@@ -5,3 +5,7 @@
 ![inner_join](./pictures/inner_join.png)
 
 ![outer join](./pictures/left_outer_join.png)
+
+![Right outer join](./pictures/right_outer_join.png)
+
+![Full join](./pictures/full_join.png)
