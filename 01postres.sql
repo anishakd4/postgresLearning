@@ -120,3 +120,12 @@ VA  LUES
 
 SELECT url, username FROM photos
 JOIN users ON users.id = photos.user_id;
+
+-- insert or update on table "photos" violates foreign key constraint "photos_user_id_fkey"
+-- user 90 doesn't exist
+INSERT INTO photos (url, user_id)
+VALUES ('http://owsd232323ne.jpg', 90);
+
+-- The value null is very special in SQL and Postgres. It means there's no value here. It just nothing.
+INSERT INTO photos (url, user_id)
+VALUES ('http://owsd232323ne.jpg', NULL);
