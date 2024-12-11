@@ -561,3 +561,34 @@ VALUES
     3,
     3
   );
+
+
+
+-- column reference "id" is ambiguous
+SELECT id FROM comments
+JOIN users ON users.id = comments.user_id;
+
+SELECT comments.id FROM comments
+JOIN users ON users.id = comments.user_id;
+
+SELECT users.id FROM comments
+JOIN users ON users.id = comments.user_id;
+
+SELECT comments.id, users.id FROM comments
+JOIN users ON users.id = comments.user_id;
+
+SELECT comments.id AS comments_id, users.id FROM comments
+JOIN users ON users.id = comments.user_id;
+
+SELECT co.id AS comments_id, users.id FROM comments as co
+JOIN users ON users.id = co.user_id;
+
+SELECT co.id AS comments_id, users.id FROM comments co
+JOIN users ON users.id = co.user_id;
+
+INSERT INTO photos (url, user_id)
+VALUES ('http://banner.jpg', NULL);
+
+-- order in join tables sometimes matters
+SELECT url, username FROM photos
+JOIN users ON users.id = photos.user_id;
