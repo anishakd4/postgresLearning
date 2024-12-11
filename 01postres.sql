@@ -129,3 +129,68 @@ VALUES ('http://owsd232323ne.jpg', 90);
 -- The value null is very special in SQL and Postgres. It means there's no value here. It just nothing.
 INSERT INTO photos (url, user_id)
 VALUES ('http://owsd232323ne.jpg', NULL);
+
+
+-- deleting a table
+DROP TABLE photos;
+
+-- After deleting a table if we try to fetch data then error comes as relation "photos" does not exist
+SELECT * FROM photos;
+
+
+CREATE TABLE photos (
+id SERIAL PRIMARY KEY,
+url VARCHAR(200),
+user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+);
+INSERT INTO photos (url, user_id)
+VALUES
+('http:/one.jpg', 4),
+('http:/two.jpg', 1),
+('http:/25.jpg', 1),
+('http:/36.jpg', 1),
+('http:/754.jpg', 2),
+('http:/35.jpg', 3),
+('http:/256.jpg', 4);
+
+SELECT * FROM photos;
+
+DELETE FROM users WHERE id = 1;
+SELECT * FROM photos;
+
+
+
+CREATE TABLE photos (
+id SERIAL PRIMARY KEY,
+url VARCHAR(200),
+user_id INTEGER REFERENCES users(id) ON DELETE SET NULL
+);
+INSERT INTO photos (url, user_id)
+VALUES
+('http:/one.jpg', 4),
+('http:/754.jpg', 2),
+('http:/35.jpg', 3),
+('http:/256.jpg', 4);
+
+SELECT * FROM photos;
+
+DELETE FROM users WHERE id = 4;
+SELECT * FROM photos;
+
+
+
+CREATE TABLE photos (
+id SERIAL PRIMARY KEY,
+url VARCHAR(200),
+user_id INTEGER REFERENCES users(id)
+);
+ 
+INSERT INTO photos (url, user_id)
+VALUES
+('http:/one.jpg', 4),
+('http:/two.jpg', 1),
+('http:/25.jpg', 1),
+('http:/36.jpg', 1),
+('http:/754.jpg', 2),
+('http:/35.jpg', 3),
+('http:/256.jpg', 4);
