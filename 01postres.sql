@@ -71,11 +71,52 @@ SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) OR name = 'Delhi' O
 
 -- here all the mathematical operations will done first before > operation.
 SELECT
-  name,
-  population / area
+    name,
+    population / area
 FROM
-  cities
+    cities
 WHERE
-  population / area > 6000;
+    population / area > 6000;
 
-UPDATE cities SET population = 39505000 WHERE name = 'Tokyo' 
+-- if there are 2 cities with name Tokyo then both row will get updated.
+UPDATE cities SET population = 39505000 WHERE name = 'Tokyo';
+
+
+DELETE FROM cities WHERE name = 'Tokyo';
+
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY,
+    username VARCHAR(50)
+);
+
+INSERT INTO users (username)
+VALUES ('anish'),('manish'),('suresh'),('mahesh');
+
+INSERT INTO 
+    users (username)
+VALUES
+    ('anish'),('manish'),('suresh'),('mahesh');
+
+
+CREATE TABLE photos (
+	id SERIAL PRIMARY KEY,
+    url VARCHAR(200),
+    user_id INTEGER REFERENCES users(id)
+);
+
+INSERT INTO photos (url, user_id)
+VALUES ('http://one.jpg', 4);
+
+INSERT INTO
+    photos (url, user_id)
+VA  LUES
+    ('http://one.jpg', 1),
+    ('http://343.jpg', 1),
+    ('http://565.jpg', 1),
+    ('http://3453.jpg', 2),
+    ('http://dfd.jpg', 3),
+    ('http://sqweq.jpg', 4);
+
+
+SELECT url, username FROM photos
+JOIN users ON users.id = photos.user_id;
