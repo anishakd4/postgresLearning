@@ -592,3 +592,15 @@ VALUES ('http://banner.jpg', NULL);
 -- order in join tables sometimes matters
 SELECT url, username FROM photos
 JOIN users ON users.id = photos.user_id;
+
+-- Left outer join
+SELECT url, username FROM photos
+LEFT JOIN users ON users.id = photos.user_id;
+
+-- new user add
+INSERT INTO users (username)
+VALUES ('Nicole');
+
+-- Right outer join
+SELECT url, username FROM photos
+RIGHT JOIN users ON users.id = photos.user_id;
