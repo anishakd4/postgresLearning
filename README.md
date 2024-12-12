@@ -9,3 +9,5 @@
 ![Right outer join](./pictures/right_outer_join.png)
 
 ![Full join](./pictures/full_join.png)
+
+![pictures/order_tables_in_from_and_join](./pictures/order_tables_in_from_and_join.png)

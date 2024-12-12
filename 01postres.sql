@@ -604,3 +604,17 @@ VALUES ('Nicole');
 -- Right outer join
 SELECT url, username FROM photos
 RIGHT JOIN users ON users.id = photos.user_id;
+
+-- Full join
+SELECT url, username FROM photos
+FULL JOIN users ON users.id = photos.user_id;
+
+-- where will always be on the other side of the join.
+SELECT url, contents FROM comments
+JOIN photos ON photos.id = comments.photo_id
+WHERE comments.user_id = photos.user_id
+
+-- 3 way join
+SELECT url, contents FROM comments
+JOIN photos ON photos.id = comments.photo_id
+JOIN users ON users.id = comments.user_id AND users.id = photos.user_id
