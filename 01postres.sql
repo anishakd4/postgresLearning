@@ -657,3 +657,7 @@ SELECT COUNT(user_id) FROM photos;
 
 -- this will count all rows.
 SELECT COUNT(*) FROM photos;
+
+SELECT user_id FROM photos GROUP BY user_id;
+SELECT user_id, COUNT(user_id) FROM photos GROUP BY user_id;
+SELECT user_id, COUNT(*) FROM photos GROUP BY user_id;
