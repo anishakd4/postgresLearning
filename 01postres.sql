@@ -625,5 +625,16 @@ SELECT url, contents FROM comments
 JOIN photos ON photos.id = comments.photo_id
 JOIN users ON users.id = comments.user_id AND users.id = photos.user_id
 
--- GROUP BY
+-- GROUP BY 
 SELECT user_id FROM comments GROUP BY user_id;
+
+-- column "comments.contents" must appear in the GROUP BY clause or be used in an aggregate function
+-- We can only select in particular, the grouped column. We are not allowed to directly select any of the underlying columns inside of our original table
+SELECT contents FROM comments GROUP BY user_id;
+
+-- aggregate function
+SELECT MAX(id) FROM comments;
+SELECT MIN(id) FROM comments;
+SELECT AVG(id) FROM comments;
+SELECT COUNT(id) FROM comments;
+SELECT SUM(id) FROM comments;
