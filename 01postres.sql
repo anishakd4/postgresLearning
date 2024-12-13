@@ -638,3 +638,22 @@ SELECT MIN(id) FROM comments;
 SELECT AVG(id) FROM comments;
 SELECT COUNT(id) FROM comments;
 SELECT SUM(id) FROM comments;
+
+-- We can not select a column and aggregate at the same time
+-- column "comments.id" must appear in the GROUP BY clause or be used in an aggregate function
+SELECT SUM(id), id FROM comments;
+-- column "comments.contents" must appear in the GROUP BY clause or be used in an aggregate function
+SELECT SUM(id), contents FROM comments;
+
+
+SELECT user_id, MAX(id) FROM COMMENTS GROUP BY user_id ;
+
+-- This conveys how many comments are there from each user_id 
+SELECT user_id, COUNT(id) AS num_comments_created 
+FROM COMMENTS GROUP BY user_id ;
+
+-- this will count all user_id which has not null values
+SELECT COUNT(user_id) FROM photos;
+
+-- this will count all rows.
+SELECT COUNT(*) FROM photos;
