@@ -661,3 +661,6 @@ SELECT COUNT(*) FROM photos;
 SELECT user_id FROM photos GROUP BY user_id;
 SELECT user_id, COUNT(user_id) FROM photos GROUP BY user_id;
 SELECT user_id, COUNT(*) FROM photos GROUP BY user_id;
+
+-- get count of number of comments for each photo
+SELECT photo_id, COUNT(*) FROM comments GROUP BY photo_id;
