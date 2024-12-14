@@ -664,3 +664,28 @@ SELECT user_id, COUNT(*) FROM photos GROUP BY user_id;
 
 -- get count of number of comments for each photo
 SELECT photo_id, COUNT(*) FROM comments GROUP BY photo_id;
+
+
+SELECT name, COUNT(*) FROM books JOIN authors ON authors.id = books.author_id
+GROUP by authors.name;
+
+-- having
+-- We're going to do some filtering based upon a aggregate function. So this is where we would make use of that having statement.
+SELECT photo_id, COUNT(*) FROM comments 
+WHERE photo_id < 3 
+GROUP BY photo_id
+HAVING COUNT(*) > 2;
+
+-- having
+-- Anytime we're trying to filter groups or anytime we're trying to filter using an aggregate function, we want to think about that having keyword.
+SELECT user_id, COUNT(*) 
+FROM comments 
+WHERE photo_id < 50 
+GROUP BY user_id
+HAVING COUNT(*) > 20;
+
+-- Given a table of phones, print the names of manufacturers and total revenue (price * units_sold) for all phones.  Only print the manufacturers who have revenue greater than 2,000,000 for all the phones they sold
+SELECT manufacturer, SUM(price * units_sold) 
+FROM phones 
+GROUP BY manufacturer
+HAVING SUM(price * units_sold) > 2000000;
