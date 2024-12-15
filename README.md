@@ -14,18 +14,16 @@
 
 [<img src="./pictures/varchar_integer.png" width="50%"/>](./pictures/varchar_integer.png)
 
-varchar_integer
-
 ## join
 
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
 
-![inner_join](./pictures/inner_join.png)
+[<img src="./pictures/inner_join.png" width="50%"/>](./pictures/inner_join.png)
 
-![outer join](./pictures/left_outer_join.png)
+[<img src="./pictures/left_outer_join.png" width="50%"/>](./pictures/left_outer_join.png)
 
-![Right outer join](./pictures/right_outer_join.png)
+[<img src="./pictures/right_outer_join.png" width="50%"/>](./pictures/right_outer_join.png)
 
-![Full join](./pictures/full_join.png)
+[<img src="./pictures/full_join.png" width="50%"/>](./pictures/full_join.png)
 
-![pictures/order_tables_in_from_and_join](./pictures/order_tables_in_from_and_join.png){ width=400px }
+[<img src="./pictures/order_tables_in_from_and_join.png" width="50%"/>](./pictures/order_tables_in_from_and_join.png)
