@@ -1,4 +1,7 @@
-![create_table_query_analyzer.png](./pictures/create_table_query_analyzer.png){ width=400px }
+<!-- ![create_table_query_analyzer.png](./pictures/create_table_query_analyzer.png){ width=400px } -->
+
+<div style="width:50%">![create_table_query_analyzer](./pictures/create_table_query_analyzer.png)</div>
+
 
 ## join
 
