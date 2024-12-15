@@ -714,3 +714,18 @@ SELECT * FROM users LIMIT 5;
 
 -- no error it is just that you will receive all the available rows if 999 os greater than 50
 SELECT * FROM users LIMIT 999;
+
+-- 5 least priced products
+SELECT * FROM products ORDER BY price LIMIT 5;
+
+-- 5 most priced products
+SELECT * FROM products ORDER BY price DESC LIMIT 5;
+
+-- 5 most priced products except the costliest one
+SELECT * FROM products ORDER BY price DESC LIMIT 5 OFFSET 1;
+
+-- logics in case of large dataset
+-- first page of 20 items
+SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 0;
+-- second page of 20 items
+SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 0;
