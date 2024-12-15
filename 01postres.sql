@@ -1,3 +1,4 @@
+-- creating tables
 CREATE TABLE cities (
     name VARCHAR(50), 
     country VARCHAR(50),
