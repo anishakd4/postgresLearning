@@ -1,4 +1,4 @@
-![create_table_query_analyzer.png](./pictures/create_table_query_analyzer.png)
+![create_table_query_analyzer.png](./pictures/create_table_query_analyzer.png){ width=400px }
 
 ## join
 
