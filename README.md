@@ -12,4 +12,4 @@
 
 ![Full join](./pictures/full_join.png)
 
-![pictures/order_tables_in_from_and_join](./pictures/order_tables_in_from_and_join.png)
+![pictures/order_tables_in_from_and_join](./pictures/order_tables_in_from_and_join.png){ width=400px }
