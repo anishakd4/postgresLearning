@@ -1,8 +1,12 @@
-<!-- ![create_table_query_analyzer.png](./pictures/create_table_query_analyzer.png){ width=400px } -->
-
 ## Create table query analyzer
 
+- keywords are always going to be capitalized and identifiers will always be lowercase.
+
 [<img src="./pictures/create_table_query_analyzer.png" width="50%"/>](./pictures/create_table_query_analyzer.png)
+
+## varchar(50)
+
+- if try to store longer than 50 characters then postgres is going to give error.
 
 ## join
 
