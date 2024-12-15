@@ -695,3 +695,22 @@ HAVING SUM(price * units_sold) > 2000000;
 SELECT * FROM products ORDER BY price;
 SELECT * FROM products ORDER BY price ASC;
 SELECT * FROM products ORDER BY price DESC;
+
+
+SELECT * FROM products ORDER BY name;
+SELECT * FROM products ORDER BY name DESC;
+
+-- second sorting criteria in case of same price
+SELECT * FROM products ORDER BY price, weight;
+
+-- ascending price and descending weight
+SELECT * FROM products ORDER BY price, weight DESC;
+
+-- skip the first 40 rows and return rest
+SELECT * FROM users OFFSET 40;
+
+-- give only first 5 rows
+SELECT * FROM users LIMIT 5;
+
+-- no error it is just that you will receive all the available rows if 999 os greater than 50
+SELECT * FROM users LIMIT 999;
