@@ -1,5 +1,7 @@
 <!-- ![create_table_query_analyzer.png](./pictures/create_table_query_analyzer.png){ width=400px } -->
 
+## Create table query analyzer
+
 [<img src="./pictures/create_table_query_analyzer.png" width="50%"/>](./pictures/create_table_query_analyzer.png)
 
 ## join
