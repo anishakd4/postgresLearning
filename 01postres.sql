@@ -729,3 +729,37 @@ SELECT * FROM products ORDER BY price DESC LIMIT 5 OFFSET 1;
 SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 0;
 -- second page of 20 items
 SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 0;
+
+--a query that shows the names of only the second and third most expensive phones
+SELECT name from phones ORDER BY price DESC LIMIT 2 OFFSET 1;
+
+-- union. this removes duplicates
+(SELECT * FROM products ORDER BY price DESC LIMIT 4)
+UNION
+(SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
+
+-- union all. this doesnot remove duplicates
+(SELECT * FROM products ORDER BY price DESC LIMIT 4)
+UNION ALL
+(SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
+
+-- UNION types character varying and integer cannot be matched. So we must always have the same columns and they must have compatible data types as well
+SELECT name FROM products UNION SELECT price FROM products;
+
+-- Besides the union keyword, there are a couple of other keywords that we use to work with multiple sets of data. Whenever I use a term multiple sets, I'm essentially saying the result of multiple different queries.
+
+
+-- Intersection between 2 queries and remove duplicates
+(SELECT * FROM products ORDER BY price DESC LIMIT 4)
+INTERSECT
+(SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
+
+-- Intersection between 2 queries but donot remove duplicates
+(SELECT * FROM products ORDER BY price DESC LIMIT 4)
+INTERSECT
+(SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
+
+-- EXCEPT. Here order of sets matter. Items present in first set but not present in second
+(SELECT * FROM products ORDER BY price DESC LIMIT 4)
+EXCEPT
+(SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
