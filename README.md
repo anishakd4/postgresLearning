@@ -1,8 +1,6 @@
 <!-- ![create_table_query_analyzer.png](./pictures/create_table_query_analyzer.png){ width=400px } -->
 
-[<img src="./pictures/create_table_query_analyzer.png" width="250"/>](./pictures/create_table_query_analyzer.png)
-<div style="width:50%"><img scr='./pictures/create_table_query_analyzer.png' width='50%' /></div>
-
+[<img src="./pictures/create_table_query_analyzer.png" width="50%"/>](./pictures/create_table_query_analyzer.png)
 
 ## join
 
