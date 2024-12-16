@@ -17,12 +17,10 @@ VALUES
   ('Sao Paulo', 'Brazil', 20935000, 3042);
 
 
+-- select query
 SELECT * FROM cities;
-
 SELECT name, population FROM cities;
-
 SELECT area, name, population FROM cities;
-
 SELECT name, name, name FROM cities;
 
 -- We can use any other mathematical operation also here:
