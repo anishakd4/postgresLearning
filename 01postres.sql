@@ -62,7 +62,8 @@ SELECT name, area FROM cities WHERE area NOT IN (8223, 3042);
 SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) AND name != 'Delhi';
 SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) OR name = 'Delhi' OR NAME = 'Tokyo';
 
--- here all the mathematical operations will done first before > operation.
+-- we can add mathematical operation or string operation in the Where clause
+-- here the mathematical operation (population / area) will done first before > operation.
 SELECT
     name,
     population / area
