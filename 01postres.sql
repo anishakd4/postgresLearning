@@ -35,17 +35,16 @@ SELECT name, population * area FROM cities;
 SELECT name, population + area AS population_density
 FROM cities;
 
-
+-- String operations and functions
 SELECT name || ', ' || country As location FROM cities;
-
 SELECT CONCAT(name, country) As location FROM cities;
-
 SELECT CONCAT(name, ', ', country) As location FROM cities;
 
+-- We can stack together as many functions as we want.
 SELECT CONCAT(UPPER(name), ', ', LOWER(country)) As location FROM cities;
-
 SELECT UPPER(CONCAT(name, ', ', country)) As location FROM cities;
 
+-- Where clause
 SELECT name, area FROM cities WHERE area > 4000
 
 SELECT name, population FROM cities WHERE area > 4000
