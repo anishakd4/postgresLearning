@@ -14,6 +14,10 @@
 
 [<img src="./pictures/varchar_integer.png" width="50%"/>](./pictures/varchar_integer.png)
 
+## Math operations
+
+[<img src="./pictures/math_operators.png" width="50%"/>](./pictures/math_operators.png)
+
 ## join
 
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
