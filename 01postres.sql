@@ -6,14 +6,15 @@ CREATE TABLE cities (
     area INTEGER
 );
 
+-- If we wanted to, we could kind of jumble the order of columns. The only requirement is that when we list out all the values we want to insert, they match up in the same order as the order in which we listed out all of our columns.
 INSERT INTO cities (name, country, population, area)
 VALUES ('Tokyo', 'Japan', 38505000, 8223);
 
 INSERT INTO cities (name, country, population, area)
 VALUES 
 	('Delhi', 'India', 28125000, 2240),
-    ('Shanghai', 'China', 22125000, 4015),
-    ('Sao Paulo', 'Brazil', 20935000, 3042);
+  ('Shanghai', 'China', 22125000, 4015),
+  ('Sao Paulo', 'Brazil', 20935000, 3042);
 
 
 SELECT * FROM cities;
