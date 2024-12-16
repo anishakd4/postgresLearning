@@ -49,21 +49,17 @@ SELECT name, area FROM cities WHERE area > 4000
 SELECT name, population FROM cities WHERE area > 4000
 SELECT name, population FROM cities WHERE area = 8223;
 
--- the comparision we are doing is going to be run for every row.
+-- the comparison we are doing is going to be run for every row.
 SELECT name, population FROM cities WHERE area != 8223;
 
 SELECT name, area FROM cities WHERE area BETWEEN 2000 AND 4000;
-
 SELECT name, area FROM cities WHERE name IN ('Delhi', 'Shanghai');
-
 SELECT name, area FROM cities WHERE name IN ('delhi', 'Shanghai');
-
 SELECT name, area FROM cities WHERE name NOT IN ('Delhi', 'Shanghai');
-
 SELECT name, area FROM cities WHERE area NOT IN (8223, 3042);
 
+-- compound where clauses
 SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) AND name != 'Delhi';
-
 SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) OR name = 'Delhi' OR NAME = 'Tokyo';
 
 -- here all the mathematical operations will done first before > operation.
