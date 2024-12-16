@@ -46,9 +46,7 @@ SELECT UPPER(CONCAT(name, ', ', country)) As location FROM cities;
 
 -- Where clause
 SELECT name, area FROM cities WHERE area > 4000
-
 SELECT name, population FROM cities WHERE area > 4000
-
 SELECT name, population FROM cities WHERE area = 8223;
 
 -- the comparision we are doing is going to be run for every row.
