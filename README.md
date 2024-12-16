@@ -30,6 +30,10 @@
 
 [<img src="./pictures/select_where_sequence.png" width="50%"/>](./pictures/select_where_sequence.png)
 
+## Where clause 
+
+[<img src="./pictures/comparision_math_operators.png" width="50%"/>](./pictures/comparision_math_operators.png)
+
 ## join
 
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
