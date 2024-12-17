@@ -52,14 +52,17 @@
 
 ## Primary keys and foreign keys
 
-- primary key is unique.
+- primary key is unique. value in primary key is unique and never going to be changed.
 - goal of foreign key is to somehow relate 1 record in a table to another record in another or same table.
 
 [<img src="./pictures/primary_foreign_keys.png" width="50%"/>](./pictures/primary_foreign_keys.png)
 
+[<img src="./pictures/primary_foreign_example.png" width="50%"/>](./pictures/primary_foreign_example.png)
+
 ## Primary keys vs foreign keys
 
 [<img src="./pictures/primary_vs_foreign.png" width="50%"/>](./pictures/primary_vs_foreign.png)
+
 
 ## join
 
