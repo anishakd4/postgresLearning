@@ -50,6 +50,14 @@
 
 [<img src="./pictures/four_relationships.png" width="50%"/>](./pictures/four_relationships.png)
 
+## Primary keys and foreign keys
+
+[<img src="./pictures/primary_foreign_keys.png" width="50%"/>](./pictures/primary_foreign_keys.png)
+
+## Primary keys vs foreign keys
+
+[<img src="./pictures/primary_vs_foreign.png" width="50%"/>](./pictures/primary_vs_foreign.png)
+
 ## join
 
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
