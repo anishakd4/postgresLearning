@@ -36,7 +36,7 @@
 
 ## One to one and many to one relationship
 
-[<img src="./pictures/one_to_one_and_many_to_one.png" width="50%"/>](./pictures/one_to_one_and_many_to_one.png)
+[<img src="./pictures/one_to_many_and_many_to_one.png" width="50%"/>](./pictures/one_to_many_and_many_to_one.png)
 
 ## join
 
