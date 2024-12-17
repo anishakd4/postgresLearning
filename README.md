@@ -63,6 +63,11 @@
 
 [<img src="./pictures/primary_vs_foreign.png" width="50%"/>](./pictures/primary_vs_foreign.png)
 
+## Foreign keys
+
+[<img src="./pictures/foreign_keys1.png" width="50%"/>](./pictures/foreign_keys1.png)
+
+[<img src="./pictures/foreign_keys2.png" width="50%"/>](./pictures/foreign_keys2.png)
 
 ## join
 
