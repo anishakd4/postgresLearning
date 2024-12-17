@@ -52,6 +52,9 @@
 
 ## Primary keys and foreign keys
 
+- primary key is unique.
+- goal of foreign key is to somehow relate 1 record in a table to another record in another or same table.
+
 [<img src="./pictures/primary_foreign_keys.png" width="50%"/>](./pictures/primary_foreign_keys.png)
 
 ## Primary keys vs foreign keys
