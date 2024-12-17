@@ -79,9 +79,10 @@ UPDATE cities SET population = 39505000 WHERE name = 'Tokyo';
 -- here also if have multiple rows matching with the where clause then multiple rows will be deleted
 DELETE FROM cities WHERE name = 'Tokyo';
 
+-- SERIAL tells postgres to generate values for this column automatically
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
-    username VARCHAR(50)
+  username VARCHAR(50)
 );
 
 INSERT INTO users (username)
@@ -92,11 +93,11 @@ INSERT INTO
 VALUES
     ('anish'),('manish'),('suresh'),('mahesh');
 
-
+--foreign key
 CREATE TABLE photos (
 	id SERIAL PRIMARY KEY,
-    url VARCHAR(200),
-    user_id INTEGER REFERENCES users(id)
+  url VARCHAR(200),
+  user_id INTEGER REFERENCES users(id)
 );
 
 INSERT INTO photos (url, user_id)
@@ -112,7 +113,7 @@ VA  LUES
     ('http://dfd.jpg', 3),
     ('http://sqweq.jpg', 4);
 
-
+-- joining 2 tables
 SELECT url, username FROM photos
 JOIN users ON users.id = photos.user_id;
 
@@ -124,7 +125,6 @@ VALUES ('http://owsd232323ne.jpg', 90);
 -- The value null is very special in SQL and Postgres. It means there's no value here. It just nothing.
 INSERT INTO photos (url, user_id)
 VALUES ('http://owsd232323ne.jpg', NULL);
-
 
 -- deleting a table
 DROP TABLE photos;
