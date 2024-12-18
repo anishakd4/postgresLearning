@@ -122,6 +122,9 @@ JOIN users ON users.id = photos.user_id;
 INSERT INTO photos (url, user_id)
 VALUES ('http://owsd232323ne.jpg', 90);
 
+-- update or delete on table "users" violates foreign key constraint "photos_user_id_fkey" on table "photos"
+DELETE FROM users WHERE id = 1;
+
 -- The value null is very special in SQL and Postgres. It means there's no value here. It just nothing.
 -- when we want to insert a photo which is not tied to any user then we put in a value of NULL for user_id
 INSERT INTO photos (url, user_id)
