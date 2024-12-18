@@ -172,10 +172,9 @@ VALUES
 
 SELECT * FROM photos;
 
+--Once we delete that user, all the related photos will have this value inside the user ID column set to null.
 DELETE FROM users WHERE id = 4;
 SELECT * FROM photos;
-
-
 
 CREATE TABLE photos (
 id SERIAL PRIMARY KEY,
