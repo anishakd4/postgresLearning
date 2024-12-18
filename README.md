@@ -73,6 +73,12 @@
 
 [<img src="./pictures/foreign_key_cases.png" width="50%"/>](./pictures/foreign_key_cases.png)
 
+## What if we delete a row in table
+
+- If we delete a row in table with a SERIAL type column then there won't be any other record with the same id. No serial id ever gets reused even if the row ever gets deleted.
+
+[<img src="./pictures/constraints_in_delete.png" width="50%"/>](./pictures/constraints_in_delete.png)
+
 ## join
 
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
