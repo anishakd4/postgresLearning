@@ -136,7 +136,6 @@ DROP TABLE photos;
 -- After deleting a table if we try to fetch data then error comes as relation "photos" does not exist
 SELECT * FROM photos;
 
-
 CREATE TABLE photos (
 id SERIAL PRIMARY KEY,
 url VARCHAR(200),
@@ -154,10 +153,10 @@ VALUES
 
 SELECT * FROM photos;
 
+-- ON DELETE CASCADE: If we attempt to delete a user, say the user with ID number one right here. All of the related photos tied to that user. So that would be the photo with ID two, three and four because they are all related to user ID one. They should all be deleted automatically whenever we delete that related user.
 DELETE FROM users WHERE id = 1;
+
 SELECT * FROM photos;
-
-
 
 CREATE TABLE photos (
 id SERIAL PRIMARY KEY,
