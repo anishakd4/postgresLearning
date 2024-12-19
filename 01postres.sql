@@ -560,7 +560,6 @@ VALUES
   );
 
 
-
 -- column reference "id" is ambiguous
 SELECT id FROM comments
 JOIN users ON users.id = comments.user_id;
