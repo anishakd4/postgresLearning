@@ -123,6 +123,6 @@
 
 ## order matters
 
-[<img src="./pictures/order_of_table_in_from_join.png" width="50%"/>](./pictures/order_of_table_in_from_join.png)]
+- yes, there is a difference in the order in which we list these tables in the from and join statement whenever we use a left or right outer, join the left and right outer joins. We definitely want to keep in mind the order of these tables so we list them out but with an inner join or a outer join in general, it doesn't make a difference.
 
-[<img src="./pictures/order_tables_in_from_and_join.png" width="50%"/>](./pictures/order_tables_in_from_and_join.png)
+[<img src="./pictures/order_of_table_in_from_join.png" width="50%"/>](./pictures/order_of_table_in_from_join.png)
