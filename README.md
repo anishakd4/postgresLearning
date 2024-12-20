@@ -96,15 +96,23 @@
 
 - If there is ever a row from our source table of photos that does not match up with the row from users, then that row right there gets dropped from the overall result set.
 
+## Inner Join
 
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
 
-
 [<img src="./pictures/inner_join.png" width="50%"/>](./pictures/inner_join.png)
+
+## Left outer join
 
 [<img src="./pictures/left_outer_join.png" width="50%"/>](./pictures/left_outer_join.png)
 
+[<img src="./pictures/left_outer_join_2.png" width="50%"/>](./pictures/left_outer_join_2.png)
+
+## Right Outer join
+
 [<img src="./pictures/right_outer_join.png" width="50%"/>](./pictures/right_outer_join.png)
+
+## Full Join
 
 [<img src="./pictures/full_join.png" width="50%"/>](./pictures/full_join.png)
 
