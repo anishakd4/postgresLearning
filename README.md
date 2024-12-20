@@ -92,6 +92,11 @@
 
 - Here simple join statement won't print photo with null user id.
 
+[<img src="./pictures/order_of_from_join_matters_2.png" width="50%"/>](./pictures/order_of_from_join_matters_2.png)
+
+- If there is ever a row from our source table of photos that does not match up with the row from users, then that row right there gets dropped from the overall result set.
+
+
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
 
 
