@@ -118,4 +118,6 @@
 
 [<img src="./pictures/full_join.png" width="50%"/>](./pictures/full_join.png)
 
+[<img src="./pictures/full_join_2.png" width="50%"/>](./pictures/full_join_2.png)
+
 [<img src="./pictures/order_tables_in_from_and_join.png" width="50%"/>](./pictures/order_tables_in_from_and_join.png)
