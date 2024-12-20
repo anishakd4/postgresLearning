@@ -130,3 +130,9 @@
 ## Group and aggregates
 
 [<img src="./pictures/group_and_aggregates.png" width="50%"/>](./pictures/group_and_aggregates.png)
+
+## Group by
+
+[<img src="./pictures/group_by_1.png" width="50%"/>](./pictures/group_by_1.png)
+
+[<img src="./pictures/group_by_2.png" width="50%"/>](./pictures/group_by_2.png)
