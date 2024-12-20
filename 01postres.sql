@@ -560,8 +560,11 @@ VALUES
     3
   );
 
+-- join statements
+SELECT contents, url FROM comments
+JOIN phoots ON photos.id = comments.photo_id;
 
--- column reference "id" is ambiguous
+-- column reference "id" is ambiguous. We need to give more context in case of multiple tables with same column.
 SELECT id FROM comments
 JOIN users ON users.id = comments.user_id;
 
@@ -574,9 +577,11 @@ JOIN users ON users.id = comments.user_id;
 SELECT comments.id, users.id FROM comments
 JOIN users ON users.id = comments.user_id;
 
+-- columns can be renamed using AS keyword
 SELECT comments.id AS comments_id, users.id FROM comments
 JOIN users ON users.id = comments.user_id;
 
+-- tables also can be renamed using AS keyword
 SELECT co.id AS comments_id, users.id FROM comments as co
 JOIN users ON users.id = co.user_id;
 
