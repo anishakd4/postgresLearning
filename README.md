@@ -87,6 +87,11 @@
 
 [<img src="./pictures/notes_on_join.png" width="50%"/>](./pictures/notes_on_join.png)
 
+
+[<img src="./pictures/order_of_from_join_matters.png" width="50%"/>](./pictures/order_of_from_join_matters.png)
+
+- Here simple join statement won't print photo with null user id.
+
 - Whenever you use the keyword, join by itself inside of a query that is by default an inner join. You can write out either join or alternatively inner join to indicate that you want to do an inner join.
 
 

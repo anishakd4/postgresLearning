@@ -588,6 +588,7 @@ JOIN users ON users.id = co.user_id;
 SELECT co.id AS comments_id, users.id FROM comments co
 JOIN users ON users.id = co.user_id;
 
+-- we can insert photos not related to any user id, issue comes only we try to delete user which photos related.
 INSERT INTO photos (url, user_id)
 VALUES ('http://banner.jpg', NULL);
 
