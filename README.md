@@ -112,6 +112,8 @@
 
 [<img src="./pictures/right_outer_join.png" width="50%"/>](./pictures/right_outer_join.png)
 
+[<img src="./pictures/right_outer_join_2.png" width="50%"/>](./pictures/right_outer_join_2.png)
+
 ## Full Join
 
 [<img src="./pictures/full_join.png" width="50%"/>](./pictures/full_join.png)
