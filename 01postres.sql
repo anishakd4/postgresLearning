@@ -645,6 +645,7 @@ SELECT SUM(id), id FROM comments;
 SELECT SUM(id), contents FROM comments;
 
 
+-- An aggregate function, if we use it while doing group by, is only going to be applied to each of the individual little sub columns.
 SELECT user_id, MAX(id) FROM COMMENTS GROUP BY user_id ;
 
 -- This conveys how many comments are there from each user_id 
