@@ -593,6 +593,8 @@ INSERT INTO photos (url, user_id)
 VALUES ('http://banner.jpg', NULL);
 
 -- order in join tables sometimes matters
+-- this won't return photos with NULL user_id
+-- If there is ever a row from our source table of photos that does not match up with the row from users, then that row right there gets dropped from the overall result set.
 SELECT url, username FROM photos
 JOIN users ON users.id = photos.user_id;
 
