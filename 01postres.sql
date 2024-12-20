@@ -193,6 +193,7 @@ VALUES
 ('http:/256.jpg', 4);
 
 
+--creating and inserting for database setup
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   username VARCHAR(50)
