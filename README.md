@@ -120,4 +120,9 @@
 
 [<img src="./pictures/full_join_2.png" width="50%"/>](./pictures/full_join_2.png)
 
+
+## order matters
+
+[<img src="./pictures/order_of_table_in_from_join.png" width="50%"/>](./pictures/order_of_table_in_from_join.png)]
+
 [<img src="./pictures/order_tables_in_from_and_join.png" width="50%"/>](./pictures/order_tables_in_from_and_join.png)
