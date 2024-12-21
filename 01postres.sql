@@ -1420,6 +1420,7 @@ VALUES
   (3, 32, true);
 
 --sorting
+-- by default is ascending order
 SELECT * FROM products ORDER BY price;
 SELECT * FROM products ORDER BY price ASC;
 SELECT * FROM products ORDER BY price DESC;
