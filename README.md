@@ -140,3 +140,9 @@
 ## combining group by and aggregates
 
 [<img src="./pictures/combining_group_by_aggregate.png" width="50%"/>](./pictures/combining_group_by_aggregate.png)
+
+## difference between a where and a having
+
+- Having is very similar to where. Its goal is to filter out some amount of information. The difference between where and having, however, is that where is going to operate on filtering out some number of rows, whereas having is going to filter out some number of groups. 
+- You are never going to see having without a group by. So you will always have a group by net right before a having.
+- You don't have to have a having if you have a group by, but if you want to do any filtering on the groups you will make use of having.
