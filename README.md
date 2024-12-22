@@ -150,3 +150,5 @@
 ## Subquery in from
 
 [<img src="./pictures/subquery_from.png" width="50%"/>](./pictures/subquery_from.png)
+
+[<img src="./pictures/subquery_from2.png" width="50%"/>](./pictures/subquery_from2.png)
