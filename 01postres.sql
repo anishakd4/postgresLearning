@@ -1492,3 +1492,26 @@ INTERSECT
 (SELECT * FROM products ORDER BY price DESC LIMIT 4)
 EXCEPT
 (SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
+
+-- subquery
+SELECT name, price FROM products
+WHERE price > (
+	SELECT MAX(price) FROM products WHERE department = 'Toys'
+);
+
+--subquery
+SELECT name, price, (
+	SELECT MAX(price) FROM products
+) FROM products
+WHERE price > 876;
+
+--subquery
+SELECT name, price, (
+	SELECT price FROM products WHERE id = 3
+) AS id_3_price 
+FROM products
+WHERE price > 876;
+
+-- Write a query that prints the name and price for each phone. In addition, print out the ratio of the phones price against max price of all phones (so price / max price).  Rename this third column to price_ratio
+SELECT name, price, price / (SELECT MAX(price) from phones) as price_ratio
+FROM phones;
