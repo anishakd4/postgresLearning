@@ -1472,6 +1472,7 @@ UNION ALL
 (SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
 
 -- UNION types character varying and integer cannot be matched. So we must always have the same columns and they must have compatible data types as well
+-- We are only allowed to use the union keyword between the results of two queries where the results have the same columns, though they must have the same name and the data inside them must be the same type of data as well.
 SELECT name FROM products UNION SELECT price FROM products;
 
 -- Besides the union keyword, there are a couple of other keywords that we use to work with multiple sets of data. Whenever I use a term multiple sets, I'm essentially saying the result of multiple different queries.
@@ -1482,7 +1483,7 @@ SELECT name FROM products UNION SELECT price FROM products;
 INTERSECT
 (SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
 
--- Intersection between 2 queries but donot remove duplicates
+-- Intersection between 2 queries but donot remove duplicates. Here the result might be present 3 times in the first set and 5 times in the second set then all will be returned in the result 
 (SELECT * FROM products ORDER BY price DESC LIMIT 4)
 INTERSECT
 (SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
