@@ -1456,7 +1456,7 @@ SELECT * FROM products ORDER BY price DESC LIMIT 5 OFFSET 1;
 -- first page of 20 items
 SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 0;
 -- second page of 20 items
-SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 0;
+SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 20;
 
 --a query that shows the names of only the second and third most expensive phones
 SELECT name from phones ORDER BY price DESC LIMIT 2 OFFSET 1;
