@@ -173,5 +173,4 @@
 
 - we do not have to return a set of rows or columns from a subquery inside of a from clause. We can return just one single value as long as the outer select statements, the where and so on are compatible with it.
 
-
 ## One row and one column which referred to as a value. That's one single value
