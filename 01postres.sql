@@ -1528,10 +1528,16 @@ WHERE price_weight_ratio > 5;
 SELECT * FROM 
 (SELECT MAX(price) FROM products) AS p
 
-
 -- Find average number of orders for all users
 SELECT AVG(order_count) 
 FROM 
 (
   SELECT user_id, COUNT(*) AS order_count FROM orders GROUP BY user_id
 ) AS p
+
+-- Calculate the average price of phones for each manufacturer.  Then print the highest average price
+SELECT MAX(avg_phones) as max_average_price
+FROM
+(
+    SELECT manufacturer, AVG(price) as avg_phones FROM phones GROUP BY manufacturer
+) AS p;
