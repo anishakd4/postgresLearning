@@ -1515,3 +1515,15 @@ WHERE price > 876;
 -- Write a query that prints the name and price for each phone. In addition, print out the ratio of the phones price against max price of all phones (so price / max price).  Rename this third column to price_ratio
 SELECT name, price, price / (SELECT MAX(price) from phones) as price_ratio
 FROM phones;
+
+-- subquery in from
+SELECT name, price_weight_ratio FROM 
+(
+	SELECT name, price / weight as price_weight_ratio FROM products
+) AS p
+WHERE price_weight_ratio > 5;
+
+-- we can provide a subquery right here that gives us one single value as long as the outer selects and so on are going to agree with the structure
+-- here we can just ask for *, everything else will break.
+SELECT * FROM 
+(SELECT MAX(price) FROM products) AS p
