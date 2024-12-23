@@ -185,3 +185,13 @@
 # Subquery in join
 
 [<img src="./pictures/subquery_in_join.png" width="50%"/>](./pictures/subquery_in_join.png)
+
+# Subquery in where
+
+- So when we start talking about subqueries being used inside of a where clause and we start to think about the type or structure of data that is returned from the subquery, a valid subquery is going to be valid or not, depending upon the operator right here that we are using.
+
+- So in some cases we are allowed to write a subquery that is going to return only one single value. In other cases, if we use a different operator, we might be allowed to write a subquery that's going to return a list or a single column of values. It all comes down to the operator that we are using.
+
+- If we get back a single column of values, then we are allowed to use that with an in operator.
+
+[<img src="./pictures/subquery_with_where.png" width="50%"/>](./pictures/subquery_with_where.png)

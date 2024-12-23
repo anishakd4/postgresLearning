@@ -1555,3 +1555,10 @@ SELECT first_name FROM users
 JOIN orders
 ON orders.user_id = users.id
 WHERE orders.product_id = 3;
+
+-- subquery in where
+SELECT id FROM orders
+WHERE product_id IN 
+(
+  SELECT id FROM products WHERE price / weight > 50
+);
