@@ -1527,3 +1527,11 @@ WHERE price_weight_ratio > 5;
 -- here we can just ask for *, everything else will break.
 SELECT * FROM 
 (SELECT MAX(price) FROM products) AS p
+
+
+-- Find average number of orders for all users
+SELECT AVG(order_count) 
+FROM 
+(
+  SELECT user_id, COUNT(*) AS order_count FROM orders GROUP BY user_id
+) AS p
