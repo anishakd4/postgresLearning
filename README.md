@@ -155,6 +155,9 @@
 
 [<img src="./pictures/subquery_example.png" width="50%"/>](./pictures/subquery_example.png)
 
+## Subquery in select
+
+[<img src="./pictures/select_subquery.png" width="50%"/>](./pictures/select_subquery.png)
 
 ## Subquery in from
 
