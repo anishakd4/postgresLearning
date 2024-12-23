@@ -153,6 +153,8 @@
 
 [<img src="./pictures/subquery_001.png" width="50%"/>](./pictures/subquery_001.png)
 
+- As you can see there are 4 different subqueries in the below example.
+
 [<img src="./pictures/subquery_example.png" width="50%"/>](./pictures/subquery_example.png)
 
 ## Subquery in select
