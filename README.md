@@ -151,6 +151,12 @@
 
 [<img src="./pictures/shape_of_query.png" width="50%"/>](./pictures/shape_of_query.png)
 
+- The very first one inside the select statement is producing a single value. The two inside the from and join statements are producing a source of rows and then finally the last one down here inside the where clause is producing a single column.
+
+- So one that produces a value, one that produces a set of rows and one that produces a single column, is the real trick to understanding this subquery stuff.
+
+- The reason that making use of a subquery in different locations is challenging to understand is that whenever we write out these subqueries in different spots, we have to change the type or the shape of data that is being returned from the inner query.
+
 [<img src="./pictures/subquery_001.png" width="50%"/>](./pictures/subquery_001.png)
 
 - As you can see there are 4 different subqueries in the below example.
