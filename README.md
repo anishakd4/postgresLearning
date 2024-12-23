@@ -169,8 +169,6 @@
 
 ## Subquery in from
 
-[<img src="./pictures/subquery_from_02.png" width="50%"/>](./pictures/subquery_from_02.png)
-
 [<img src="./pictures/subquery_from.png" width="50%"/>](./pictures/subquery_from.png)
 
 [<img src="./pictures/subquery_from_2.png" width="50%"/>](./pictures/subquery_from_2.png)
