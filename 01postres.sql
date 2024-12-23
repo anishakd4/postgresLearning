@@ -1541,3 +1541,17 @@ FROM
 (
     SELECT manufacturer, AVG(price) as avg_phones FROM phones GROUP BY manufacturer
 ) AS p;
+
+
+-- subquery
+SELECT first_name FROM users
+JOIN (
+  SELECT user_id FROM orders WHERE product_id = 3
+) AS o
+ON o.user_id = users.id
+
+-- above can be done without subquery also
+SELECT first_name FROM users
+JOIN orders
+ON orders.user_id = users.id
+WHERE orders.product_id = 3;
