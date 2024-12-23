@@ -147,7 +147,7 @@
 - You are never going to see having without a group by. So you will always have a group by net right before a having.
 - You don't have to have a having if you have a group by, but if you want to do any filtering on the groups you will make use of having.
 
-## Subquery
+# Subquery
 
 [<img src="./pictures/shape_of_query.png" width="50%"/>](./pictures/shape_of_query.png)
 
@@ -163,7 +163,7 @@
 
 [<img src="./pictures/subquery_example.png" width="50%"/>](./pictures/subquery_example.png)
 
-## Subquery in select
+# Subquery in select
 
 [<img src="./pictures/select_subquery.png" width="50%"/>](./pictures/select_subquery.png)
 
