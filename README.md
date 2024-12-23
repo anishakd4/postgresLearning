@@ -149,8 +149,6 @@
 
 ## Subquery in from
 
-[<img src="./pictures/subquery_from_01.png" width="50%"/>](./pictures/subquery_from_01.png)
-
 [<img src="./pictures/subquery_from_02.png" width="50%"/>](./pictures/subquery_from_02.png)
 
 [<img src="./pictures/subquery_from.png" width="50%"/>](./pictures/subquery_from.png)
@@ -158,6 +156,8 @@
 [<img src="./pictures/subquery_from_2.png" width="50%"/>](./pictures/subquery_from_2.png)
 
 - The result of these subquery has only columns, name and price to weight ratio. So inside of our select statement, if we asked for just price by itself, we would get an error.
+
+[<img src="./pictures/subquery_from_01.png" width="50%"/>](./pictures/subquery_from_01.png)
 
 - we do not have to return a set of rows or columns from a subquery inside of a from clause. We can return just one single value as long as the outer select statements, the where and so on are compatible with it.
 
