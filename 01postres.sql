@@ -1632,3 +1632,11 @@ SELECT DISTINCT department, name FROM products;
 -- If we do a distinct over two or more different columns, we can no longer do a count on it.
 -- function count(character varying, character varying) does not exist
 SELECT COUNT(DISTINCT department, name) FROM products;
+
+SELECT GREATEST(20, 30, 5);
+
+SELECT name, weight , GREATEST(30, 2 * weight) FROM products;
+
+SELECT LEAST(8, 5, 2 , 4);
+
+SELECT name, price, LEAST(price * 0.5, 400) FROM products;
