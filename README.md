@@ -199,3 +199,7 @@
 # Subquery with where operators
 
 [<img src="./pictures/where_operator_subquery.png" width="50%"/>](./pictures/where_operator_subquery.png)
+
+# Correlated queries
+
+[<img src="./pictures/correlated_queries.png" width="50%"/>](./pictures/correlated_queries.png)

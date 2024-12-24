@@ -1590,6 +1590,7 @@ WHERE price > SOME
 );
 
 -- correlated queries
+-- The term correlated subquery essentially means that we are referring to some row from the outside query in the inner query or in the subquery.
 SELECT name, department, price FROM products AS p1
 WHERE p1.price = (
   SELECT MAX(price) 
