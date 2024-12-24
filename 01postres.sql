@@ -1562,3 +1562,29 @@ WHERE product_id IN
 (
   SELECT id FROM products WHERE price / weight > 50
 );
+
+SELECT name FROM products
+WHERE price > 
+(
+  SELECT AVG(price) FROM products
+);
+
+SELECT name, department FROM products
+WHERE department NOT IN
+(
+  SELECT department FROM products WHERE price < 100
+);
+
+-- > ALL will work only in case of a single column
+SELECT name, department FROM products
+WHERE price > ALL
+(
+  SELECT price FROM products WHERE department = 'Industrial'
+);
+
+-- show the name of products that are more expensive than at least one product in the industrial department.
+SELECT name, department, price FROM products
+WHERE price > SOME
+(
+  SELECT price FROM products WHERE department = 'Industrial'
+);

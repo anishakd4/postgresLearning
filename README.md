@@ -195,3 +195,7 @@
 - If we get back a single column of values, then we are allowed to use that with an in operator.
 
 [<img src="./pictures/subquery_with_where.png" width="50%"/>](./pictures/subquery_with_where.png)
+
+# Subquery with where operators
+
+[<img src="./pictures/where_operator_subquery.png" width="50%"/>](./pictures/where_operator_subquery.png)
