@@ -1619,6 +1619,7 @@ SELECT
 (SELECT MAX(price) FROM products) , (SELECT AVG(price) FROM products);
 
 -- DISTINCT
+-- Distinct is always going to be placed inside of a select clause, and we're going to place it right after that select keyword.
 SELECT DISTINCT department FROM products;
 
 -- the number of unique departments we have inside of our products table.
@@ -1626,3 +1627,7 @@ SELECT COUNT(DISTINCT department) FROM products;
 
 --  it's going to find every unique combination of department and name put together.
 SELECT DISTINCT department, name FROM products;
+
+-- If we do a distinct over two or more different columns, we can no longer do a count on it.
+-- function count(character varying, character varying) does not exist
+SELECT COUNT(DISTINCT department, name) FROM products;
