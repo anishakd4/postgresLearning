@@ -1620,6 +1620,7 @@ SELECT
 
 -- DISTINCT
 -- Distinct is always going to be placed inside of a select clause, and we're going to place it right after that select keyword.
+-- Distinct is going to give you a list of all the different unique values inside of a column.
 SELECT DISTINCT department FROM products;
 
 -- the number of unique departments we have inside of our products table.
