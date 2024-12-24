@@ -1640,3 +1640,20 @@ SELECT name, weight , GREATEST(30, 2 * weight) FROM products;
 SELECT LEAST(8, 5, 2 , 4);
 
 SELECT name, price, LEAST(price * 0.5, 400) FROM products;
+
+SELECT name, price, 
+  CASE
+    WHEN price > 600 THEN 'high'
+    WHEN price > 300 THEN 'medium'
+    else 'cheap'
+  END
+FROM products;
+
+-- without else null will be returned at the unmatched case
+SELECT name, price, 
+  CASE
+    WHEN price > 600 THEN 'high'
+    WHEN price > 300 THEN 'medium'
+    else 'cheap'
+  END
+FROM products;
