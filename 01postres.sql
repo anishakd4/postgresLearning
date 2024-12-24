@@ -1620,3 +1620,9 @@ SELECT
 
 -- DISTINCT
 SELECT DISTINCT department FROM products;
+
+-- the number of unique departments we have inside of our products table.
+SELECT COUNT(DISTINCT department) FROM products;
+
+--  it's going to find every unique combination of department and name put together.
+SELECT DISTINCT department, name FROM products;
