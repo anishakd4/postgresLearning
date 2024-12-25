@@ -223,4 +223,7 @@
 
 # Character data types
 
+-  Char(5) : we provide a string to Postgres that is longer than five characters, then Postgres is going to trim characters until it just gets down to five. And likewise, if we provide a string less than five characters, Postgres is going to insert spaces to the right hand side until it gets up to five.
+- VARCHAR(5): we provide a string to Postgres that is longer than five characters, then Postgres is going to trim characters until it just gets down to five. If we put in a string less than five characters, no spaces will be added, as was the case with Char.
+
 [<img src="./pictures/character_data_type.png" width="50%"/>](./pictures/character_data_type.png)

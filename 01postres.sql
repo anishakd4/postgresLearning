@@ -1677,3 +1677,10 @@ SELECT (1.99999::REAL - 1.99998::REAL);
 -- this will return the exact result
 -- speaking of decimal and numeric, these are essentially the exact same type. You can think of these as being totally identical.
 SELECT (1.99999::DECIMAL - 1.99998::DECIMAL);
+
+
+SELECT ('asdfwewrwerew'::CHAR(3));
+
+SELECT ('a'::CHAR(3));
+
+SELECT ('awderwerwer'::VARCHAR(5));
