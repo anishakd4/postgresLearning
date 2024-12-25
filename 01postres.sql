@@ -1657,3 +1657,13 @@ SELECT name, price,
     else 'cheap'
   END
 FROM products;
+
+
+SELECT 2 + 2;
+SELECT (2);
+SELECT (2.0);
+SELECT (2.0::INTEGER);
+SELECT (2.0::SMALLINT);
+
+-- if we put in 99999, that's definitely outside the range of a small int and play that we get an error like this right here.
+SELECT (99999::SMALLINT);

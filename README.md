@@ -215,4 +215,6 @@
 
 [<img src="./pictures/data_type_category.png" width="50%"/>](./pictures/data_type_category.png)
 
+- rule of thumb here is that whenever we are trying to store numbers, that must be 100% accurate, like the number of grams of gold that someone owns or the their bank account currency or how much money they have inside their bank account. Even though there is a performance hit to making use of a types decimal or numeric, we want to use decimal or numeric. If we ever trying to store some kind of number that's going to have a decimal tied to it and we don't really need to be 100% precise, that's when we will reach for these other types of real double precision and float.
+
 [<img src="./pictures/numeric_data_type.png" width="50%"/>](./pictures/numeric_data_type.png)
