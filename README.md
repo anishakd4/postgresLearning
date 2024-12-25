@@ -207,3 +207,12 @@
 - We can make use of a correlated subquery not only inside of where, we can use them just about anywhere.
 
 [<img src="./pictures/correlated_queries.png" width="50%"/>](./pictures/correlated_queries.png)
+
+
+# Categories of data types in postgresql
+
+- So here are some of the different categories of data types we have access to. Now, I want to stress the word categories and say the numbers category. There are many different subtypes that we can get access to.
+
+[<img src="./pictures/data_type_category.png" width="50%"/>](./pictures/data_type_category.png)
+
+[<img src="./pictures/numeric_data_type.png" width="50%"/>](./pictures/numeric_data_type.png)
