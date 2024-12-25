@@ -220,3 +220,7 @@
 [<img src="./pictures/numeric_data_type.png" width="50%"/>](./pictures/numeric_data_type.png)
 
 [<img src="./pictures/number_data_type_02.png" width="50%"/>](./pictures/number_data_type_02.png)
+
+# Character data types
+
+[<img src="./pictures/character_data_type.png" width="50%"/>](./pictures/character_data_type.png)
