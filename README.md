@@ -232,5 +232,9 @@
 
 # Boolean data types
 
+- But what you need to know is that we can actually provide different values to Postgres, tell it to treat it as a boolean and it will automatically convert these different values into true or false for us.
+- Well, in the past, other databases and some different languages that we use to interact with databases have used a precedence of saying, rather than storing a boolean value of true or false, they instead might just store a one or a zero. So this is kind of some backwards support, support for other databases, support for other languages, or at least for other engineers coming into the Postgres world.
+- And besides true and false Boolean values or Boolean type columns can also store a value of null, which essentially means, well, we don't know. There's no value here.
+
 [<img src="./pictures/boolean_data_type.png" width="50%"/>](./pictures/boolean_data_type.png)
 

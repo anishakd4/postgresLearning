@@ -1684,3 +1684,12 @@ SELECT ('asdfwewrwerew'::CHAR(3));
 SELECT ('a'::CHAR(3));
 
 SELECT ('awderwerwer'::VARCHAR(5));
+
+SELECT ('True'::BOOLEAN);
+SELECT ('t'::BOOLEAN);
+SELECT ('y'::BOOLEAN);
+SELECT (1::BOOLEAN);
+
+SELECT ('no'::BOOLEAN);
+
+SELECT (NULL::BOOLEAN);
