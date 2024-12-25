@@ -238,3 +238,7 @@
 
 [<img src="./pictures/boolean_data_type.png" width="50%"/>](./pictures/boolean_data_type.png)
 
+# Date data types
+
+[<img src="./pictures/date_data_types.png" width="50%"/>](./pictures/date_data_types.png)
+
