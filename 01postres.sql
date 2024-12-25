@@ -1667,3 +1667,12 @@ SELECT (2.0::SMALLINT);
 
 -- if we put in 99999, that's definitely outside the range of a small int and play that we get an error like this right here.
 SELECT (99999::SMALLINT);
+
+-- in the world of Postgres, the type's real,double precision and float are treated with floating point math.If you're not familiar with floating point calculations, they are notorious for being somewhat inaccurate.
+-- when you start doing subtraction or any kind of really any kind of arithmetic operation on them, the decimal values are going to sometimes be just totally inaccurate and you're going to get these extra decimal values placed inside of here.
+-- So whenever we are trying to do or trying to store some values related to a value that we don't really care about too much, like, for example, the number of liters of water in a lake or the number of kilograms of trash in a landfill. We can make use of these different types over here.
+-- if they're not precise, the reason is that they're a lot more efficient for running calculations on. We can do math or do calculations with numbers that are of this type much more quickly than numbers of type, decimal or numeric.
+SELECT (1.99999::REAL - 1.99998::REAL);
+
+-- this will return the exact result
+SELECT (1.99999::DECIMAL - 1.99998::DECIMAL);
