@@ -1675,4 +1675,5 @@ SELECT (99999::SMALLINT);
 SELECT (1.99999::REAL - 1.99998::REAL);
 
 -- this will return the exact result
+-- speaking of decimal and numeric, these are essentially the exact same type. You can think of these as being totally identical.
 SELECT (1.99999::DECIMAL - 1.99998::DECIMAL);
