@@ -228,3 +228,9 @@
 - Now, just so you know, there is no performance difference between these different character types, which is kind of unlike many other types of databases. So you should pick the type that best suits your application. You don't have to worry about trying to pick the exact correct value of VarChar in order to optimize any performance or anything like that.
 
 [<img src="./pictures/character_data_type.png" width="50%"/>](./pictures/character_data_type.png)
+
+
+# Boolean data types
+
+[<img src="./pictures/boolean_data_type.png" width="50%"/>](./pictures/boolean_data_type.png)
+
