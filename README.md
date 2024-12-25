@@ -225,5 +225,6 @@
 
 -  Char(5) : we provide a string to Postgres that is longer than five characters, then Postgres is going to trim characters until it just gets down to five. And likewise, if we provide a string less than five characters, Postgres is going to insert spaces to the right hand side until it gets up to five.
 - VARCHAR(5): we provide a string to Postgres that is longer than five characters, then Postgres is going to trim characters until it just gets down to five. If we put in a string less than five characters, no spaces will be added, as was the case with Char.
+- Now, just so you know, there is no performance difference between these different character types, which is kind of unlike many other types of databases. So you should pick the type that best suits your application. You don't have to worry about trying to pick the exact correct value of VarChar in order to optimize any performance or anything like that.
 
 [<img src="./pictures/character_data_type.png" width="50%"/>](./pictures/character_data_type.png)
