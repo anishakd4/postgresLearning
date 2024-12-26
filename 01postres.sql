@@ -1757,3 +1757,18 @@ VALUES
 INSERT INTO products (name, department, price)
 VALUES
 	('Pants', 'Clothes', 3);
+
+-- ERROR:  column "weight" of relation "products" contains null values. Because already there is a row with weight as null value.
+ALTER TABLE products
+ALTER COLUMN weight SET NOT NULL;
+
+UPDATE products SET weight = 30 WHERE weight IS NULL;
+
+-- no error this time
+ALTER TABLE products
+ALTER COLUMN weight SET NOT NULL;
+
+-- Failing row contains (3, Shows, Clothes, 200, null).null value in column "weight" of relation "products" violates not-null constraint 
+INSERT INTO products (name, department, price)
+VALUES
+	('Shows', 'Clothes', 200);

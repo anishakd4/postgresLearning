@@ -261,7 +261,7 @@
 
 [<img src="./pictures/row_level_validation.png" width="50%"/>](./pictures/row_level_validation.png)
 
-# NUll constraint
+# NULL constraint
 
 - So in other words, we can't add a rule to this price column and say that there can't be null values because there's already one right there.
 - So we have to somehow deal with all the null values inside this table before we can apply a constraint to it.
