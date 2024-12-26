@@ -256,3 +256,7 @@
 # Interval data type
 
 [<img src="./pictures/interval_type.png" width="50%"/>](./pictures/interval_type.png)
+
+# Row level validation
+
+[<img src="./pictures/row_level_validation.png" width="50%"/>](./pictures/row_level_validation.png)
