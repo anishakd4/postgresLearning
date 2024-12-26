@@ -288,3 +288,7 @@
 - We're going to make sure that all the different products we add in have a unique combination of name and department.
 
 [<img src="./pictures/multi_column_uniqueness.png" width="50%"/>](./pictures/multi_column_uniqueness.png)
+
+# Validation check
+
+[<img src="./pictures/validation_check.png" width="50%"/>](./pictures/validation_check.png)

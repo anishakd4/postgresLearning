@@ -1788,3 +1788,11 @@ ALTER TABLE products Add UNIQUE(name, department);
 -- This will work once and next time it will fail because of same 
 INSERT INTO products (name, department, price, weight)
 VALUES ('Shirt', 'Housewares', 24, 1);
+
+
+ALTER TABLE products ADD CHECK (price > 0);
+
+-- ERROR:  Failing row contains (10, dress, cloths, -99, 7).new row for relation "products" violates check constraint "products_price_check" 
+
+INSERT INTO products (name, department, price, weight)
+VALUES ('dress', 'cloths', -99, 7);
