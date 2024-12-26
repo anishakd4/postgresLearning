@@ -268,3 +268,8 @@
 - We can either try to find all the rows inside this table that have a price of null and delete them. After we delete all those rows, we can then run this alter table command once again. And because there's no null values inside of price, it should succeed. Alternatively, we could write out a little bit of SQL that will find all the different rows inside this table with a price of null and update it to some other value.
 
 [<img src="./pictures/null_constraint.png" width="50%"/>](./pictures/null_constraint.png)
+
+
+# default column values
+
+[<img src="./pictures/default_colum_values.png" width="50%"/>](./pictures/default_colum_values.png)
