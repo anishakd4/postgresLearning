@@ -1739,3 +1739,21 @@ SELECT ('NOV-20-1980 01:23 AM PST'::TIMESTAMP WITH TIME ZONE) -
 
 SELECT ('NOV-20-1980 01:23 AM PST'::TIMESTAMP WITH TIME ZONE) - 
 ('NOV-13-1980 05:43 AM EST'::TIMESTAMP WITH TIME ZONE);
+
+
+CREATE TABLE products (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(40),
+	department VARCHAR(40),
+	price INTEGER,
+	weight INTEGER
+);
+
+INSERT INTO products (name, department, price, weight)
+VALUES
+	('Shirt', 'Clothes', 20, 1);
+
+-- price will be set to null for this row
+INSERT INTO products (name, department, price)
+VALUES
+	('Pants', 'Clothes', 3);

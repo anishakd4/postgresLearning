@@ -260,3 +260,11 @@
 # Row level validation
 
 [<img src="./pictures/row_level_validation.png" width="50%"/>](./pictures/row_level_validation.png)
+
+# NUll constraint
+
+- So in other words, we can't add a rule to this price column and say that there can't be null values because there's already one right there.
+- So we have to somehow deal with all the null values inside this table before we can apply a constraint to it.
+- We can either try to find all the rows inside this table that have a price of null and delete them. After we delete all those rows, we can then run this alter table command once again. And because there's no null values inside of price, it should succeed. Alternatively, we could write out a little bit of SQL that will find all the different rows inside this table with a price of null and update it to some other value.
+
+[<img src="./pictures/null_constraint.png" width="50%"/>](./pictures/null_constraint.png)
