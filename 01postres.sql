@@ -1781,3 +1781,10 @@ INSERT INTO products (name, department, weight) VALUES ('Gloves', 'Tools', 5);
 
 -- ERROR:  Key (name)=(Shirt) is duplicated.could not create unique index "products_name_key" 
 ALTER TABLE products ADD UNIQUE(name);
+
+
+ALTER TABLE products Add UNIQUE(name, department);
+
+-- This will work once and next time it will fail because of same 
+INSERT INTO products (name, department, price, weight)
+VALUES ('Shirt', 'Housewares', 24, 1);
