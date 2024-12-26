@@ -272,4 +272,6 @@
 
 # default column values
 
+- if we are setting up a default for, say, a VARCHAR column or a text column or a date or a Boolean, we could put the appropriate type inside of here. So for example, if we were setting up the default for VARCHAR. We had put in a default value of a string and set instead. So something like a string. If it was for a boolean column, we could put in a default of true or false, and for maybe a time we could put in a default time.
+
 [<img src="./pictures/default_colum_values.png" width="50%"/>](./pictures/default_colum_values.png)

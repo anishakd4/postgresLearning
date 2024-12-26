@@ -1772,3 +1772,9 @@ ALTER COLUMN weight SET NOT NULL;
 INSERT INTO products (name, department, price)
 VALUES
 	('Shows', 'Clothes', 200);
+
+
+ALTER TABLE products
+ALTER COLUMN price SET DEFAULT 999;
+
+INSERT INTO products (name, department, weight) VALUES ('Gloves', 'Tools', 5);
