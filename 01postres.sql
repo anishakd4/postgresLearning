@@ -1796,3 +1796,20 @@ ALTER TABLE products ADD CHECK (price > 0);
 
 INSERT INTO products (name, department, price, weight)
 VALUES ('dress', 'cloths', -99, 7);
+
+
+-- Multi column check
+CREATE TABLE orders (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(40) NOT NULL,
+	created_at TIMESTAMP NOT NULL,
+	est_delivery TIMESTAMP NOT NULL,
+	CHECK (created_at > est_delivery)
+);
+
+INSERT INTO orders (name, created_at, est_delivery) 
+VALUES ('Shirt', '2000-NOV-25 01:00 AM', '2000-NOV-20 01:00AM');
+
+-- ERROR:  Failing row contains (3, Shirt, 2000-11-19 01:00:00, 2000-11-29 01:00:00).new row for relation "orders" violates check constraint "orders_check" 
+INSERT INTO orders (name, created_at, est_delivery) 
+VALUES ('Shirt', '2000-NOV-19 01:00 AM', '2000-NOV-29 01:00AM');
