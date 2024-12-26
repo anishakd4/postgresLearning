@@ -1699,3 +1699,22 @@ SELECT ('NOV 20 1980'::DATE);
 SELECT ('NOV 20, 1980'::DATE);
 SELECT ('1980 NOV 20'::DATE);
 SELECT ('1980 November 20'::DATE);
+
+SELECT ('01:23'::TIME);
+
+-- both are exact same thing
+-- The type of this column is time without time zone. Time is an alias of time without time zone.
+SELECT ('01:23 PM'::TIME);
+SELECT ('01:23 PM'::TIME WITHOUT TIME ZONE);
+
+SELECT ('01:23:33 PM'::TIME);
+
+SELECT ('01:23:33 AM EST'::TIME WITH TIME ZONE);
+
+SELECT ('01:23:33 AM PST'::TIME WITH TIME ZONE);
+
+-- both are exact same thing
+SELECT ('01:23:33 AM z'::TIME WITH TIME ZONE);
+SELECT ('01:23:33 AM utc'::TIME WITH TIME ZONE);
+
+SELECT ('NOV-20-1980 01:23 AM PST'::TIMESTAMP WITH TIME ZONE);

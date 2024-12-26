@@ -242,3 +242,14 @@
 
 [<img src="./pictures/date_data_types.png" width="50%"/>](./pictures/date_data_types.png)
 
+# Time data type
+
+- We can store a time without a time zone or a time with a time zone as well.
+- So we could designate a time type or a type of time without time zone. They mean the exact same thing.
+
+[<img src="./pictures/time_with_zone.png" width="50%"/>](./pictures/time_with_zone.png)
+
+- the eastern coast of the United States, it will be converted into 01:23 minus 05. The -05 right there indicates five hours behind UTC time.
+
+[<img src="./pictures/time_without_zone.png" width="50%"/>](./pictures/time_without_zone.png)
+
