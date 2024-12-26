@@ -1778,3 +1778,6 @@ ALTER TABLE products
 ALTER COLUMN price SET DEFAULT 999;
 
 INSERT INTO products (name, department, weight) VALUES ('Gloves', 'Tools', 5);
+
+-- ERROR:  Key (name)=(Shirt) is duplicated.could not create unique index "products_name_key" 
+ALTER TABLE products ADD UNIQUE(name);

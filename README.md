@@ -278,4 +278,7 @@
 
 # unique constraint
 
+- We cannot add this unique constraint unless all the values inside that column are already unique. So we have to clean up all the duplicate values first before we can apply this constraint.
+- So let's say that we want to manually modify the name of this product right here. So I'm going to change its name to how about Red Shirt and then click Okay. Now, just making that change doesn't actually modify any value after making that change. If I refresh the table again. You'll notice that it reverts back to shirt. So after we manually make a change like this, we have to click on this little grid button right here that's going to save the changes that we have manually made inside this table.
+
 [<img src="./pictures/unique_constraint.png" width="50%"/>](./pictures/unique_constraint.png)
