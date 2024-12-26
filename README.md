@@ -253,3 +253,6 @@
 
 [<img src="./pictures/time_without_zone.png" width="50%"/>](./pictures/time_without_zone.png)
 
+# Interval data type
+
+[<img src="./pictures/interval_type.png" width="50%"/>](./pictures/interval_type.png)
