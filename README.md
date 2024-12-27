@@ -302,3 +302,13 @@
 # Reaction based system
 
 [<img src="./pictures/reaction_based_system.png" width="50%"/>](./pictures/reaction_based_system.png)
+
+
+# Polymorphic associations
+
+- Whenever we try to insert, say, a new like with this kind of original design over here, Postgres is going to take a look at the value that we put into the user ID column. In this case, if we try to insert a row with a user ID of three, then Postgres is going to go over to the users table and make sure that there actually is a user ID of three.If there is no user ID of three, then Postgres is going to say throw an error.
+- And the reason for that is that when we create this table and we tell Postgres that this is going to be a foreign key column, we can't tell Postgres if it's going to be a foreign key on the post table or the comment table. We don't know up front. We only know later on when we actually insert a row into this table.
+- So when we make use of this polymorphic association and we've got this like type column and this like ID column, we cannot treat this as a foreign key column. And so we lose out on this entire idea of data consistency.
+- We could very easily insert a like in here. That refers to a comment with 99999. And well, we don't have a comment with that ID and so we can very easily accidentally insert data that is going to refer to some other row that just doesn't exist.
+
+[<img src="./pictures/polymorphic_associations.png" width="50%"/>](./pictures/polymorphic_associations.png)
