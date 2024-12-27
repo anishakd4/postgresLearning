@@ -336,3 +336,18 @@
 [<img src="./pictures/phototags_and_captiontags.png" width="50%"/>](./pictures/phototags_and_captiontags.png)
 
 [<img src="./pictures/tag_solution_1.png" width="50%"/>](./pictures/tag_solution_1.png)
+
+[<img src="./pictures/tag_solution_2.png" width="50%"/>](./pictures/tag_solution_2.png)
+
+- If you ever expect to have to run queries against caption tags like ten times more frequently than for photo tags? If that is the case, then you might want to split these out into two separate tables.
+- Doing an optimization like that would be a lot more challenging if we had everything combined together on one single table.
+- If we ever expect a photo tag to kind of change in functionality, then well, that would really drive us towards solution number two, because that means we could start making changes to our photo tags table without having to worry about the impact on that separate definition of a tag that occurred inside of a caption.
+
+# Hastag system
+
+[<img src="./pictures/hastag_design_first_impression.png" width="50%"/>](./pictures/hastag_design_first_impression.png)
+
+- We only have to model things that we eventually expect to query. In the case of tags inside of a caption, we did decide that this was an important thing to model inside of our database because we eventually might want to run a query to figure out who the most popular users are.
+- So before we start to go to down down this path of creating these three separate tables to model the relationship between a hashtag and a post, a comment or a user, we kind of have to ask ourselves the exact same question.
+- Because if we don't, we don't really have to model out these relationships. If we're never going to use this data, we don't have to create these tables.
+- If we search some hastag then we are being presented with only one kind of resource : a post. When you look at a hash tag, you are only seeing posts that make use of the hash tag inside of the post caption.
