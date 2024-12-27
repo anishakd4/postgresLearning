@@ -321,3 +321,7 @@
 - The only downside here is that if you end up with wanting to relate a user to many different kinds of things, like let's say we want to allow a user to like a post, a comment, a channel, a video, a message, a I don't know, who knows what else, a website. If we want to allow a user to comment many different things, that means that we would end up with many different columns inside this table.
 
 [<img src="./pictures/polymorphic_association_alternative_implementation_iisue.png" width="50%"/>](./pictures/polymorphic_association_alternative_implementation_iisue.png)
+
+# Simplest alternative
+
+[<img src="./pictures/simplest_alternative.png" width="50%"/>](./pictures/simplest_alternative.png)
