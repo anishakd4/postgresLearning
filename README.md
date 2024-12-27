@@ -351,3 +351,5 @@
 - So before we start to go to down down this path of creating these three separate tables to model the relationship between a hashtag and a post, a comment or a user, we kind of have to ask ourselves the exact same question.
 - Because if we don't, we don't really have to model out these relationships. If we're never going to use this data, we don't have to create these tables.
 - If we search some hastag then we are being presented with only one kind of resource : a post. When you look at a hash tag, you are only seeing posts that make use of the hash tag inside of the post caption.
+
+[<img src="./pictures/hastag_system_design_conclusion.png" width="50%"/>](./pictures/hastag_system_design_conclusion.png)
