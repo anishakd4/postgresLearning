@@ -353,3 +353,7 @@
 - If we search some hastag then we are being presented with only one kind of resource : a post. When you look at a hash tag, you are only seeing posts that make use of the hash tag inside of the post caption.
 
 [<img src="./pictures/hastag_system_design_conclusion.png" width="50%"/>](./pictures/hastag_system_design_conclusion.png)
+
+- On the other hand, we cannot search for comments or users with a hashtag, and that kind of implies that we do not care about this relationship at all. We don't really care about which hashtags are being used inside of a given comment or which users are using a hashtag inside their biography.
+- hashtags related to comments and hashtags related to users are not really being used at all. And because of that, we really don't need those tables.
+- So we don't really need those two extra tables. We really just need the relationship between a hashtag and the post.
