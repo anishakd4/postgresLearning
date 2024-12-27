@@ -324,4 +324,9 @@
 
 # Simplest alternative
 
+- It does allow us to create some different check constraints or validation rules for each different kind of like.
+- if we want to allow a user to like a post and also put in some kind of like reaction type to it. But we only want to allow a post to have a reaction type and maybe comments can only be liked. This would also be a pretty good solution.
+
 [<img src="./pictures/simplest_alternative.png" width="50%"/>](./pictures/simplest_alternative.png)
+
+[<img src="./pictures/simple_alternative_02.png" width="50%"/>](./pictures/simple_alternative_02.png)
