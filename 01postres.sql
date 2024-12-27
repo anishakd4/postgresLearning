@@ -1813,3 +1813,18 @@ VALUES ('Shirt', '2000-NOV-25 01:00 AM', '2000-NOV-20 01:00AM');
 -- ERROR:  Failing row contains (3, Shirt, 2000-11-19 01:00:00, 2000-11-29 01:00:00).new row for relation "orders" violates check constraint "orders_check" 
 INSERT INTO orders (name, created_at, est_delivery) 
 VALUES ('Shirt', '2000-NOV-19 01:00 AM', '2000-NOV-29 01:00AM');
+
+-- All COALESCE does is it takes a look at the different arguments it is provided and it's going to return the first value that is not null.
+SELECT COALESCE(NULL, 5);
+SELECT COALESCE(10, 5);
+
+
+SELECT COALESCE((NULL)::BOOLEAN::INTEGER, 0);
+
+-- this will return null;
+SELECT (NULL)::BOOLEAN::INTEGER;
+
+-- for any number greater than 0, this will return 1
+SELECT (1)::BOOLEAN::INTEGER;
+SELECT (45)::BOOLEAN::INTEGER;
+
