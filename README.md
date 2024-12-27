@@ -357,3 +357,6 @@
 - On the other hand, we cannot search for comments or users with a hashtag, and that kind of implies that we do not care about this relationship at all. We don't really care about which hashtags are being used inside of a given comment or which users are using a hashtag inside their biography.
 - hashtags related to comments and hashtags related to users are not really being used at all. And because of that, we really don't need those tables.
 - So we don't really need those two extra tables. We really just need the relationship between a hashtag and the post.
+
+
+[<img src="./pictures/hashtag_table_perf.png" width="50%"/>](./pictures/hashtag_table_perf.png)
