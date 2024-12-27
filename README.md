@@ -292,3 +292,9 @@
 # Validation check
 
 [<img src="./pictures/validation_check.png" width="50%"/>](./pictures/validation_check.png)
+
+# Likes System
+
+[<img src="./pictures/likes_system_01.png" width="50%"/>](./pictures/likes_system_01.png)
+
+[<img src="./pictures/likes_system_02.png" width="50%"/>](./pictures/likes_system_02.png)
