@@ -330,3 +330,9 @@
 [<img src="./pictures/simplest_alternative.png" width="50%"/>](./pictures/simplest_alternative.png)
 
 [<img src="./pictures/simple_alternative_02.png" width="50%"/>](./pictures/simple_alternative_02.png)
+
+# Photo Tags and Caption Tags
+
+[<img src="./pictures/phototags_and_captiontags.png" width="50%"/>](./pictures/phototags_and_captiontags.png)
+
+[<img src="./pictures/tag_solution_1.png" width="50%"/>](./pictures/tag_solution_1.png)
