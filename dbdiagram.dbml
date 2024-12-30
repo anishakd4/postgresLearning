@@ -3,6 +3,12 @@ Table users {
   created_at TIMESTAMP
   updated_at TIMESTAMP
   username VARCHAR(30)
+  bio varchar(400)
+  avatar varchar(200)
+  phone varchar(25)
+  email varchar(40)
+  password varchar(50)
+  status varchar(15)
 }
 
 Table posts {
@@ -64,4 +70,11 @@ Table hashtags_posts {
   id serial [pk, increment]
   hashtag_id integer [ref: > hashtags.id]
   post_id integer [ref: > posts.id]
+}
+
+Table followers {
+  id serial [pk, increment]
+  created_at timestamp
+  leader_id integer [ref: > users.id]
+  follower_id integer [ref: > users.id]
 }

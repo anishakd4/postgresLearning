@@ -364,3 +364,7 @@
 - The real big statement here, the big reason for that is that you'll notice that in the hash tags table on this first design, we had a lot of words that were being duplicated many different times. Any time that we start to duplicate strings, that might be a little bit of a space concern. We might be using a little bit more storage in our database than we would otherwise want to be using. It turns out that if we make use of this kind of relationship, we only have to list out each string just one time and then we can store a very simple integer instead to point back to the appropriate string. Storing an integer is a lot more space effective than storing a big string in general.
 
 [<img src="./pictures/hashtag_table_perf.png" width="50%"/>](./pictures/hashtag_table_perf.png)
+
+# follower design system
+
+[<img src="./pictures/follower_design_system.png" width="50%"/>](./pictures/follower_design_system.png)
