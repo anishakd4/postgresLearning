@@ -20,5 +20,5 @@ CREATE TABLE posts (
 	caption VARCHAR(240),
 	lat REAL CHECK(lat is NULL OR (lat >= -90 AND lat <= 90)),
 	lng REAL CHECK(lng is NULL OR (lng >= -180 AND lng <= 180)),
-	user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+	user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE
 );
