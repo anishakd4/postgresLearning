@@ -358,5 +358,6 @@
 - hashtags related to comments and hashtags related to users are not really being used at all. And because of that, we really don't need those tables.
 - So we don't really need those two extra tables. We really just need the relationship between a hashtag and the post.
 
+[<img src="./pictures/hastag_table_design.png" width="50%"/>](./pictures/hastag_table_design.png)
 
 [<img src="./pictures/hashtag_table_perf.png" width="50%"/>](./pictures/hashtag_table_perf.png)
