@@ -11,3 +11,6 @@
 - So this file 16420 which is is shown against users table in below, in theory, contains all of the data for my entire users table.
 
 [<img src="./pg_class_list.png" width="50%"/>](./pg_class_list.png)
+
+- So at this point in time, we've established that inside of your hard disk somewhere, Postgres is storing all the information tied to one individual database inside of one folder.
+- And inside of that directory are a ton of different files. And each of these different files represent one different thing inside the database. An example of a individual thing is a table. And so we identified two files that store all the data related to our users table and our post table.
