@@ -45,3 +45,5 @@
 - So when you are looking at above diagram, we can kind of imagine that behind the scenes, we are looking at some collection of zeros and ones. So maybe the first set of zeros and ones right here. The first couple of zeroes and ones are being dedicated to store some very particular type of information. Maybe the next couple of zeros and ones are being dedicated to store some other kind of information. And then eventually maybe the zeros and ones at the very bottom are dedicated to storing yet another kind of information.
 
 [<img src="./block_binary.png" width="50%"/>](./block_binary.png)
+
+[<img src="./block_detailed_structure.png" width="50%"/>](./block_detailed_structure.png)
