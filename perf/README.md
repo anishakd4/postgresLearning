@@ -34,3 +34,7 @@
 - By default. Each of these blocks or pages are eight kilobytes in size. So we might have one block right here. Regardless of how many items are inside of it, it is always eight kilobytes large. The next one, regardless of how many items are stored inside of it, it is always eight kilobytes large.
 
 [<img src="./heap_file.png" width="50%"/>](./heap_file.png)
+
+# Block Data layout
+
+[<img src="./block_data_layout.png" width="50%"/>](./block_data_layout.png)
