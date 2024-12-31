@@ -37,4 +37,11 @@
 
 # Block Data layout
 
+- Each block. has this kind of structure.
+- Well, when we are thinking about block number one, we are really talking about some information that is being stored on the hard disk of your computer. Your hard disk stores information as binary. So zeros and ones.
+
 [<img src="./block_data_layout.png" width="50%"/>](./block_data_layout.png)
+
+- So when you are looking at above diagram, we can kind of imagine that behind the scenes, we are looking at some collection of zeros and ones. So maybe the first set of zeros and ones right here. The first couple of zeroes and ones are being dedicated to store some very particular type of information. Maybe the next couple of zeros and ones are being dedicated to store some other kind of information. And then eventually maybe the zeros and ones at the very bottom are dedicated to storing yet another kind of information.
+
+[<img src="./block_binary.png" width="50%"/>](./block_binary.png)
