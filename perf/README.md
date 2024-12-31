@@ -53,3 +53,23 @@
 - At the very end, we've got some collection of zeros and ones down here for information about tuple two perhaps, and then maybe some information about tuple Number one, perhaps.
 
 [<img src="./block_detailed_structure.png" width="50%"/>](./block_detailed_structure.png)
+
+- If we scroll up to the very top, we are looking at the start of page zero right here. This is page zero. If we counted off 8096 bytes. So if we counted off like one, two, three, four, and then all the way down, we would eventually get to page number two. Because remember, every page is eight kilobytes and inside of eight kilobytes there are 8096 bytes.
+
+[<img src="./db_data_read.png" width="50%"/>](./db_data_read.png)
+
+# PageHeaderData layout
+
+- pd_lower is a two byte value. It is an offset to the start of free space.
+- Right after pd_lower, the next two bytes are referred to as upper. That is also going to be an integer value and it's going to be the number of bytes from the start of the page all the way down to the end of free space.
+
+[<img src="./data_layout_breakup.png" width="50%"/>](./data_layout_breakup.png)
+
+# itemiddata
+
+- Here's our header, the first 24 bytes. So then every four bytes section after that represents one individual itemiddata. So you can see that in total from the end of the header all the way down to the start of our free space. So these are all item data's, each one is four bytes long.
+- Each item ID data has a byte offset to the start of an item. In this case, remember an item is a tuple or a row. So the byte offset to the start of the item essentially means the number of bytes from the start of the page to the start of an actual item or a tuple or a row inside of this block. It then relates the length of that individual row or item in bytes and then some other information that we don't really care about. So in reality, these itemID things, item ID datas are telling us the byte offset to the start of item and its length in bytes.
+
+[<img src="./data_layout_breakup.png" width="50%"/>](./data_layout_breakup.png)
+
+[<img src="./page_layout.png" width="50%"/>](./page_layout.png)
