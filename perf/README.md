@@ -16,3 +16,15 @@
 
 - So at this point in time, we've established that inside of your hard disk somewhere, Postgres is storing all the information tied to one individual database inside of one folder.
 - And inside of that directory are a ton of different files. And each of these different files represent one different thing inside the database. An example of a individual thing is a table. And so we identified two files that store all the data related to our users table and our post table.
+
+# HEAPS, BLOCKS AND TUPLES 
+
+- HEAP or HEAP file: This is a file that contains all the data related to one particular table.
+- 16420 is a heap file as it contains all of the data for my entire users table.
+- A heap data structure is very different than a heap file, so we don't really want to be thinking about a heap data structure at all when we're thinking about these heap file things.
+- Tuple or Item: These are referring to individual rows from one particular table.
+- A single heat file is divided into many different blocks or pages. And then inside of each block or page, we have many different tuples items/Rows.
+
+[<img src="./heap_tuple_block_01.png" width="50%"/>](./heap_tuple_block_01.png)
+
+[<img src="./heap_tuple_block_02.png" width="50%"/>](./heap_tuple_block_02.png)
