@@ -69,7 +69,15 @@
 
 - Here's our header, the first 24 bytes. So then every four bytes section after that represents one individual itemiddata. So you can see that in total from the end of the header all the way down to the start of our free space. So these are all item data's, each one is four bytes long.
 - Each item ID data has a byte offset to the start of an item. In this case, remember an item is a tuple or a row. So the byte offset to the start of the item essentially means the number of bytes from the start of the page to the start of an actual item or a tuple or a row inside of this block. It then relates the length of that individual row or item in bytes and then some other information that we don't really care about. So in reality, these itemID things, item ID datas are telling us the byte offset to the start of item and its length in bytes.
+- Remember, each item ID is actually referring to an individual or different item inside the data section.
 
 [<img src="./data_layout_breakup.png" width="50%"/>](./data_layout_breakup.png)
 
 [<img src="./page_layout.png" width="50%"/>](./page_layout.png)
+
+# Table row layout
+
+- for an individual item, this is the tricky part. There's actually 23 bytes worth of information at the start of the item. Then some other information after that. And then finally, after all that filler stuff is the actual user data. Like the actual ID that we care about, the created_at, the username and so on.
+- The start of this item is actually the start of the header for the item only after about 23 bytes plus or minus some additional amount do we actually get to the data that we really care about.
+
+[<img src="./table_row_layout.png" width="50%"/>](./table_row_layout.png)
