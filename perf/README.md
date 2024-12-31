@@ -46,4 +46,10 @@
 
 [<img src="./block_binary.png" width="50%"/>](./block_binary.png)
 
+- So right now, as you're looking at this diagram, this is kind of a representation of the actual physical data being stored on your hard drive and the purpose of every little zero and one in there. So as I mentioned, this is a very low level lecture that we're going through right now.
+
+- So inside the block we have some collection of zeros and ones at the very start of the block that are made to represent information about the block itself. The next section of zeros and ones contain information about the actual data that is stored inside this block. So information about the actual rows. This does not actually contain information for the rows themselves. So in other words, there's not necessarily any IDs or user names or anything like that inside of here. These are just little pieces of information that say where you can find the different rows that are stored inside the block.
+- After that, we've got this big gray area in the middle that is dedicated to free space. By free space. I just mean to say there are some collection of zeros and ones that are not actually being used by the block right now.
+- At the very end, we've got some collection of zeros and ones down here for information about tuple two perhaps, and then maybe some information about tuple Number one, perhaps.
+
 [<img src="./block_detailed_structure.png" width="50%"/>](./block_detailed_structure.png)
