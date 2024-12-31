@@ -71,9 +71,9 @@ CREATE TABLE hashtags (
 
 CREATE TABLE hashtags_posts (
 	id SERIAL PRIMARY KEY,
-	hastag_id INTEGER NOT NULL REFERENCES hashtags(id) ON DELETE CASCADE,
+	hashtag_id INTEGER NOT NULL REFERENCES hashtags(id) ON DELETE CASCADE,
 	post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
-	UNIQUE(hastag_id, post_id)
+	UNIQUE(hashtag_id, post_id)
 );
 
 CREATE TABLE followers (
