@@ -27,4 +27,10 @@
 
 [<img src="./heap_tuple_block_01.png" width="50%"/>](./heap_tuple_block_01.png)
 
+- The entire file itself is referred to as the heap or heap file. The file is subdivided into many different blocks or pages, and then each block or page stores some number of tuples items rows. Each block or page can store no items. So like no users whatsoever or can can store many different items.
+
 [<img src="./heap_tuple_block_02.png" width="50%"/>](./heap_tuple_block_02.png)
+
+- By default. Each of these blocks or pages are eight kilobytes in size. So we might have one block right here. Regardless of how many items are inside of it, it is always eight kilobytes large. The next one, regardless of how many items are stored inside of it, it is always eight kilobytes large.
+
+[<img src="./heap_file.png" width="50%"/>](./heap_file.png)
