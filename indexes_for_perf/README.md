@@ -54,5 +54,7 @@
 
 
 - So the index that was created was automatically given a name of users username id ID being short for index.
+- Whenever you create an index, if you do not provide a name, one will be assigned for you automatically. The name that gets assigned is always going to follow this naming convention. It's always going to be the name of the table, the name of the column. And then idx at the very end.
+- So now in theory queries on our username column inside that users table will be rather quick.
 
 [<img src="./index_created.png" width="50%"/>](./index_created.png)
