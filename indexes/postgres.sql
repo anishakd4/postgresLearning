@@ -8,3 +8,7 @@ SELECT pg_size_pretty(pg_relation_size('users'));
 
 -- Well, definitely 880kB and 184kB is really no big deal. At the end of the day, these are trivial amounts of space. So in a big application just for table 80GB large, we might be talking about 18GB worth of information just to store this additional index.
 SELECT pg_size_pretty(pg_relation_size('users_username_idx'));
+
+
+-- So we are looking at all the different indexes that exist inside of our Instagram database right now.
+SELECT relname, relkind FROM pg_class WHERE relkind = 'i';

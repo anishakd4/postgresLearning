@@ -105,7 +105,15 @@
 
 [<img src="./types_of_indexes.png" width="50%"/>](./types_of_indexes.png)
 
+# automatic_index
+
 - Any time that you create a column that is a primary key column or anytime you create a column that has a unique constraint on it, Postgres is going to automatically create an index for you for specifically that column.
 
+- Now, the one thing that's really confusing about this is that these indexes don't actually get listed under the indexes section in Pgadmin.
+
 [<img src="./automatic_index.png" width="50%"/>](./automatic_index.png)
+
+- This pg_class table lists all the different objects that exist inside of our database. So all the different tables, indexes, sequences and so on.
+
+- A relkind='i' means that this object listed out inside of here is an index.
 
