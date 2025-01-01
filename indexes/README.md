@@ -102,3 +102,10 @@
 - Anytime that we run the Create Index command, we are creating a very specific type of index. So in Postgres there are several different types of indices that we can create. The most common one and the one that you want the vast majority of the time is a b-tree index.
 
 - All of our information stored in the leaf nodes and then the more parent nodes direct us to the leaf node that we want to visit is referred to as a b-tree index.
+
+[<img src="./types_of_indexes.png" width="50%"/>](./types_of_indexes.png)
+
+- Any time that you create a column that is a primary key column or anytime you create a column that has a unique constraint on it, Postgres is going to automatically create an index for you for specifically that column.
+
+[<img src="./automatic_index.png" width="50%"/>](./automatic_index.png)
+
