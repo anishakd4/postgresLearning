@@ -51,3 +51,8 @@
 [<img src="./index_create_step_07.png" width="50%"/>](./index_create_step_07.png)
 
 [<img src="./index_create_step_08.png" width="50%"/>](./index_create_step_08.png)
+
+
+- So the index that was created was automatically given a name of users username id ID being short for index.
+
+[<img src="./index_created.png" width="50%"/>](./index_created.png)
