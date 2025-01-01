@@ -73,4 +73,22 @@
 
 [<img src="./query_speed_without_indexing.png" width="50%"/>](./query_speed_without_indexing.png.png)
 
+
+# Downsides on indexes
+
 - There are many scenarios where an index is not super useful. There are even more scenarios where an index can actually ultimately slow down your database.
+
+- When we created the index, we were essentially creating some kind of tree data structure behind the scenes and inside that tree data structure. For every row of our actual table, we extracted one piece of information along with a pointer over to some location inside of our heap file.
+
+- in other words, for every single row we are now storing in addition inside of our index some piece of information and a pointer that comes with some amount of storage cost. It takes some amount of hard drive space just to store this index. It doesn't just persist inside of memory. There's actually a file that is created on our hard drive to store all this index data.
+
+- So any time that you create an index, you are using some additional amount of storage space on your computer.
+
+- So in other words, if you are relying upon to host a copy of Postgres for you, the amount of money that you pay on storage space is actually rather large. So in some cases you can actually save a lot of money by not kind of stuffing a ton of extra information into your database.
+
+- Having an index around can also slow down the insert update and delete operations on that table because every single time that you make a change to that table. Now Postgres also has to go and update the index. So if you decide to, say, insert 20 rows into your table, well, that means Postgres has to make 20 updates to the index as well.
+
+- It turns out that there are actually some scenarios where Postgres is not going to use an index to speed up a particular query. So just because an index exists doesn't guarantee that Postgres is going to actually use it. There are actually some queries that are going to run faster without using an index at all.
+
+
+[<img src="./downsides_indexes.png" width="50%"/>](./downsides_indexes.png)
