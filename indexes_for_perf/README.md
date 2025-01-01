@@ -58,3 +58,19 @@
 - So now in theory queries on our username column inside that users table will be rather quick.
 
 [<img src="./index_created.png" width="50%"/>](./index_created.png)
+
+# Query speed
+
+-  whenever you run a query right now, you do see query returned successfully in some number of milliseconds. That millisecond value right there is just a little bit misleading because it includes travel time for the query from essentially the Pgadmin interface over to the database and back. So in other words, it includes some network travel time that doesn't really reflect very nicely or is really relevant on the actual execution speed of the query itself.
+
+- So for right now, there's really just one value I want to focus on, and that is this fourth row right here, execution time. That execution time is how long it took to actually run this query.
+
+- So when we have the index in place, it looks like running this query or doing the select statement is just unbelievably fast.
+
+[<img src="./query_speed_with_indexing.png" width="50%"/>](./query_speed_with_indexing.png)
+
+- it is way slower than how long it took to fetch a user when we had the index in place.
+
+[<img src="./query_speed_without_indexing.png" width="50%"/>](./query_speed_without_indexing.png.png)
+
+- There are many scenarios where an index is not super useful. There are even more scenarios where an index can actually ultimately slow down your database.
