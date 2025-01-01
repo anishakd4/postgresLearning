@@ -20,3 +20,34 @@
 [<img src="./index_02.png" width="50%"/>](./index_02.png)
 
 [<img src="./indexing.png" width="50%"/>](./indexing.png)
+
+# How indexing is created
+
+- the series of steps we're about to go through is not exactly what occurs inside of Postgres, but the series of steps I'm going to show you is close enough that it's going to help you understand some of the inner workings of an index, how it works, and some big caveats around them as well.
+- for step number one, in creating an index, you and I are first going to decide exactly which column we want to have a very fast lookup on.
+- whenever we create an index, we create it on a very specific column that allows us to do a fast lookup on our table of users whenever we are doing some kind of filtering logic on that same column.
+- Now we can technically have an index that takes into account the value in multiple different columns for each row, not just one.
+- Step number two, we're going to take a look at our user table or really our heap file, and we're going to look for every single row. We're going to extract just that one property that we want to create the index for. And then when we extract that property, we're also going to record the block and the index that we found that property at.
+- So we're now going to take a look at all the different values that we have extracted and sort them in some meaningful way. So in this case, we're going to sort all of our user names in alphabetical order from A to Z.
+- Now, the next step is going to take that list of records right there and we're going to organize them all into a tree data structure.
+- notice that I preserved alphabetical order here. So if we look at all these records from left to right, they are still in alphabetical order.
+- so now last big step. We're going to add some helpers to the root node.
+- Inside these white boxes, we're going to put in some directions to say whether or not someone who's trying to execute a query or find some particular record should go down to that leaf node.
+- When we went through this sort of operation, we were able to find the exact record we were looking for without having to load up the vast majority of records inside of our heap file so we did not have to access block zero inside the heap file.
+- So we were able to skip a huge portion of this entire search operation by just using the inequalities that we had set up ahead of time.
+
+[<img src="./index_create_step_01.png" width="50%"/>](./index_create_step_01.png)
+
+[<img src="./index_create_step_02.png" width="50%"/>](./index_create_step_02.png)
+
+[<img src="./index_create_step_03.png" width="50%"/>](./index_create_step_03.png)
+
+[<img src="./index_create_step_04.png" width="50%"/>](./index_create_step_04.png)
+
+[<img src="./index_create_step_05.png" width="50%"/>](./index_create_step_05.png)
+
+[<img src="./index_create_step_06.png" width="50%"/>](./index_create_step_06.png)
+
+[<img src="./index_create_step_07.png" width="50%"/>](./index_create_step_07.png)
+
+[<img src="./index_create_step_08.png" width="50%"/>](./index_create_step_08.png)
