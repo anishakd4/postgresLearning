@@ -92,3 +92,13 @@
 
 
 [<img src="./downsides_indexes.png" width="50%"/>](./downsides_indexes.png)
+
+# Index Types
+
+[<img src="./index_types.png" width="50%"/>](./index_types.png)
+
+# Types of indexes
+
+- Anytime that we run the Create Index command, we are creating a very specific type of index. So in Postgres there are several different types of indices that we can create. The most common one and the one that you want the vast majority of the time is a b-tree index.
+
+- All of our information stored in the leaf nodes and then the more parent nodes direct us to the leaf node that we want to visit is referred to as a b-tree index.
