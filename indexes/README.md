@@ -185,3 +185,5 @@
 - when we were actually looking at a leaf node, the CT id takes on a slightly different meaning. When you are looking at a leaf node, the CTid represents the page and the index in that page of where we can find this record inside of our user heap file.
 
 [<img src="./hex_in_leaf.png" width="50%"/>](./hex_in_leaf.png)
+
+[<img src="./leaf_and_root.png" width="50%"/>](./leaf_and_root.png)
