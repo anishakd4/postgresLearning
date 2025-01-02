@@ -152,4 +152,26 @@
 
 - You'll notice that we do not see an index of three here. That is because index three is the actual root node itself. We are looking at the root node right now. So all the id CT IDs right here 1, 2, 4, 5, 6, 7, 8, Those are the index of the different leaf nodes that we can go to.
 
+- data column of the first row is empty.
+
+- Well when we said that there is some kind of comparison in the root node going on, we was kind of exaggerating just a little bit, just to make things a little bit more clear. In reality, the comparison that we do here is a little bit more complicated.
+
 [<img src="./bt_page_items_04.png" width="50%"/>](./bt_page_items_04.png)
+
+- So we see some hex value inside of data column.
+
+- hex value in the second row translates to Allison14 which is an actual username tied to one of our users.
+
+[<img src="./index_table_hex_data_value.png" width="50%"/>](./index_table_hex_data_value.png)
+
+- when we first come into this root node. We would go to the first cell right here. We would skip over it because it's empty. And we would say okay, do we have a value that is greater than or equal to Alison14 if we do not, we would go back to the previous and go down to page one.
+
+- Otherwise, if we are looking for some value that is greater than or equal to Alison14 we could possibly go down to page two, but first we would probably want to check the next possible page over.
+
+- So now if we have a value that is greater than Allison 14, we would go to the next one. Say do we have a value that is greater than or equal to Austin zero. If we do, then we would kind of continue on the comparison. Otherwise, if we have a value that is less than Austin dot zero, but greater than or equal to Allison14, that means we would go down into page two.
+
+- process is a little bit confusing, but basically we start on the left hand side and go over until we eventually kind of fail this comparison. And as soon as we do, that is a sign that we need to go kind of back one step and go down to the respective page.
+
+[<img src="./hex_to_string.png" width="50%"/>](./hex_to_string.png)
+
+[<img src="./root_condition_from_hex.png" width="50%"/>](./root_condition_from_hex.png)
