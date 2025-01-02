@@ -145,3 +145,11 @@
 [<img src="./index_on_disk.png" width="50%"/>](./index_on_disk.png)
 
 [<img src="./index_in_memory.png" width="50%"/>](./index_in_memory.png)
+
+[<img src="./bt_page_items_01.png" width="50%"/>](./bt_page_items_01.png)
+
+[<img src="./bt_page_items_02.png" width="50%"/>](./bt_page_items_02.png)
+
+[<img src="./bt_page_items_03.png" width="50%"/>](./bt_page_items_03.png)
+
+[<img src="./bt_page_items_04.png" width="50%"/>](./bt_page_items_04.png)
