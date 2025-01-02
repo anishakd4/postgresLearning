@@ -175,3 +175,13 @@
 [<img src="./hex_to_string.png" width="50%"/>](./hex_to_string.png)
 
 [<img src="./root_condition_from_hex.png" width="50%"/>](./root_condition_from_hex.png)
+
+# Leaf node
+
+- The first row in the leaf node has a very special meaning.
+
+- So Row two is going to be the first possible alphabetically sorted record out of our entire table.
+
+- when we were actually looking at a leaf node, the CT id takes on a slightly different meaning. When you are looking at a leaf node, the CTid represents the page and the index in that page of where we can find this record inside of our user heap file.
+
+[<img src="./hex_in_leaf.png" width="50%"/>](./hex_in_leaf.png)
