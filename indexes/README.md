@@ -117,3 +117,31 @@
 
 - A relkind='i' means that this object listed out inside of here is an index.
 
+# Behind the scenes of indexes
+
+- When we create an index, an actual file is created on your hard drive. The file is assigned some kind of random number identifier.
+
+- The structure of this file internally has the same kind of structure that we had for those heap files.
+
+- So inside of this index file we have eight kilobyte pages.
+
+- In the case of an index each page has a very specific purpose. Whereas back inside of a heat file each page was essentially identical to another.
+
+- The very first page is called the meta page. So this has some information about the overall index. We then might have some number of leaf pages and then eventually one called the root page. So all the pages you see right here are essentially represent the different nodes of our b-tree.
+
+- So at the very top is the meta page that has information about the entire tree. We've then got the root block or the root page right here that has some directions inside of it to direct us to which page or which leaf has some particular records. And then the leaf pages themselves are where our actual information is stored for the index.
+
+- So for example, this leaf right here might have some listing of usernames. And for each username there might be a pointer to where we could find the record corresponding to that username inside of our users heap file.
+
+- the index file or these individual pages are actually identical in nature to those heap file pages we had looked at previously. So inside of each of these pages there is a header. There is that item id index array. There's then some free space, and then the actual items that are stored in each of these leaf pages.
+
+- An extension is some piece of code that gives us some additional functionality inside of Postgres.
+- the page Inspect extension gives us some functions that we can use to take a look at the data that is stored on different pages inside of either an index or a heap file.
+
+- We are being told that if we have some data matching, some condition that is listed over here inside the data column, then we should go to the page index listed inside of the CT id column. So in other words, if we satisfy like some data criteria right here, we should go to page one inside this index. So in other words page one is leaf node one. If we satisfy some other data criteria then we should go to page two.
+
+- You'll notice that we do not see an index of three here. That is because index three is the actual root node itself.
+
+[<img src="./index_on_disk.png" width="50%"/>](./index_on_disk.png)
+
+[<img src="./index_in_memory.png" width="50%"/>](./index_in_memory.png)

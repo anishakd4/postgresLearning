@@ -12,3 +12,11 @@ SELECT pg_size_pretty(pg_relation_size('users_username_idx'));
 
 -- So we are looking at all the different indexes that exist inside of our Instagram database right now.
 SELECT relname, relkind FROM pg_class WHERE relkind = 'i';
+
+CREATE EXTENSION pageinspect;
+
+-- So bt stands for B-tree. And then metap stands for meta page. So we are trying to retrieve information off the meta page of the users username index right now.
+SELECT * FROM bt_metap('users_username_idx');
+
+-- as you'd guess this stands for B-tree. Get all the items off of a specific page.
+SELECT * FROM bt_page_items('users_username_idx', 3);
