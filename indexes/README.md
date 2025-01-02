@@ -150,6 +150,6 @@
 
 [<img src="./bt_page_items_03.png" width="50%"/>](./bt_page_items_03.png)
 
-- You'll notice that we do not see an index of three here. That is because index three is the actual root node itself.
+- You'll notice that we do not see an index of three here. That is because index three is the actual root node itself. We are looking at the root node right now. So all the id CT IDs right here 1, 2, 4, 5, 6, 7, 8, Those are the index of the different leaf nodes that we can go to.
 
 [<img src="./bt_page_items_04.png" width="50%"/>](./bt_page_items_04.png)
