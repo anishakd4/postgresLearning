@@ -140,8 +140,6 @@
 
 - We are being told that if we have some data matching, some condition that is listed over here inside the data column, then we should go to the page index listed inside of the CT id column. So in other words, if we satisfy like some data criteria right here, we should go to page one inside this index. So in other words page one is leaf node one. If we satisfy some other data criteria then we should go to page two.
 
-- You'll notice that we do not see an index of three here. That is because index three is the actual root node itself.
-
 [<img src="./index_on_disk.png" width="50%"/>](./index_on_disk.png)
 
 [<img src="./index_in_memory.png" width="50%"/>](./index_in_memory.png)
@@ -151,5 +149,7 @@
 [<img src="./bt_page_items_02.png" width="50%"/>](./bt_page_items_02.png)
 
 [<img src="./bt_page_items_03.png" width="50%"/>](./bt_page_items_03.png)
+
+- You'll notice that we do not see an index of three here. That is because index three is the actual root node itself.
 
 [<img src="./bt_page_items_04.png" width="50%"/>](./bt_page_items_04.png)
