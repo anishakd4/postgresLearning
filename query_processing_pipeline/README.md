@@ -29,3 +29,7 @@
 # Executer
 
 - After the planner decides on what the most efficient strategy is, it is handed off to the executor, which is going to actually run the query.
+
+# Explain and Explain analyze
+
+[<img src="./pictures/explain_explain_analyze.png" width="50%"/>](./pictures/explain_explain_analyze.png)
