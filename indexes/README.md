@@ -187,3 +187,29 @@
 [<img src="./hex_in_leaf.png" width="50%"/>](./hex_in_leaf.png)
 
 [<img src="./leaf_and_root.png" width="50%"/>](./leaf_and_root.png)
+
+- This very first row is actually a pointer to the first user inside of the next leaf node over.
+
+- /Users/anishkumardubey/Library/Application Support/Postgres/var-17/base/16418 : here's all the individual files that represent all the different objects we have inside this database. So every one of these files represents either a table, an index a sequence and so on.
+
+- If we open the index file using hex viewer in vs code we can clearly see that see a ton of different user names. And we definitely only see usernames here. We don't see any other IDs Created_at. We don't see phone numbers, bios, anything like that unlike the user heap file.
+
+- So right away we are looking at page at index zero which is our meta page, these first 24 bytes right here. Just like the heap file we looked at previously are the header for this particular page.
+
+- We can find page 1 at 2000 row.
+
+- So the first 24 bytes are the header. We can probably say that right there you might remember is the offset to the free space and the offset to our actual data. So then after those first 24 bytes of this page, we then have four bytes right there that probably specify the exact same thing that it did back inside the heap file. So that's probably the offset to the index of some particular item and then the length of the item as well.
+
+- After past free space we get to where the actual records or pieces of data are stored for this index or for this particular page.
+
+- So some values around Alison14 either immediately before or immediately after should encode (82,30) which is ctid.
+
+- And finally at row 4000 here's page at index two.
+
+[<img src="./index_diagram.png" width="50%"/>](./index_diagram.png)
+
+[<img src="./index_page_2.png" width="50%"/>](./index_page_2.png)
+
+- Once you have enough records inside of your index, Postgres is going to decide to add in another layer of leaf nodes underneath. Once that happens, we end up with a structure that looks a little bit closer to this right here. But when we have far fewer records, like in the case of users where we have just about 4000, we've got just that kind of one layer.
+
+[<img src="./multi_layer_leaf_node.png" width="50%"/>](./multi_layer_leaf_node.png)

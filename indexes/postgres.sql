@@ -26,3 +26,10 @@ SELECT * FROM bt_page_items('users_username_idx', 1);
 
 -- it turns out that every row actually does have a ctid. It's just kind of invisible to us unless we specifically ask for it inside of our query.  Aaliyah was found on page 33, index 43.
 SELECT ctid, * FROM users WHERE username = 'Aaliyah.Hintz';
+
+SHOW data_directory;
+
+-- to the the file name of the index file
+SELECT * FROM pg_class WHERE relkind = 'i';
+
+SELECT * FROM bt_page_items('users_username_idx', 1);
