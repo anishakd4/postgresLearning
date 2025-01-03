@@ -8,7 +8,7 @@
 
 [<img src="./pictures/query_run_step_01.png" width="50%"/>](./pictures/query_run_step_01.png)
 
-[<img src="./pictures/query_run_step_02.png.png" width="50%"/>](./pictures/query_run_step_02.png)
+[<img src="./pictures/query_run_step_02.png" width="50%"/>](./pictures/query_run_step_02.png)
 
 # index
 
