@@ -6,20 +6,20 @@
 - a full table scan is whenever Postgres has to load up a ton or even possibly all the different rows out of a heap file into memory and then execute some kind of iteration over those rows to find some number of records.
 - you do not always run into poor performance when you are doing a full table scan. There are actually some scenarios where a full table scan is kind of desirable over any alternative.
 
-[<img src="./query_run_step_01.png" width="50%"/>](./query_run_step_01.png)
+[<img src="./pictures/query_run_step_01.png" width="50%"/>](./pictures/query_run_step_01.png)
 
-[<img src="./query_run_step_02.png.png" width="50%"/>](./query_run_step_02.png)
+[<img src="./pictures/query_run_step_02.png.png" width="50%"/>](./pictures/query_run_step_02.png)
 
 # index
 
 - An index is a data structure that very efficiently tells us exactly what block and index a particular record is stored at.
 - That's what an index is all about. It is an external record of sorts. Record book of sorts that tells us exactly where some records are stored inside of a heap file.
 
-[<img src="./index_01.png" width="50%"/>](./index_01.png)
+[<img src="./pictures/index_01.png" width="50%"/>](./pictures/index_01.png)
 
-[<img src="./index_02.png" width="50%"/>](./index_02.png)
+[<img src="./pictures/index_02.png" width="50%"/>](./pictures/index_02.png)
 
-[<img src="./indexing.png" width="50%"/>](./indexing.png)
+[<img src="./pictures/indexing.png" width="50%"/>](./pictures/indexing.png)
 
 # How indexing is created
 
@@ -36,28 +36,28 @@
 - When we went through this sort of operation, we were able to find the exact record we were looking for without having to load up the vast majority of records inside of our heap file so we did not have to access block zero inside the heap file.
 - So we were able to skip a huge portion of this entire search operation by just using the inequalities that we had set up ahead of time.
 
-[<img src="./index_create_step_01.png" width="50%"/>](./index_create_step_01.png)
+[<img src="./pictures/index_create_step_01.png" width="50%"/>](./pictures/index_create_step_01.png)
 
-[<img src="./index_create_step_02.png" width="50%"/>](./index_create_step_02.png)
+[<img src="./pictures/index_create_step_02.png" width="50%"/>](./pictures/index_create_step_02.png)
 
-[<img src="./index_create_step_03.png" width="50%"/>](./index_create_step_03.png)
+[<img src="./pictures/index_create_step_03.png" width="50%"/>](./pictures/index_create_step_03.png)
 
-[<img src="./index_create_step_04.png" width="50%"/>](./index_create_step_04.png)
+[<img src="./pictures/index_create_step_04.png" width="50%"/>](./pictures/index_create_step_04.png)
 
-[<img src="./index_create_step_05.png" width="50%"/>](./index_create_step_05.png)
+[<img src="./pictures/index_create_step_05.png" width="50%"/>](./pictures/index_create_step_05.png)
 
-[<img src="./index_create_step_06.png" width="50%"/>](./index_create_step_06.png)
+[<img src="./pictures/index_create_step_06.png" width="50%"/>](./pictures/index_create_step_06.png)
 
-[<img src="./index_create_step_07.png" width="50%"/>](./index_create_step_07.png)
+[<img src="./pictures/index_create_step_07.png" width="50%"/>](./pictures/index_create_step_07.png)
 
-[<img src="./index_create_step_08.png" width="50%"/>](./index_create_step_08.png)
+[<img src="./pictures/index_create_step_08.png" width="50%"/>](./pictures/index_create_step_08.png)
 
 
 - So the index that was created was automatically given a name of users username id ID being short for index.
 - Whenever you create an index, if you do not provide a name, one will be assigned for you automatically. The name that gets assigned is always going to follow this naming convention. It's always going to be the name of the table, the name of the column. And then idx at the very end.
 - So now in theory queries on our username column inside that users table will be rather quick.
 
-[<img src="./index_created.png" width="50%"/>](./index_created.png)
+[<img src="./pictures/index_created.png" width="50%"/>](./pictures/index_created.png)
 
 # Query speed
 
@@ -67,11 +67,11 @@
 
 - So when we have the index in place, it looks like running this query or doing the select statement is just unbelievably fast.
 
-[<img src="./query_speed_with_indexing.png" width="50%"/>](./query_speed_with_indexing.png)
+[<img src="./pictures/query_speed_with_indexing.png" width="50%"/>](./pictures/query_speed_with_indexing.png)
 
 - it is way slower than how long it took to fetch a user when we had the index in place.
 
-[<img src="./query_speed_without_indexing.png" width="50%"/>](./query_speed_without_indexing.png.png)
+[<img src="./pictures/query_speed_without_indexing.png" width="50%"/>](./pictures/query_speed_without_indexing.png.png)
 
 
 # Downsides on indexes
@@ -91,11 +91,11 @@
 - It turns out that there are actually some scenarios where Postgres is not going to use an index to speed up a particular query. So just because an index exists doesn't guarantee that Postgres is going to actually use it. There are actually some queries that are going to run faster without using an index at all.
 
 
-[<img src="./downsides_indexes.png" width="50%"/>](./downsides_indexes.png)
+[<img src="./pictures/downsides_indexes.png" width="50%"/>](./pictures/downsides_indexes.png)
 
 # Index Types
 
-[<img src="./index_types.png" width="50%"/>](./index_types.png)
+[<img src="./pictures/index_types.png" width="50%"/>](./pictures/index_types.png)
 
 # Types of indexes
 
@@ -103,7 +103,7 @@
 
 - All of our information stored in the leaf nodes and then the more parent nodes direct us to the leaf node that we want to visit is referred to as a b-tree index.
 
-[<img src="./types_of_indexes.png" width="50%"/>](./types_of_indexes.png)
+[<img src="./pictures/types_of_indexes.png" width="50%"/>](./pictures/types_of_indexes.png)
 
 # automatic_index
 
@@ -111,7 +111,7 @@
 
 - Now, the one thing that's really confusing about this is that these indexes don't actually get listed under the indexes section in Pgadmin.
 
-[<img src="./automatic_index.png" width="50%"/>](./automatic_index.png)
+[<img src="./pictures/automatic_index.png" width="50%"/>](./pictures/automatic_index.png)
 
 - This pg_class table lists all the different objects that exist inside of our database. So all the different tables, indexes, sequences and so on.
 
@@ -140,15 +140,15 @@
 
 - We are being told that if we have some data matching, some condition that is listed over here inside the data column, then we should go to the page index listed inside of the CT id column. So in other words, if we satisfy like some data criteria right here, we should go to page one inside this index. So in other words page one is leaf node one. If we satisfy some other data criteria then we should go to page two.
 
-[<img src="./index_on_disk.png" width="50%"/>](./index_on_disk.png)
+[<img src="./pictures/index_on_disk.png" width="50%"/>](./pictures/index_on_disk.png)
 
-[<img src="./index_in_memory.png" width="50%"/>](./index_in_memory.png)
+[<img src="./pictures/index_in_memory.png" width="50%"/>](./pictures/index_in_memory.png)
 
-[<img src="./bt_page_items_01.png" width="50%"/>](./bt_page_items_01.png)
+[<img src="./pictures/bt_page_items_01.png" width="50%"/>](./pictures/bt_page_items_01.png)
 
-[<img src="./bt_page_items_02.png" width="50%"/>](./bt_page_items_02.png)
+[<img src="./pictures/bt_page_items_02.png" width="50%"/>](./pictures/bt_page_items_02.png)
 
-[<img src="./bt_page_items_03.png" width="50%"/>](./bt_page_items_03.png)
+[<img src="./pictures/bt_page_items_03.png" width="50%"/>](./pictures/bt_page_items_03.png)
 
 - You'll notice that we do not see an index of three here. That is because index three is the actual root node itself. We are looking at the root node right now. So all the id CT IDs right here 1, 2, 4, 5, 6, 7, 8, Those are the index of the different leaf nodes that we can go to.
 
@@ -156,13 +156,13 @@
 
 - Well when we said that there is some kind of comparison in the root node going on, we was kind of exaggerating just a little bit, just to make things a little bit more clear. In reality, the comparison that we do here is a little bit more complicated.
 
-[<img src="./bt_page_items_04.png" width="50%"/>](./bt_page_items_04.png)
+[<img src="./pictures/bt_page_items_04.png" width="50%"/>](./pictures/bt_page_items_04.png)
 
 - So we see some hex value inside of data column.
 
 - hex value in the second row translates to Allison14 which is an actual username tied to one of our users.
 
-[<img src="./index_table_hex_data_value.png" width="50%"/>](./index_table_hex_data_value.png)
+[<img src="./pictures/index_table_hex_data_value.png" width="50%"/>](./pictures/index_table_hex_data_value.png)
 
 - when we first come into this root node. We would go to the first cell right here. We would skip over it because it's empty. And we would say okay, do we have a value that is greater than or equal to Alison14 if we do not, we would go back to the previous and go down to page one.
 
@@ -172,9 +172,9 @@
 
 - process is a little bit confusing, but basically we start on the left hand side and go over until we eventually kind of fail this comparison. And as soon as we do, that is a sign that we need to go kind of back one step and go down to the respective page.
 
-[<img src="./hex_to_string.png" width="50%"/>](./hex_to_string.png)
+[<img src="./pictures/hex_to_string.png" width="50%"/>](./pictures/hex_to_string.png)
 
-[<img src="./root_condition_from_hex.png" width="50%"/>](./root_condition_from_hex.png)
+[<img src="./pictures/root_condition_from_hex.png" width="50%"/>](./pictures/root_condition_from_hex.png)
 
 # Leaf node
 
@@ -184,9 +184,9 @@
 
 - when we were actually looking at a leaf node, the CT id takes on a slightly different meaning. When you are looking at a leaf node, the CTid represents the page and the index in that page of where we can find this record inside of our user heap file.
 
-[<img src="./hex_in_leaf.png" width="50%"/>](./hex_in_leaf.png)
+[<img src="./pictures/hex_in_leaf.png" width="50%"/>](./pictures/hex_in_leaf.png)
 
-[<img src="./leaf_and_root.png" width="50%"/>](./leaf_and_root.png)
+[<img src="./pictures/leaf_and_root.png" width="50%"/>](./pictures/leaf_and_root.png)
 
 - This very first row is actually a pointer to the first user inside of the next leaf node over.
 
@@ -206,10 +206,10 @@
 
 - And finally at row 4000 here's page at index two.
 
-[<img src="./index_diagram.png" width="50%"/>](./index_diagram.png)
+[<img src="./pictures/index_diagram.png" width="50%"/>](./pictures/index_diagram.png)
 
-[<img src="./index_page_2.png" width="50%"/>](./index_page_2.png)
+[<img src="./pictures/index_page_2.png" width="50%"/>](./pictures/index_page_2.png)
 
 - Once you have enough records inside of your index, Postgres is going to decide to add in another layer of leaf nodes underneath. Once that happens, we end up with a structure that looks a little bit closer to this right here. But when we have far fewer records, like in the case of users where we have just about 4000, we've got just that kind of one layer.
 
-[<img src="./multi_layer_leaf_node.png" width="50%"/>](./multi_layer_leaf_node.png)
+[<img src="./pictures/multi_layer_leaf_node.png" width="50%"/>](./pictures/multi_layer_leaf_node.png)
