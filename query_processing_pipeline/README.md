@@ -64,4 +64,8 @@
 
 [<img src="./pictures/explain_analyze_result.png" width="50%"/>](./pictures/explain_analyze_result.png)
 
+[<img src="./pictures/explain_analyze_steps.png" width="50%"/>](./pictures/explain_analyze_steps.png)
+
 - So in addition to telling us the individual steps and how they're kind of sharing information amongst each other, you'll notice that there are some other interesting numbers inside of here.
+
+[<img src="./pictures/extra_info.png" width="50%"/>](./pictures/extra_info.png)
