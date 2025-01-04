@@ -15,3 +15,11 @@
 - But there is a second form of a common table expression referred to as a recursive form. A recursive common table expression allows you to write queries that are otherwise impossible to to express with just plain SQL by itself.
 
 [<img src="./pictures/common_table_expressions.png" width="50%"/>](./pictures/common_table_expressions.png)
+
+# Recursive CTE(Common table expressions)
+
+[<img src="./pictures/recursive_ctes.png" width="50%"/>](./pictures/recursive_ctes.png)
+
+- As I've mentioned, every recursive CTE is going to have a union inside of it, whether or not you think you need it.
+
+[<img src="./pictures/recursice_cte.png" width="50%"/>](./pictures/recursice_cte.png)
