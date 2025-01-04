@@ -106,4 +106,10 @@
 
 - Well, if we had to kind of assign a score to both steps, maybe a good way of doing that would be to think about the number of different pages that we have to load up off the hard drive.
 
+- So at first glance, it's really obvious that this stuff on the left hand side is more efficient because we are loading up 50 less or by a factor of 50 less pages. It's two versus 100.
+
 [<img src="./pictures/cost_compare.png" width="50%"/>](./pictures/cost_compare.png)
+
+- Any time that we are loading data off of random areas of our hard drive, there's usually actually a performance penalty associated with that. So if you are just randomly jumping all over your hard drive and loading up data from all over the place, that usually takes a lot longer to do than if you load up a bunch of data that's kind of all in one line.
+
+[<img src="./pictures/cost_random_pages.png" width="50%"/>](./pictures/cost_random_pages.png)
