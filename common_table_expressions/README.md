@@ -22,4 +22,8 @@
 
 - As I've mentioned, every recursive CTE is going to have a union inside of it, whether or not you think you need it.
 
+- We then have one select immediately above, we refer to the select statement above the Union. As the initial or non-recursive query.
+
+- Then immediately after the union, we've got another select. We refer to this statement right here as the recursive query.
+
 [<img src="./pictures/recursice_cte.png" width="50%"/>](./pictures/recursice_cte.png)
