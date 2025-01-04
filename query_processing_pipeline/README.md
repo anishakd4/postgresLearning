@@ -182,4 +182,8 @@ https://www.postgresql.org/docs/current/runtime-config-query.html
 
 # Root node cost
 
+- We calculate the cost of that parent node as the sum of all child nodes. So the immediate children, in this case, the immediate children of the hash join is the hash and the sequential scan, plus the cost of this node in its own right.
+
+- the point here is that for every node that has a child, we have to take the startup cost and the total cost of that child and add it in to get the total cost of the parent itself.
+
 [<img src="./pictures/root_node_cost.png" width="50%"/>](./pictures/root_node_cost.png)
