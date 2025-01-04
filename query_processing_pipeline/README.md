@@ -112,4 +112,12 @@
 
 - Any time that we are loading data off of random areas of our hard drive, there's usually actually a performance penalty associated with that. So if you are just randomly jumping all over your hard drive and loading up data from all over the place, that usually takes a lot longer to do than if you load up a bunch of data that's kind of all in one line.
 
+- So in other words, if you're loading up a ton of data from one file, just kind of block by block throughout that file, that generally is a faster operation than jumping all over the place.
+
 [<img src="./pictures/cost_random_pages.png" width="50%"/>](./pictures/cost_random_pages.png)
+
+- This typically occurs a little bit faster than if we do a random load.
+
+[<img src="./pictures/random_load.png" width="50%"/>](./pictures/sequential_load.png)
+
+[<img src="./pictures/random_load.png" width="50%"/>](./pictures/sequential_load.png)
