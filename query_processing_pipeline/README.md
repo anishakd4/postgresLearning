@@ -90,4 +90,6 @@
 
 - So pg_stats is a table that is maintained by, you guessed it, Postgres. It has detailed statistics about all the different values and all the different columns of your different tables. So these statistics inside these tables are is what allows Postgres to kind of make a guess at some of the different number of rows coming out of each of those steps of the query plan and possibly the number of bytes for each of those rows as well. So we've got, say, average width right here, which is the number of bytes. status right now has only values inside of it of online or offline. So there's a column inside of here or this statistics table of most common values. So this records the most common values that are found inside of this column. n_distinct : that's actually the number of distinct items inside there. We are also given the frequency of those items as well. So on average, about 50.1% of rows have an status of offline and about 49.8 have a status of offline.
 
+- this stats table is how that query planner is able to make a guess about the efficiency or kind of the cost or the outcome of each of those different steps without having to actually do any processing of those steps ahead of time.
+
 [<img src="./pictures/pg_stats.png" width="50%"/>](./pictures/pg_stats.png)
