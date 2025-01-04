@@ -164,6 +164,15 @@ https://www.postgresql.org/docs/current/runtime-config-query.html
 
 - So in other words, when this sequential scan opens up the very first page and starts to process all those rows, it generates some different rows. Or in this case, I'm going to call them items, and we can immediately start to provide that first set of items off to the next processing step. So in this case, maybe the hash join.
 
+- The sequential scan will then move on to the next page, open up the page, process the rows on that, and then we are able to start emitting those rows over to the hash join.
+
 [<img src="./pictures/startup_total_cost_02.png" width="50%"/>](./pictures/startup_total_cost_02.png)
 
+- for a lot of these different processing steps, we are doing some kind of long running processing operation where we are operating over a lot of different rows. In some cases, as soon as we process just one row, we can immediately take that row and emit it or send it off to the next processing step. And that next step might be able to immediately start doing something with that row. Why the original sequential scan is still running.
+
+- So the lower bound cost that we're seeing here is what the cost is to just get the very first row, the very first little bit of information and pass it along to the next processing step.
+
+- in this case, our sequential scan has a cost lower bound of zero, which means it essentially is free in theory to start emitting the very first row for this processing step.
+
+- in theory, a sequential scan to get the very first row. We are doing some work, but the cost here of zero seems to indicate that is not the case.
 
