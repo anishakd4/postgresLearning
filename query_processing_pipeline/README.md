@@ -135,3 +135,7 @@
 [<img src="./pictures/cost_rows_block_02.png" width="50%"/>](./pictures/cost_rows_block_02.png)
 
 [<img src="./pictures/cost_rows_blocks.png" width="50%"/>](./pictures/cost_rows_blocks.png)
+
+- So first, here's the actual full equation for calculating the cost of any arbitrary step of your query plan.
+
+[<img src="./pictures/cost_equation.png" width="50%"/>](./pictures/cost_equation.png)
