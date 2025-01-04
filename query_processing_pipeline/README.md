@@ -178,6 +178,8 @@ https://www.postgresql.org/docs/current/runtime-config-query.html
 
 - That indicates that for this hash step right here. It is not able to kind of start producing one row and pass it off to the next step. Instead, this indicates that the hashing process, whatever that thing is doing, has to process all rows before it can emit anything. So that means that the hash step is going to receive some information from the index scan. It's going to kind of collect all the records it gets out of the index scan, and then only after it has all these records, it's going to do all the processing on it in one big batch and then send the absolute total result of all that down to the hash join. So that's why you're going to sometimes see a cost with the identical startup and identical total.
 
-- 
-
 [<img src="./pictures/startup_total_cost_02.png" width="50%"/>](./pictures/startup_total_cost_02.png)
+
+# Root node cost
+
+[<img src="./pictures/root_node_cost.png" width="50%"/>](./pictures/root_node_cost.png)
