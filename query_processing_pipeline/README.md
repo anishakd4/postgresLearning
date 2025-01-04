@@ -98,10 +98,12 @@
 
 - cost is referring to the amount of time, maybe seconds, maybe milliseconds to execute some part of our query plan.
 
-- Well, if we had to kind of assign a score to both steps, maybe a good way of doing that would be to think about the number of different pages that we have to load up off the hard drive.
-
 [<img src="./pictures/cost_def.png" width="50%"/>](./pictures/cost_def.png)
 
 [<img src="./pictures/cost_def_2.png" width="50%"/>](./pictures/cost_def_2.png)
 
 [<img src="./pictures/two_days.png" width="50%"/>](./pictures/two_days.png)
+
+- Well, if we had to kind of assign a score to both steps, maybe a good way of doing that would be to think about the number of different pages that we have to load up off the hard drive.
+
+[<img src="./pictures/cost_compare.png" width="50%"/>](./pictures/cost_compare.png)
