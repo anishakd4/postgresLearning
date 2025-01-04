@@ -139,3 +139,20 @@
 - So first, here's the actual full equation for calculating the cost of any arbitrary step of your query plan.
 
 [<img src="./pictures/cost_equation.png" width="50%"/>](./pictures/cost_equation.png)
+
+- This link shows you where these different cost factors are coming from.
+
+- some kind of arbitrary factor to use to gauge how expensive it is to load up one page sequentially out of a heap file. So notice that the default is 1.0. We've then got some kind of random page cost right here, which is relative to sequential page cost. I'll explain a little bit more on that in just a moment. The default value for random page cost is 4.0.
+
+- We then have some other cost factors down here. So the processing power required to essentially deal with one tuple by the CPU processing, one tuple out of an index and evaluating one single operator.
+
+- The sequential page cost is kind of our baseline value and everything else is relative to the sequential page cost.
+
+- So they are all constant values. You can change them if you want to, but there are very reasonable defaults already set inside of Postgres for you, so you will not really be changing those default values unless you've got a really good reason for that.
+
+https://www.postgresql.org/docs/current/runtime-config-query.html
+
+# Startup vs total cost
+
+[<img src="./pictures/startup_cost_total_cost.png" width="50%"/>](./pictures/startup_cost_total_cost.png)
+
