@@ -93,3 +93,13 @@
 - this stats table is how that query planner is able to make a guess about the efficiency or kind of the cost or the outcome of each of those different steps without having to actually do any processing of those steps ahead of time.
 
 [<img src="./pictures/pg_stats.png" width="50%"/>](./pictures/pg_stats.png)
+
+# Cost
+
+- cost is referring to the amount of time, maybe seconds, maybe milliseconds to execute some part of our query plan.
+
+[<img src="./pictures/cost_def.png" width="50%"/>](./pictures/cost_def.png)
+
+[<img src="./pictures/cost_def_2.png" width="50%"/>](./pictures/cost_def_2.png)
+
+[<img src="./pictures/two_days.png" width="50%"/>](./pictures/two_days.png)
