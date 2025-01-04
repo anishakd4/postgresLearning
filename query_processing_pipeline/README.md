@@ -130,5 +130,8 @@
 
 - processing a comment is probably not free. There's probably some kind of CPU time involved with it or something like that. So I just want to make some kind of real big guess or estimate at how long it takes to process each individual row.
 
+- Well, throughout this entire process, we have made guesses at how information is being loaded up
+
+[<img src="./pictures/cost_rows_block_02.png" width="50%"/>](./pictures/cost_rows_block_02.png)
 
 [<img src="./pictures/cost_rows_blocks.png" width="50%"/>](./pictures/cost_rows_blocks.png)
