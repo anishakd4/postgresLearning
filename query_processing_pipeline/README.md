@@ -154,5 +154,16 @@ https://www.postgresql.org/docs/current/runtime-config-query.html
 
 # Startup vs total cost
 
+- So the first number that we see in every pair is the cost for this particular step for the hash Join in this case to produce the very first row of output. And then the second number is the cost for this step to produce all expected rows.
+
 [<img src="./pictures/startup_cost_total_cost.png" width="50%"/>](./pictures/startup_cost_total_cost.png)
+
+- sequential scan : means we're going to open up our heap file, read one page, process all the rows on it, go to the next page, process all the rows and so on.
+
+- Once we process all the rows on one individual page, we then have some number of rows that are ready to be processed by the next step in our chain.
+
+- So in other words, when this sequential scan opens up the very first page and starts to process all those rows, it generates some different rows. Or in this case, I'm going to call them items, and we can immediately start to provide that first set of items off to the next processing step. So in this case, maybe the hash join.
+
+[<img src="./pictures/startup_total_cost_02.png" width="50%"/>](./pictures/startup_total_cost_02.png)
+
 
