@@ -68,4 +68,26 @@
 
 - So in addition to telling us the individual steps and how they're kind of sharing information amongst each other, you'll notice that there are some other interesting numbers inside of here.
 
+- So the term hash join is telling us exactly how this particular node or this line right here is either generating data or processing some data. In this case, we are doing a hash join operation, which, as you might guess, is going to implement some kind of join process, like the same kind of join.
+
+- the cost is kind of telling us the amount of processing power that is required for this step.
+
+- So rows is an estimate or a guess at how many rows this step right here is going to produce. And then the width is an estimate of the average number of bytes for each of those rows.
+
 [<img src="./pictures/extra_info.png" width="50%"/>](./pictures/extra_info.png)
+
+-  you'll notice that we no longer have any information about how long it took to execute any of these different steps. And the reason for that is that we did not actually execute any of these steps.
+
+- when we run this with just explain in theory, we have not really accessed or gone through all the information in our users index or the users table or the comments table. We have not actually accessed any of that data. However, you'll notice that we still have a rows number and a width number on here. 
+
+- How does Postgres know or how is it able to make a guess at the number of rows that we're going to get out and the average width of each of those rows, if Postgres did not actually access the users table or comments or the users index and so on.
+
+- Well, it turns out that Postgres actually keeps some very detailed statistics about what is going on inside of each of your different tables.
+
+[<img src="./pictures/explain_result.png" width="50%"/>](./pictures/explain_result.png)
+
+# pg_stats
+
+- So pg_stats is a table that is maintained by, you guessed it, Postgres. It has detailed statistics about all the different values and all the different columns of your different tables. So these statistics inside these tables are is what allows Postgres to kind of make a guess at some of the different number of rows coming out of each of those steps of the query plan and possibly the number of bytes for each of those rows as well. So we've got, say, average width right here, which is the number of bytes. status right now has only values inside of it of online or offline. So there's a column inside of here or this statistics table of most common values. So this records the most common values that are found inside of this column. n_distinct : that's actually the number of distinct items inside there. We are also given the frequency of those items as well. So on average, about 50.1% of rows have an status of offline and about 49.8 have a status of offline.
+
+[<img src="./pictures/pg_stats.png" width="50%"/>](./pictures/pg_stats.png)
