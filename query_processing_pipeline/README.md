@@ -166,8 +166,6 @@ https://www.postgresql.org/docs/current/runtime-config-query.html
 
 - The sequential scan will then move on to the next page, open up the page, process the rows on that, and then we are able to start emitting those rows over to the hash join.
 
-[<img src="./pictures/startup_total_cost_02.png" width="50%"/>](./pictures/startup_total_cost_02.png)
-
 - for a lot of these different processing steps, we are doing some kind of long running processing operation where we are operating over a lot of different rows. In some cases, as soon as we process just one row, we can immediately take that row and emit it or send it off to the next processing step. And that next step might be able to immediately start doing something with that row. Why the original sequential scan is still running.
 
 - So the lower bound cost that we're seeing here is what the cost is to just get the very first row, the very first little bit of information and pass it along to the next processing step.
@@ -176,3 +174,10 @@ https://www.postgresql.org/docs/current/runtime-config-query.html
 
 - in theory, a sequential scan to get the very first row. We are doing some work, but the cost here of zero seems to indicate that is not the case.
 
+-  in some other cases, such as the hash step right here, the lower bound cost or the startup cost is how we refer to it is the same as the total cost. So 8.3 and 8.3.
+
+- That indicates that for this hash step right here. It is not able to kind of start producing one row and pass it off to the next step. Instead, this indicates that the hashing process, whatever that thing is doing, has to process all rows before it can emit anything. So that means that the hash step is going to receive some information from the index scan. It's going to kind of collect all the records it gets out of the index scan, and then only after it has all these records, it's going to do all the processing on it in one big batch and then send the absolute total result of all that down to the hash join. So that's why you're going to sometimes see a cost with the identical startup and identical total.
+
+- 
+
+[<img src="./pictures/startup_total_cost_02.png" width="50%"/>](./pictures/startup_total_cost_02.png)
