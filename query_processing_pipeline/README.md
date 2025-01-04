@@ -127,3 +127,8 @@
 [<img src="./pictures/cost_random_load.png" width="50%"/>](./pictures/cost_random_load.png)
 
 [<img src="./pictures/cost_random_02.png" width="50%"/>](./pictures/cost_random_02.png)
+
+- processing a comment is probably not free. There's probably some kind of CPU time involved with it or something like that. So I just want to make some kind of real big guess or estimate at how long it takes to process each individual row.
+
+
+[<img src="./pictures/cost_rows_blocks.png" width="50%"/>](./pictures/cost_rows_blocks.png)
