@@ -27,3 +27,13 @@
 - Then immediately after the union, we've got another select. We refer to this statement right here as the recursive query.
 
 [<img src="./pictures/recursice_cte.png" width="50%"/>](./pictures/recursice_cte.png)
+
+[<img src="./pictures/recursive_01.png" width="50%"/>](./pictures/recursive_01.png)
+
+- The first thing that occurs when we run this query, Postgres is going to define two tables behind the scenes. So you're not really going to see these immediately or really see them in any kind of output. We refer to these two temporary tables as a results table and the working table.
+
+[<img src="./pictures/recursive_steps.png" width="50%"/>](./pictures/recursive_steps.png)
+
+- Both these tables are going to be given some number of columns. The columns that they get assigned are whatever you have inside of that set of parentheses right there. So we have with recursive, then some name and then a set of parentheses.
+
+[<img src="./pictures/recursive_steps_01.png" width="50%"/>](./pictures/recursive_steps_01.png)
