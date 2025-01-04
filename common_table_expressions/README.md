@@ -44,3 +44,27 @@
 
 
 [<img src="./pictures/recursive_steps_03.png" width="50%"/>](./pictures/recursive_steps_03.png)
+
+- In step number two, we run the initial or non-recursive statement. So we're going to run that and then we're going to put the results from that statement into both the results table and the working table.
+
+- So we can imagine that we're going to execute select 3 as Val by itself.
+
+[<img src="./pictures/recursive_04.png" width="50%"/>](./pictures/recursive_04.png)
+
+- So in step number three, we're going to now run our recursive statement. And here's the kind of little trick to understanding what's going on here. We're going to replace the table name of Countdown in there with a reference to the working table instead.
+
+- We are selecting all the different rows from the working table where Val is greater than one. So in that case, it gives us this one row right here. Then from that one row, we are saying take the value inside of the Val column and subtract one from it.
+
+-  if the recursive statement returned any rows. And yep, it definitely did. It gave us that right there. Then we're going to take that row and append it to the results table.
+
+- I'm then going to throw away. This is not really in the step right here, but I'm going to throw away everything inside of the working table as it stands right now, and I'm going to replace it with the result of that recursive query that we just calculated.
+
+- Because our recursive statement just returns some rows. We're then going to run a recursive statement again.
+
+- So we're going to go back up here to step number three. So let's imagine what happens there again, that we're going to run the recursive statement.
+
+-  in the last case, when we executed this query right here, we did not get any rows back out of it. No rows whatsoever. So in this case, our recursive statement returned no rows. So we are going to immediately stop recursion.
+
+- Then our results table will be taken. We're going to rename the results table to whatever we named our recursive as. In this case, we called it Countdown.
+
+- And now we're going to make this resulting table right here accessible to the rest of our query or essentially the outer query.

@@ -43,3 +43,5 @@ WITH RECURSIVE countdown(val) AS (
 	SELECT val - 1 FROM countdown WHERE val > 1
 )
 SELECT * FROM countdown;
+
+SELECT 3 as val;
