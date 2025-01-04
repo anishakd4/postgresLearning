@@ -36,4 +36,11 @@
 
 - Both these tables are going to be given some number of columns. The columns that they get assigned are whatever you have inside of that set of parentheses right there. So we have with recursive, then some name and then a set of parentheses.
 
+- In this case, we have just one word inside those parentheses of Val, which again is short for value. That means that both of our tables are going to have one single column labeled Val.
+
 [<img src="./pictures/recursive_steps_01.png" width="50%"/>](./pictures/recursive_steps_01.png)
+
+- If we had additional words inside of here, such as maybe created_at or count, that means that we would have additional columns inside of both these tables.
+
+
+[<img src="./pictures/recursive_steps_03.png" width="50%"/>](./pictures/recursive_steps_03.png)
