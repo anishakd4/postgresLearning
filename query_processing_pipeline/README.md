@@ -121,3 +121,9 @@
 [<img src="./pictures/random_load.png" width="50%"/>](./pictures/sequential_load.png)
 
 [<img src="./pictures/random_load.png" width="50%"/>](./pictures/sequential_load.png)
+
+- But let's just assume for a moment that loading up a random page of data takes four times longer than loading up pages sequentially.
+
+[<img src="./pictures/cost_random_load.png" width="50%"/>](./pictures/cost_random_load.png)
+
+[<img src="./pictures/cost_random_02.png" width="50%"/>](./pictures/cost_random_02.png)
