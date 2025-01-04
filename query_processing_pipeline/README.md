@@ -187,3 +187,21 @@ https://www.postgresql.org/docs/current/runtime-config-query.html
 - the point here is that for every node that has a child, we have to take the startup cost and the total cost of that child and add it in to get the total cost of the parent itself.
 
 [<img src="./pictures/root_node_cost.png" width="50%"/>](./pictures/root_node_cost.png)
+
+# Use my index
+
+- We have created an index on the created_at column, but it looks like Postgres decided to do a sequential scan anyways.
+
+- The index is really good for helping us find some very specific and usually small set of records. In this case, we are trying to find something like 90% or I guess probably closer to 70% of all the records out of our likes table. We're trying to fetch a tremendous number of records. So because of that, if we were to make use of the index, we would end up having to fetch or probably end up visiting about 70% of all these different leaf nodes. And we would then have to take all those different pointers and open up a tremendous number of blocks out of our heap file. And when we are opening up these blocks, we're essentially probably going to be jumping around to each block randomly, which means we have to pay that penalty for kind of random access in the heap file.
+
+- So at a certain point, Postgres realized that rather than going through all the extra hassle of going through the index, having to do the random lookup for all these different leaf nodes and then random lookups inside the heap file it decided, you know what, it's probably going to be a lot easier if we just open up the heap, file directly, take a look at block zero, block one, block to block three and just go through that file sequentially.
+
+- The lesson here is that even if you have an index in place, you can easily write a query where Postgres decides, you know what, the index is too much trouble. I'm just going to fall back to doing a sequential scan anyways.
+
+- So this is a scenario where adding in an index like this is not going to buy you any kind of performance benefit.
+
+- If you have a query that is never using an index, that is a sign that you should probably drop the index.
+
+[<img src="./pictures/use_index_01.png" width="50%"/>](./pictures/use_index_01.png)
+
+[<img src="./pictures/use_index_02.png" width="50%"/>](./pictures/use_index_02.png)
