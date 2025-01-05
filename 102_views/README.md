@@ -28,3 +28,7 @@
 [<img src="./pictures/merging_table_01.png" width="50%"/>](./pictures/merging_table_01.png)
 
 [<img src="./pictures/merging_table_02.png" width="50%"/>](./pictures/merging_table_02.png)
+
+# Solution 2
+
+- So in solution number two, we're going to create something called a view. You can think of a view as being like a fake table that has a reference to rows or data from other tables inside of our database.
