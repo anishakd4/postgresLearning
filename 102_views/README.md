@@ -77,3 +77,9 @@
 
 [<img src="./pictures/slow_query.png" width="50%"/>](./pictures/slow_query.png)
 
+- So with data right here means that when we first create the materialized view, we want Postgres to automatically run this query one time and hold on to all the results.
+
+- And the one downside to materialize view, even though it's very clear that we get this very big performance benefit, is that if we now modify any of this underlying data, in other words, if we modify our likes table or posts or comments, that is not going to modify those kind of cached results that are currently stored inside of postgres.
+
+- Now, as you can guess, the one big downside to a materialized view is that we have to very manually tell post grass that we want it to rerun the query inside the materialized view. So in general, we only like to make use of materialized views whenever we are trying to calculate some values that are not going to be changing very often.
+

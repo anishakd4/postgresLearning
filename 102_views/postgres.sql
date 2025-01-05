@@ -55,3 +55,16 @@ LEFT JOIN posts ON posts.id = likes.post_id
 LEFT JOIN comments ON comments.id = likes.comment_id
 GROUP BY week
 ORDER BY week;
+
+SELECT * FROM weekly_likes;
+
+DELETE FROM posts WHERE created_at < '2010-02-01';
+
+SELECT * FROM weekly_likes;
+
+--  to update the data that is being held by materialized view.
+REFRESH MATERIALIZED VIEW weekly_likes;
+
+SELECT * FROM weekly_likes;
+
+
