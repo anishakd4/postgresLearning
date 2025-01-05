@@ -67,3 +67,7 @@
 
 [<img src="./pictures/left_inner_join.png" width="50%"/>](./pictures/left_inner_join.png)
 
+- If we need to run this query all the time, then 10 or 20 or 30s is way too long. We don't want to be running this query all day long or repeatedly if it's going to take quite such a long time.
+
+[<img src="./pictures/slow_query.png" width="50%"/>](./pictures/slow_query.png)
+

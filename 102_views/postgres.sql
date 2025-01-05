@@ -46,3 +46,12 @@ JOIN comments ON comments.id = likes.comment_id;
 SELECT * FROM likes
 LEFT JOIN posts ON posts.id = likes.post_id
 LEFT JOIN comments ON comments.id = likes.comment_id;
+
+SELECT date_trunc('week', COALESCE(posts.created_at, comments.created_at)) AS week,
+	COUNT(posts.id) AS num_posts, 
+	COUNT(comments.id) AS num_comments
+FROM likes
+LEFT JOIN posts ON posts.id = likes.post_id
+LEFT JOIN comments ON comments.id = likes.comment_id
+GROUP BY week
+ORDER BY week;
