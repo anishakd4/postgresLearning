@@ -67,6 +67,12 @@
 
 [<img src="./pictures/left_inner_join.png" width="50%"/>](./pictures/left_inner_join.png)
 
+- we're going to use a function that is built directly into Postgres called Date Trunk. The date trunk function allows you to pull one piece of information out of a timestamp.
+
+- The date trunk function is then going to automatically round down that information or that little part of the timestamp that you pull out to kind of like the nearest unit.
+
+- the count function, it does not count null values. So out of this entire first week bucket right here, any likes that were for a post that had an ID of null will not be counted. Same thing for comments.
+
 - If we need to run this query all the time, then 10 or 20 or 30s is way too long. We don't want to be running this query all day long or repeatedly if it's going to take quite such a long time.
 
 [<img src="./pictures/slow_query.png" width="50%"/>](./pictures/slow_query.png)
