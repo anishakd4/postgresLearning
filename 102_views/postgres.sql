@@ -32,3 +32,8 @@ CREATE VIEW recent_posts AS (
 
 SELECT username FROM recent_posts
 JOIN users ON users.id = recent_posts.user_id;
+
+CREATE OR REPLACE VIEW recent_posts AS (
+	SELECT * FROM posts
+	ORDER BY created_at DESC LIMIT 15
+)
