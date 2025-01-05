@@ -32,3 +32,17 @@
 # Solution 2
 
 - So in solution number two, we're going to create something called a view. You can think of a view as being like a fake table that has a reference to rows or data from other tables inside of our database.
+
+- You can think of a view as being like a fake table that has a reference to rows or data from other tables inside of our database. When we create a view, we can essentially wrap up some other information or present it in a cleaner form that already exists inside of our database.
+
+- Ultimately, you can think of a view as being very similar in nature to a common table expression. The only issue with a common table expression, you might recall, is that we attach them to some other query. So in this case, we've got a common table expression up here at the top and we can only refer to this tag's CTE inside of the query that it is directly attached to. The nice thing about a view is that we get this very similar behavior where we can kind of wrap up some existing query, but we can create a view ahead of time and then refer to it at any future point in time in any other query. And we don't have to rewrite the view or anything like that.
+
+- We should really think of a view as being very similar to a common table expression. The big difference is that we create a view ahead of time and then we can refer to it at any point in time after that.
+
+- We are going to use a view in our case to take the union between two different tables in our case caption tags and photo tags. But we do not have to use a view for only a union. We can put any kind of query into a view.
+
+- We're then going to write out our query inside these parentheses. So this is where we are going to kind of generate some data that's going to be accessible through The View.
+
+- So with this view, we've essentially solved this issue of having two separate tables. We've kind of merged them together, but it's not any permanent change whatsoever. We can always remove this view if we want to, and none of the underlying data is going to go anywhere.
+
+- All the underlying data inside of the two separate tables still exists. So if we have any queries that refer to those two separate tables of caption tags or photo tags, those existing queries are going to work just fine.
