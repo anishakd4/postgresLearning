@@ -93,6 +93,8 @@
 
 # Recursive cte example 
 
+- We're going to find all the rows with a follower of one.
+
 [<img src="./pictures/recursive_cte_example_00.png" width="50%"/>](./pictures/recursive_cte_example_00.png)
 
 [<img src="./pictures/recursive_cte_example_01.png" width="50%"/>](./pictures/recursive_cte_example_01.png)
