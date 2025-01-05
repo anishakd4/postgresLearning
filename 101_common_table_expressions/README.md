@@ -79,4 +79,6 @@
 
 - As you can imagine that this tree kind of grows in depth over and over and over.
 
+- So even if we could figure out some way to write a joint statement to get this kind of first unassociated layer, because I am already following these people, even if we could kind of figure out a joint statement to get these writing out, a joint statement to go down another level and then another in another would get really confusing and really nasty really quickly.
+
 [<img src="./pictures/why_use_resursive_ctes_02.png" width="50%"/>](./pictures/why_use_resursive_ctes_02.png)
