@@ -90,3 +90,20 @@
 - So even if we could figure out some way to write a joint statement to get this kind of first unassociated layer, because I am already following these people, even if we could kind of figure out a joint statement to get these writing out, a joint statement to go down another level and then another in another would get really confusing and really nasty really quickly.
 
 [<img src="./pictures/why_use_resursive_ctes_02.png" width="50%"/>](./pictures/why_use_resursive_ctes_02.png)
+
+# Recursive cte example 
+
+[<img src="./pictures/recursive_cte_example_00.png" width="50%"/>](./pictures/recursive_cte_example_00.png)
+
+[<img src="./pictures/recursive_cte_example_01.png" width="50%"/>](./pictures/recursive_cte_example_01.png)
+
+[<img src="./pictures/recursive_cte_example_02.png" width="50%"/>](./pictures/recursive_cte_example_02.png)
+
+[<img src="./pictures/recursive_cte_example_03.png" width="50%"/>](./pictures/recursive_cte_example_03.png)
+
+[<img src="./pictures/recursive_cte_example_04.png" width="50%"/>](./pictures/recursive_cte_example_04.png)
+
+[<img src="./pictures/recursive_cte_example_05.png" width="50%"/>](./pictures/recursive_cte_example_05.png)
+
+[<img src="./pictures/recursive_cte_example_06.png" width="50%"/>](./pictures/recursive_cte_example_06.png)
+
