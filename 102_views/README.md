@@ -7,4 +7,12 @@
 
 - Once we get those counts, we can then do some kind of order operation or a sorting operation to make sure that we get the most popular users at the top of the list.
 
+- Maybe it was kind of a mistake when we were doing our initial database design to create these two separate tables because we just have to keep on having to take the union of them again and again and again.
+
 [<img src="./pictures/most_popular_users.png" width="50%"/>](./pictures/most_popular_users.png)
+
+[<img src="./pictures/most_popular_users_01.png" width="50%"/>](./pictures/most_popular_users_01.png)
+
+[<img src="./pictures/most_popular_users_02.png" width="50%"/>](./pictures/most_popular_users_02.png)
+
+[<img src="./pictures/most_popular_users_03.png" width="50%"/>](./pictures/most_popular_users_03.png)
