@@ -68,3 +68,15 @@
 - Then our results table will be taken. We're going to rename the results table to whatever we named our recursive as. In this case, we called it Countdown.
 
 - And now we're going to make this resulting table right here accessible to the rest of our query or essentially the outer query.
+
+# Why use recursive ctes
+
+- So Instagram makes the assumption this is a really big assumption. If I am interested in these people and those people are interested in these people, then I should be interested in Justin Bieber, Jennifer Lopez and Snoop Dog as well.
+
+- So to get the list of suggestions for this page right here, we would have to write out a query to take a look at who some user is following. Find those people and then find who they are following in turn.
+
+[<img src="./pictures/why_use_resursive_ctes.png" width="50%"/>](./pictures/why_use_resursive_ctes.png)
+
+- As you can imagine that this tree kind of grows in depth over and over and over.
+
+[<img src="./pictures/why_use_resursive_ctes_02.png" width="50%"/>](./pictures/why_use_resursive_ctes_02.png)
