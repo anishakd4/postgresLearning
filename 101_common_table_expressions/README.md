@@ -97,6 +97,30 @@
 
 - We're going to find all the rows with a follower of one.
 
+- And for those rows, we're going to extract only the leader ID and the follower ID. We're going to pull out that row right there. And we're also going to give it that fixed constant value of depth of one as well.
+
+- So we've added those rows or the result of the initial query to the working table. We also add that to our results table as well.
+
+- the little trick that we use for understanding the recursive statement. The trick is to find the reference to the name of the CTE itself, and we're going to replace that with working table.
+
+- To illustrate the join, we're going to kind of diagrammatically or guess visually, just to put it very simply, show the matching or the merge tables in this temporary table over here.
+
+- Okay, so now that we've got the join table put together, we would then execute the Where statement. So we would execute that where and we would make sure that we've only got rows inside of here with a depth that is less than 2.
+
+- So we take the follower side leader, the follower side follower, take depth and add one as well.
+
+- So now we will take that result, copy it into our results table. We would dump everything inside of our working table and put the result of the recursive statement in there as well.
+
+- So now we're going to run our recursive statement again. That means we have to do the join a second time around. So we're going to take a look at all these different working table values and we will join them with the followers table follower ID column.
+
+- The where clause to it would make sure that we've only got rows with a depth less than two.
+
+- That is the result of our recursive query. There are no rows to actually select any columns from. So in this case, our recursive statement did not return any rows. We have nothing to merge into the results table.
+
+- So we stop recursion and this results table right here, we can imagine gets renamed automatically to the name of our CTE itself, which was suggestions.
+
+- And then the rest of our query would start to operate on it.
+
 [<img src="./pictures/recursive_cte_example_00.png" width="50%"/>](./pictures/recursive_cte_example_00.png)
 
 [<img src="./pictures/recursive_cte_example_01.png" width="50%"/>](./pictures/recursive_cte_example_01.png)
