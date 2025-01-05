@@ -37,3 +37,12 @@ CREATE OR REPLACE VIEW recent_posts AS (
 	SELECT * FROM posts
 	ORDER BY created_at DESC LIMIT 15
 )
+
+-- zero results because left inner join is needed
+SELECT * FROM likes
+JOIN posts ON posts.id = likes.post_id
+JOIN comments ON comments.id = likes.comment_id;
+
+SELECT * FROM likes
+LEFT JOIN posts ON posts.id = likes.post_id
+LEFT JOIN comments ON comments.id = likes.comment_id;

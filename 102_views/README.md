@@ -60,3 +60,10 @@
 - However, every time that we do actually execute the query, Postgres is going to take the results and save them and we can then refer back to those results without rerunning the query itself.
 
 - So we make use of materialized views anytime that we have a very expensive query. In other words, a query that might take many seconds, minutes or even hours to actually execute. We can run a materialized view just one time and then hang on to the result set and refer back to the results without having to go and rerun the very expensive query.
+
+[<img src="./pictures/materialized_views_01.png" width="50%"/>](./pictures/materialized_views_01.png)
+
+- Left inner join
+
+[<img src="./pictures/left_inner_join.png" width="50%"/>](./pictures/left_inner_join.png)
+
