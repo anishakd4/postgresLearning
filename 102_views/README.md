@@ -46,3 +46,13 @@
 - So with this view, we've essentially solved this issue of having two separate tables. We've kind of merged them together, but it's not any permanent change whatsoever. We can always remove this view if we want to, and none of the underlying data is going to go anywhere.
 
 - All the underlying data inside of the two separate tables still exists. So if we have any queries that refer to those two separate tables of caption tags or photo tags, those existing queries are going to work just fine.
+
+- So at this point, we've been talking about views which are essentially queries that we kind of wrap up and refer back to at some point in time in the future. Whenever we refer to a view, we are ultimately executing the underlying query kind of stored within it.
+
+# Materialized views
+
+- we're now going to take a look at a variation on a view called a materialized view. A materialized view is a query that we're going to kind of wrap up or kind of package, but the query is only going to be executed at very specific times.
+
+- However, every time that we do actually execute the query, Postgres is going to take the results and save them and we can then refer back to those results without rerunning the query itself.
+
+- So we make use of materialized views anytime that we have a very expensive query. In other words, a query that might take many seconds, minutes or even hours to actually execute. We can run a materialized view just one time and then hang on to the result set and refer back to the results without having to go and rerun the very expensive query.
