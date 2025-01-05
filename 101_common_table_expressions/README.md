@@ -69,6 +69,14 @@
 
 - And now we're going to make this resulting table right here accessible to the rest of our query or essentially the outer query.
 
+[<img src="./pictures/recursive__step_05.png" width="50%"/>](./pictures/recursive__step_05.png)
+
+[<img src="./pictures/recursive__step_06.png" width="50%"/>](./pictures/recursive__step_06.png)
+
+[<img src="./pictures/recursive__step_07.png" width="50%"/>](./pictures/recursive__step_07.png)
+
+[<img src="./pictures/recursive__step_08.png" width="50%"/>](./pictures/recursive__step_08.png)
+
 # Why use recursive ctes
 
 - So Instagram makes the assumption this is a really big assumption. If I am interested in these people and those people are interested in these people, then I should be interested in Justin Bieber, Jennifer Lopez and Snoop Dog as well.
