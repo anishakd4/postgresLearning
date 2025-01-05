@@ -49,6 +49,10 @@
 
 - So at this point, we've been talking about views which are essentially queries that we kind of wrap up and refer back to at some point in time in the future. Whenever we refer to a view, we are ultimately executing the underlying query kind of stored within it.
 
+[<img src="./pictures/view_01.png" width="50%"/>](./pictures/view_01.png)
+
+[<img src="./pictures/view_02.png" width="50%"/>](./pictures/view_02.png)
+
 # Materialized views
 
 - we're now going to take a look at a variation on a view called a materialized view. A materialized view is a query that we're going to kind of wrap up or kind of package, but the query is only going to be executed at very specific times.
