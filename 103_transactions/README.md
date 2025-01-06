@@ -50,4 +50,7 @@
 
 - If we ever, for some reason, lose this connection. So if the connection is just suddenly terminated because the process that is making the connection crashes. So like our server or something like that, if we crash, then Postgres will detect that and it's going to automatically clean up that transaction and delete all that stuff. And so we will not commit any of those changes back to our main data pool.
 
+[<img src="./pictures/connection_loss.png" width="50%"/>](./pictures/connection_loss.png)
+
+
 
