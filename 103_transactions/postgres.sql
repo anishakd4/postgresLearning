@@ -11,3 +11,20 @@ VALUES
 
 
 SELECT * FROM accounts;
+
+
+BEGIN;
+
+UPDATE accounts 
+SET balance = balance - 50 
+WHERE name = 'Alyson';
+
+UPDATE accounts 
+SET balance = balance + 50 
+WHERE name = 'Gia';
+
+SELECT * FROM accounts;
+
+COMMIT;
+
+SELECT * FROM accounts;
