@@ -42,11 +42,14 @@
 
 - So if we run rollback, that is going to delete the separate workspace. We're not going to save any changes. And connection number one will continue to take a look at the main data pool.
 
+[<img src="./pictures/rollback.png" width="50%"/>](./pictures/rollback.png)
+
 - Another scenario that we can fall into if connection number one runs some kind of query that results in an error. So, for example, if we do a select star from some table that doesn't exist, that would result in an error. Whenever you have this separate workspace and get an error inside of it, the workspace or really the transaction is what we're referring to here enters an aborted state. You have to manually run a command of rollback to get out of that aborted state until you run rollback. You will not be able to issue any other queries or statements inside of that transaction.
 
 - So in other words, if you have some kind of error, you got to run rollback. You're going to delete everything inside there. And connection number one falls back to looking at the main data pool again.
 
-[<img src="./pictures/rollback.png" width="50%"/>](./pictures/rollback.png)
+
+[<img src="./pictures/transaction_error.png" width="50%"/>](./pictures/transaction_error.png)
 
 - If we ever, for some reason, lose this connection. So if the connection is just suddenly terminated because the process that is making the connection crashes. So like our server or something like that, if we crash, then Postgres will detect that and it's going to automatically clean up that transaction and delete all that stuff. And so we will not commit any of those changes back to our main data pool.
 
