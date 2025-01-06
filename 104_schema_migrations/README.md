@@ -40,3 +40,18 @@
 
 [<img src="./pictures/migration_file_apply.png" width="50%"/>](./pictures/migration_file_apply.png)
 
+- So every migration file contains everything you need to make a change and undo a change.
+
+- Any single project can have many different migration files inside of it.
+
+- rather than opening up Pgadmin and writing out some SQL that would create some tables for you. You could instead create a migration file that describes setting up the initial structure of that database.
+
+- Now, the very nice thing about migration files is that you can take a project with a bunch of migration files inside of it and hand it off to any brand new engineer working at your company.
+
+- That brand new engineer could then run all the migration files and they would be guaranteed that they've got the most up to date, perfect and exact structure of the database.
+
+- The other nice thing about migration files is that if you ever write a migration and then decide that it's not quite right, you could run the down migration tied to it. So you would undo that migration, make some change, fix everything up and then reapply the up.
+
+[<img src="./pictures/migration_files_multiple.png" width="50%"/>](./pictures/migration_files_multiple.png)
+
+
