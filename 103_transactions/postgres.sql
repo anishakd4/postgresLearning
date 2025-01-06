@@ -28,3 +28,15 @@ SELECT * FROM accounts;
 COMMIT;
 
 SELECT * FROM accounts;
+
+
+UPDATE accounts 
+SET balance = 100
+WHERE name = 'Alyson';
+
+UPDATE accounts 
+SET balance = 100
+WHERE name = 'Gia';
+
+-- this is just going to take a look at all the different rows inside of accounts and set the balance of every one of them to $100.
+UPDATE accounts SET balance = 100;

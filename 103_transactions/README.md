@@ -55,5 +55,20 @@
 
 [<img src="./pictures/connection_loss.png" width="50%"/>](./pictures/connection_loss.png)
 
+- let's open up a transaction. Remember we do that with begin.
+
+- By opening dashboard and So I'm going to manually terminate both those windows. So click that red x right there and the red x right there. So now those connections have been terminated just 100% stopped. So in theory we no longer have any transactions running.
+
+- Postgres should have automatically recognized that that connection has died and cleaned up the transaction tied to it.
+
+- If we open the two connections then we will get database connection popup if we try to run any query in them.
+
+[<img src="./pictures/database_connection_error.png" width="50%"/>](./pictures/database_connection_error.png)
+
+
+- We're going to make sure that if we ever need to run some number of queries in sequence and they all have to be executed or none of them be executed, we're just going to wrap them all inside of a transaction.
+
+[<img src="./pictures/transaction_crash_01.png" width="50%"/>](./pictures/transaction_crash_01.png)
+
 
 
