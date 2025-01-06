@@ -40,3 +40,17 @@ WHERE name = 'Gia';
 
 -- this is just going to take a look at all the different rows inside of accounts and set the balance of every one of them to $100.
 UPDATE accounts SET balance = 100;
+
+BEGIN;
+
+-- ERROR:  relation "sdfsfsdfsdf" does not exist
+SELECT * FROM sdfsfsdfsdf;
+
+-- ERROR:  current transaction is aborted, commands ignored until end of transaction block 
+SELECT * FROM accounts;
+
+-- ERROR:  current transaction is aborted, commands ignored until end of transaction block 
+SELECT * FROM accounts;
+
+-- ERROR:  current transaction is aborted, commands ignored until end of transaction block 
+SELECT * FROM accounts;

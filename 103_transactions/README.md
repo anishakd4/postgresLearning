@@ -70,5 +70,11 @@
 
 [<img src="./pictures/transaction_crash_01.png" width="50%"/>](./pictures/transaction_crash_01.png)
 
+- So recall that if you ever open a transaction and then run a query that results in an error, then the transaction is going to enter into an aborted state and you have to manually roll back the transaction.
+
+- So to end the transaction block or essentially close the transaction out, we're going to do a rollback and that's it.
+
+- The transaction is now closed and now we can once again do some normal queries like Select Star from accounts.
+
 
 
