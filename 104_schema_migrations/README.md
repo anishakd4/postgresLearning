@@ -35,3 +35,8 @@
 - The down section is also going to contain some SQL that is going to exactly undo whatever the up command did. So if our up command renamed contents to body are down would do the exact opposite. We would rename body back to contents.
 
 [<img src="./pictures/schema_migration_file_structure.png" width="50%"/>](./pictures/schema_migration_file_structure.png)
+
+- Once we author a migration file, we then apply it to our database.
+
+[<img src="./pictures/migration_file_apply.png" width="50%"/>](./pictures/migration_file_apply.png)
+
