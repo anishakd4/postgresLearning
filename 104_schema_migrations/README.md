@@ -68,3 +68,14 @@
 # Libraries for creating/Running data schema migrations
 
 [<img src="./pictures/data_migration_language_options.png" width="50%"/>](./pictures/data_migration_language_options.png)
+
+# Project creating migration
+
+
+[<img src="./pictures/create_migration_file_01.png" width="50%"/>](./pictures/create_migration_file_01.png)
+
+[<img src="./pictures/create_migration_file_02.png" width="50%"/>](./pictures/create_migration_file_02.png)
+
+[<img src="./pictures/create_migration_file_03.png" width="50%"/>](./pictures/create_migration_file_03.png)
+
+[<img src="./pictures/create_migration_file_04.png" width="50%"/>](./pictures/create_migration_file_04.png)
