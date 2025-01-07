@@ -131,5 +131,6 @@
 
 - And when we do a down, it's only going to revert one step at a time.
 
-
 [<img src="./pictures/post_migration.png" width="50%"/>](./pictures/post_migration.png)
+
+[<img src="./pictures/post_migration_02.png" width="50%"/>](./pictures/post_migration_02.png)
