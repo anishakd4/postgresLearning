@@ -54,4 +54,10 @@
 
 [<img src="./pictures/migration_files_multiple.png" width="50%"/>](./pictures/migration_files_multiple.png)
 
+- So in theory, this could shrink down that window of time where we have a differing version of our API and a different version of our database structure down to a very small period of time.
+
+- Inside of any given code review request, we can say that we have some new version of some code that needs to be reviewed and we can pair it along with that.
+
+-  A migration file that describes the exact changes to the structure that need to be made to our database in order to safely execute this new code. So then in theory, another engineer could take all the code for this code review request. They could apply the migration, which would give them the correct structure of the database to run this new version of the API. The other engineer could then evaluate and test all this code. And then finally, once they were complete with the review, that engineer could then revert this migration and that would take them back to the current structure of the database that would allow them to run whatever current code, base or version of the code or the version. The API is really out there.
+
 
