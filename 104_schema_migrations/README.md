@@ -79,3 +79,31 @@
 [<img src="./pictures/create_migration_file_03.png" width="50%"/>](./pictures/create_migration_file_03.png)
 
 [<img src="./pictures/create_migration_file_04.png" width="50%"/>](./pictures/create_migration_file_04.png)
+
+- You'll see that there is a new migrations folder inside of here. And inside there is a file called Table comments. The number at the very start of this is a timestamp. So that is the time at which this migration was created.
+
+- That timestamp is going to tell this migration library later on. So node migrate what order these different migrations should be executed in because we would want to make sure that we always run this migration file first. In other words, the migration file that actually creates the table before we ever try to run a migration that would try to change it in some way.
+
+- Then inside this file we can see very easily that there is a function right here called up and a function called down.
+
+- They are going to contain or produce some amount of SQL or run some command or do whatever to either advance the structure of our database in some way. And then down is going to contain some SQL or run some command or do whatever that is going to revert or do the exact opposite of whatever we did with up.
+
+- you might have noticed that this argument pgm right here is essentially an object that we can use to create tables or change tables, add columns, all that kind of stuff. But we are not going to rely upon any kind of automatic migration generation or anything like that, anything to automate the process of making changes to our different tables. So instead, we going to write out pgm.SQL. We're then going to put in a multi-line string which in JavaScript we indicate with a set of backticks that is a character to the left of the one on your keyboard. And then we are going to write out some raw SQL inside of here that we want to execute.
+
+- So again, we are not relying upon any kind of built in function that is going to create the table for us.
+
+
+# Exceute the migration
+
+- So to execute the migration, it's going to be a little bit different depending upon your operating system.
+
+- You'll also notice that there is another table inside of here called Migrations. This table was created for you automatically by the Node migrate module. If you do a right click on there and then go to view data all the rows. You'll see that this table essentially just lists out the name of a migration that has been executed and when it was actually executed. So that table is used by many different migration frameworks or a table very similar to it, I should say, is used by many different migration frameworks just to keep track of what migrations have actually been executed and make sure that you don't run that same migration again.
+
+- If you go and run the same command once again back at our terminal and try to do that same migration again. It'll just say, okay, there's no migrations to run because our module has detected that we already
+
+- If for any reason we decided that this migration was not written correctly or if we did something wrong, or if we just don't want to have our database in this structure anymore, we could run the same exact command. But at the very end, instead of up, we will put in down. So down is going to undo the most recent migration.
+
+- So we just dropped table comments.
+
+- So now if we go back over to Pgadmin yet again and refresh tables, now the table is gone and we've only got migrations, which again just keeps track of which migrations we have actually executed. If you refresh that table now migrations, you'll see that there are no rows inside there and that indicates that we have not actually executed any migrations.
+
