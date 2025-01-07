@@ -107,25 +107,25 @@
 
 - So now if we go back over to Pgadmin yet again and refresh tables, now the table is gone and we've only got migrations, which again just keeps track of which migrations we have actually executed. If you refresh that table now migrations, you'll see that there are no rows inside there and that indicates that we have not actually executed any migrations.
 
-[<img src="./pictures/create_migration_file_01.png" width="50%"/>](./pictures/create_migration_file_01.png)
+[<img src="./pictures/create_migration_01.png" width="50%"/>](./pictures/create_migration_01.png)
 
-[<img src="./pictures/create_migration_file_02.png" width="50%"/>](./pictures/create_migration_file_02.png)
+[<img src="./pictures/create_migration_02.png" width="50%"/>](./pictures/create_migration_02.png)
 
-[<img src="./pictures/create_migration_file_03.png" width="50%"/>](./pictures/create_migration_file_03.png)
+[<img src="./pictures/create_migration_03.png" width="50%"/>](./pictures/create_migration_03.png)
 
-[<img src="./pictures/create_migration_file_04.png" width="50%"/>](./pictures/create_migration_file_04.png)
+[<img src="./pictures/create_migration_04.png" width="50%"/>](./pictures/create_migration_04.png)
 
-[<img src="./pictures/create_migration_file_041.png" width="50%"/>](./pictures/create_migration_file_041.png)
+[<img src="./pictures/create_migration_041.png" width="50%"/>](./pictures/create_migration_041.png)
 
-[<img src="./pictures/create_migration_file_05.png" width="50%"/>](./pictures/create_migration_file_05.png)
+[<img src="./pictures/create_migration_05.png" width="50%"/>](./pictures/create_migration_05.png)
 
-[<img src="./pictures/create_migration_file_06.png" width="50%"/>](./pictures/create_migration_file_06.png)
+[<img src="./pictures/create_migration_06.png" width="50%"/>](./pictures/create_migration_06.png)
 
-[<img src="./pictures/create_migration_file_07.png" width="50%"/>](./pictures/create_migration_file_07.png)
+[<img src="./pictures/create_migration_07.png" width="50%"/>](./pictures/create_migration_07.png)
 
-[<img src="./pictures/create_migration_file_08.png" width="50%"/>](./pictures/create_migration_file_08.png)
+[<img src="./pictures/create_migration_08.png" width="50%"/>](./pictures/create_migration_08.png)
 
-[<img src="./pictures/create_migration_file_09.png" width="50%"/>](./pictures/create_migration_file_09.png)
+[<img src="./pictures/create_migration_09.png" width="50%"/>](./pictures/create_migration_09.png)
 
 - After adding the second migration file we run the migration again then It looks like that created first the comments table for me and then went ahead and applied that renaming step.
 
