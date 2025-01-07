@@ -126,3 +126,7 @@
 [<img src="./pictures/create_migration_file_08.png" width="50%"/>](./pictures/create_migration_file_08.png)
 
 [<img src="./pictures/create_migration_file_09.png" width="50%"/>](./pictures/create_migration_file_09.png)
+
+- After adding the second migration file we run the migration again then It looks like that created first the comments table for me and then went ahead and applied that renaming step.
+
+- And when we do a down, it's only going to revert one step at a time.
