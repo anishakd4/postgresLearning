@@ -134,3 +134,48 @@
 [<img src="./pictures/post_migration.png" width="50%"/>](./pictures/post_migration.png)
 
 [<img src="./pictures/post_migration_02.png" width="50%"/>](./pictures/post_migration_02.png)
+
+# Data migration and schema migration
+
+- Well, as I'm going to show you, if we try to do everything inside of one step, we can very easily get into trouble really, really quickly.
+
+- Whenever we add a column to a table that is generally just about instantaneous in nature. So we could add this column location and a millisecond later the column would be in place.
+
+- Copying millions of different values around is going to take some amount of time.
+
+- After that, we would then drop columns, latitude and longitude and just like adding a column, dropping a column is just about instantaneous in nature.
+
+- When you drop a column, Postgres does not go back into your different heap files and delete any data. It just says, Hey, this column is dead. And then over time it's going to clean up all the values inside those column, the column that you dropped automatically.
+
+- Whenever we run a migration, it is very common to place the migration or execute it inside of a transaction. That's to make sure that if we ever start to do some amount of work, say up here, like adding a column, removing a column, then copying some data around, and then get down to, say, dropping a column down here. If anything goes wrong with dropping the column, we probably want to undo all the work that we had previously done during the migration.
+
+- So we really do not want to ever have a migration in a kind of half executed state. And to prevent that, well, we just run it inside of a transaction.
+
+- And to prevent that, well, we just run it inside of a transaction. So if at any point in time, any one of these steps fail, we're going to roll back the entire transaction and the entire thing gets cancelled. No changes actually made to our database.
+
+- And when we imagine that we're opening up that separate workspace, it's kind of like we can kind of imagine again, this is not what really goes on behind the scenes, but we can imagine that we're kind of creating a copy of all the data inside of our database and putting it into that separate workspace. We then do some amount of work inside that separate workspace, and then if there are no errors, we commit the transaction, which essentially merges all the changes we made back into the real world of our database.
+
+- Now, in that meantime, while we are doing the copy operation, we still might have our API server up and running like the actual application up and running and we are still accepting requests and possibly also creating posts.
+
+- So this is one of the big downsides of trying to do a data migration and a schema migration at the same time. If you're doing everything inside of a transaction and you probably really want to do it inside of a transaction, you can end up in this really weird state where any additional records that you added into a table while that transaction was running might accidentally get deleted.
+
+
+[<img src="./pictures/data_schema_migration_01.png" width="50%"/>](./pictures/data_schema_migration_01.png)
+
+
+[<img src="./pictures/data_schema_migration_02.png" width="50%"/>](./pictures/data_schema_migration_02.png)
+
+
+[<img src="./pictures/data_schema_migration_03.png" width="50%"/>](./pictures/data_schema_migration_03.png)
+
+
+[<img src="./pictures/data_schema_migration_04.png" width="50%"/>](./pictures/data_schema_migration_04.png)
+
+
+[<img src="./pictures/data_schema_migration_05.png" width="50%"/>](./pictures/data_schema_migration_05.png)
+
+
+[<img src="./pictures/data_schema_migration_06.png" width="50%"/>](./pictures/data_schema_migration_06.png)
+
+
+[<img src="./pictures/data_schema_migration_07.png" width="50%"/>](./pictures/data_schema_migration_07.png)
