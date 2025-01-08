@@ -227,3 +227,40 @@
 [<img src="./pictures/create_post_01.png" width="50%"/>](./pictures/create_post_01.png)
 
 [<img src="./pictures/create_post_02.png" width="50%"/>](./pictures/create_post_02.png)
+
+# Web server setup
+
+- pg being the module that we're going to use to connect to Postgres.
+
+- Then after that we'll put together two route handlers. One route handler is going to show a user a list of all of our different posts, and a form to create a new post.
+
+- The other route handler is going to receive a form submission and create a new post inside the database.
+
+[<img src="./pictures/webserver_01.png" width="50%"/>](./pictures/webserver_01.png)
+
+[<img src="./pictures/webserver_02.png" width="50%"/>](./pictures/webserver_02.png)
+
+
+# updating loc for all the rows
+
+- This approach has a couple of different downsides tied to it. First off, remember, our post table might have a ton of different records inside of it. Well, if we wrote some kind of query like that and executed it. We could accidentally load up a million different records into our JavaScript server. And in that case, chances are we would eventually run out of memory and our node server would just crash entirely.
+
+- Another way we could approach this is to use something called batching. So if we make use of batching, we would try to load up just a set of all of our records at once. So we could do that with something as simple as limit 5000 or something similar to that. So that means give us the first 5000 posts where location is null. We can then do the update for those 5000 records and then save the updates back over to the database.
+
+- When we start doing batching, this kind of implies that we're going to kind of have a multiple different batches running and each batch will be running sequentially. So in other words, we'll do one batch, process everything, save it back to the database, open up another batch, do all the processing, save it back over and so on. It's entirely possible that by the time we get to the very last batch, there could be some kind of error in our logic in how we do the update or how we calculate it. We might only see that error when we get to that very last batch. So if we only see that error at the very end and that error crashes our program, now we're kind of left in a halfway between state where some number of rows have been updated and the other rows have not.
+
+- The other downside to this is that it requires us to manually connect to our database from a JavaScript environment. This is sometimes a little bit challenging as you're going to see a little bit later on in this course. If you provision a database, for example, on AWS or Amazon Web Services, that database will frequently be very locked down and it will be challenging to connect to it from any arbitrary location with any kind of arbitrary JavaScript file or something like that. And so there might be scenarios where just trying to connect to your database from a node environment will be a little bit challenging.
+
+- The one very big upside to this approach, however, is that we can very easily run really complex business logic or do some kind of complex validation on all these records before we process the update.
+
+
+[<img src="./pictures/option_01.png" width="50%"/>](./pictures/option_01.png)
+
+[<img src="./pictures/option_02.png" width="50%"/>](./pictures/option_02.png)
+
+
+- One very big upside is that we are not moving any information or records between the database and the JavaScript world. That means that this update is, in theory, going to run a lot faster than if we were trying to load up all these rows into our JavaScript world.
+
+[<img src="./pictures/option2_01.png" width="50%"/>](./pictures/option2_01.png)
+
+[<img src="./pictures/option2_02.png" width="50%"/>](./pictures/option2_02.png)
