@@ -223,3 +223,7 @@
 [<img src="./pictures/approach_08.png" width="50%"/>](./pictures/approach_08.png)
 
 # Creating post table
+
+[<img src="./pictures/create_post_01.png" width="50%"/>](./pictures/create_post_01.png)
+
+[<img src="./pictures/create_post_02.png" width="50%"/>](./pictures/create_post_02.png)
