@@ -135,7 +135,7 @@
 
 [<img src="./pictures/post_migration_02.png" width="50%"/>](./pictures/post_migration_02.png)
 
-# Data migration and schema migration
+# Data migration and schema migration together
 
 - Well, as I'm going to show you, if we try to do everything inside of one step, we can very easily get into trouble really, really quickly.
 
@@ -179,3 +179,30 @@
 
 
 [<img src="./pictures/data_schema_migration_07.png" width="50%"/>](./pictures/data_schema_migration_07.png)
+
+
+# Data migration and schema migration Separately
+
+- So step number one up here, we're going to run a schema migration that is going to add a column called Location or look to our post table. So we can imagine that we would add in a new column. And we would have all the values inside that column by default be null.
+
+- Now, in between step two and step one, we can allow for just about any period of time we could run step one on a Friday, take the weekend off, come back on Monday, and then run this next step. We can even allow a month to pass in between. The nice thing about this entire approach or this entire flow that we're going through is that you can allow just about any amount of time to pass in between each step.
+
+- So in step number two, we're going to deploy a new version of our API or essentially our application server. And it's going to make sure that any time that we create a new post or possibly update a post, we're going to write new values to both the columns latitude, longitude and location.
+
+- So in other words, if we came into our post table and we tried to create a new post right here, let's say number three. We would make sure that we put in some appropriate latitude, longitude and the appropriate location as well.
+
+- We would then repeat that process for any number of posts that are created during the step.
+
+- In step number three, we're going to go back and backfill all the previous rows we had ever created. Now, this step does not have to be in the form of some kind of schema migration file. We could very easily write a separate script authored in maybe Java or Python or JavaScript, some kind of separate little program that can go and take a look at all the rows inside this table, calculate the new location value and update that column.
+
+- So now at this point in time. We have a location for all of our different rows.
+
+- So the next step, we're going to update our code once again. So this is updating our API or our application server, and we're going to make sure that we write only to our location column.
+
+- And then finally, very last step, because our application no longer really cares about the latitude longitude columns because we are not writing to them anymore. And presumably we would also not be reading from them. We can finally drop those columns so we can drop latitude and longitude like so.
+
+- All of our different rows have a defined value for location, and at no point in time were we ever in a scenario where we kind of missed out on copying some different values over or ran into any kind of issues like that that we saw previously back on that other approach.
+
+- So this is the process that I recommend you taking a look at any time that you have to do a schema, migration and a data migration together, you're going to break it up into a series of different operations.
+
+
