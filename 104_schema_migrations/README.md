@@ -261,6 +261,30 @@
 
 - One very big upside is that we are not moving any information or records between the database and the JavaScript world. That means that this update is, in theory, going to run a lot faster than if we were trying to load up all these rows into our JavaScript world.
 
+- One very big downside to this approach is that it's of course a lot harder to implement any kind of complex validation because again, we don't really have the ability to execute any kind of JavaScript or inspect any of the individual rows that are being updated in any way.
+
 [<img src="./pictures/option2_01.png" width="50%"/>](./pictures/option2_01.png)
 
 [<img src="./pictures/option2_02.png" width="50%"/>](./pictures/option2_02.png)
+
+- There's one other issue I want to mention very briefly around both option number one and option number two. This is an issue that only starts to come up once you have many, many records inside of a given table. So we're talking about on the realm of hundreds of thousands of records or millions of records.
+
+- So whenever we do an update with either approach, we might want to run the entire update inside of one single transaction. There's a really good reason for doing that. It means that if we start to process all these rows and we get to that very last row, if something goes wrong with updating that last row, it might mean that there's some kind of bug or issue in our update logic. So if we threw an error on the update of that very last row, then the transaction would automatically cancel.
+
+- So doing the update inside of a transaction generally probably a good idea and it's probably something we want to do.
+
+- Let's imagine that we open up a transaction and inside of our transaction, we start to take a look at all of our different rows that need to be updated. So we might see row three right here. We would see that it has a location of null. So that means we need to do an update. So we would say, okay, our new location is going to be 25, comma 24. So we would put in 25, 24 right there. And then internally, Postgres says, Hey, this value right here has been updated. Whenever a transaction is going to update a value, that entire row is going to get locked.
+
+- We can kind of imagine that transaction number one updated at row three. And after that, it's then going to move on to row four and then five and so on. So at this point in time, this row has been locked. This row is going to be locked. And essentially it cannot be updated by any other transaction until transaction number one has either committed or rolled back.
+
+- So in other words, no other transaction can update that value right there until transaction number one has processed all the other rows inside this table. So in other words, no other transaction can update that value right there until transaction number one has processed all the other rows inside this table. So if in this period of time some user makes a request to our application and they say, Hey, I'm trying to update the location of Post with ID 3. So they're trying to update that one right there. Well, unfortunately, that value is locked. And so this transaction number two is not allowed to update any value inside this row until transaction number one is completed.
+
+- Now, transaction number two is not going to fail entirely. It's just going to sit around and wait until transaction number one is either committed or rolled back.
+
+- So this is going to be an issue if transaction number one. Essentially, our update process is going to be running for a very long time means that during that period, no other transaction or essentially any other attempt to modify these same rows is going to succeed.
+
+- Okay, so long story short, whenever we are doing this really big update of a ton of different rows, there will be some period of time where nothing else can update those rows until upped. Our update has been completed.
+
+- There is a very easy way to kind of get around this, and that would be to do the same kind of batch update system.
+
+- So on query tool Window number two. Well, we're still just sitting here and we're going to continue sitting here until we eventually commit the transaction or rollback the one inside of query tool number one. And the instant I commit this, if we go back over to query tool number two. The update over here has been processed because transaction number one got resolved.
