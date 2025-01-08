@@ -288,3 +288,29 @@
 - There is a very easy way to kind of get around this, and that would be to do the same kind of batch update system.
 
 - So on query tool Window number two. Well, we're still just sitting here and we're going to continue sitting here until we eventually commit the transaction or rollback the one inside of query tool number one. And the instant I commit this, if we go back over to query tool number two. The update over here has been processed because transaction number one got resolved.
+
+[<img src="./pictures/transaction_update_01.png" width="50%"/>](./pictures/transaction_update_01.png)
+
+[<img src="./pictures/transaction_update_02.png" width="50%"/>](./pictures/transaction_update_02.png)
+
+[<img src="./pictures/transaction_update_03.png" width="50%"/>](./pictures/transaction_update_03.png)
+
+[<img src="./pictures/transaction_update_04.png" width="50%"/>](./pictures/transaction_update_04.png)
+
+[<img src="./pictures/transaction_update_05.png" width="50%"/>](./pictures/transaction_update_05.png)
+
+[<img src="./pictures/transaction_update_06.png" width="50%"/>](./pictures/transaction_update_06.png)
+
+## Updating values
+
+- We could of course do this directly inside of Pgadmin. The reason that we are doing it inside of a JavaScript file is so that we can commit this file to version control eventually and share this file with other engineers, because there might be other engineers working on our project who need to make this update as well.
+
+- In addition, we're going to eventually have to run this update for our production instance or a production database in theory. And so we would probably want to commit this file just to make it easier to run this query for the production instance in the future.
+
+- So the idea behind the 01 right here is to just provide an index for this file. The order in which it should be executed in case we ever have any other data migration files.
+
+- The migration framework that we are using, the node-pg-migrate module is only about managing or running the files directly inside of the migrations directory. So by placing this file inside of a nested data directory, this is a sign that it is a data migration.
+
+[<img src="./pictures/updating_values_01.png" width="50%"/>](./pictures/updating_values_01.png)
+
+[<img src="./pictures/updating_values_02.png" width="50%"/>](./pictures/updating_values_02.png)
