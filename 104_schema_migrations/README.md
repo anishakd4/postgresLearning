@@ -221,3 +221,5 @@
 [<img src="./pictures/approach_07.png" width="50%"/>](./pictures/approach_07.png)
 
 [<img src="./pictures/approach_08.png" width="50%"/>](./pictures/approach_08.png)
+
+# Creating post table
