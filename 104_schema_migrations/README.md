@@ -206,3 +206,18 @@
 - So this is the process that I recommend you taking a look at any time that you have to do a schema, migration and a data migration together, you're going to break it up into a series of different operations.
 
 
+[<img src="./pictures/approach_01.png" width="50%"/>](./pictures/approach_01.png)
+
+[<img src="./pictures/approach_02.png" width="50%"/>](./pictures/approach_02.png)
+
+[<img src="./pictures/approach_03.png" width="50%"/>](./pictures/approach_03.png)
+
+[<img src="./pictures/approach_04.png" width="50%"/>](./pictures/approach_04.png)
+
+[<img src="./pictures/approach_05.png" width="50%"/>](./pictures/approach_05.png)
+
+[<img src="./pictures/approach_06.png" width="50%"/>](./pictures/approach_06.png)
+
+[<img src="./pictures/approach_07.png" width="50%"/>](./pictures/approach_07.png)
+
+[<img src="./pictures/approach_08.png" width="50%"/>](./pictures/approach_08.png)
