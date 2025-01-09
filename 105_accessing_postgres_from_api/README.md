@@ -6,6 +6,8 @@
 
 - So rather than using a client directly, we generally make use of something instead called a pool. A pool internally maintains a list of different clients. Then any time that you need to run a query, you essentially ask the pool to run a query for you. The pool will take your query, hand it off to one of the clients that is free internally, and that client will then execute the query over to Postgres.
 
+- There is one scenario in which you will make use of a client directly, and that is whenever you need to write or run a transaction,
+
 [<img src="./pictures/sql_pg_01.png" width="50%"/>](./pictures/sql_pg_01.png)
 
 [<img src="./pictures/sql_pg_02.png" width="50%"/>](./pictures/sql_pg_02.png)
