@@ -13,3 +13,7 @@
 [<img src="./pictures/sql_pg_02.png" width="50%"/>](./pictures/sql_pg_02.png)
 
 [<img src="./pictures/sql_pg_03.png" width="50%"/>](./pictures/sql_pg_03.png)
+
+# Repository pattern
+
+- So again, at the end of the day, all three different methods, 100% equivalent, more or less. And there's really not a great reason to use one approach over the other outside of your own personal preference as a developer, I personally rather like this static method approach because it makes this class just very easy to read.
