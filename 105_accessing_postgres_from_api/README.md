@@ -17,3 +17,43 @@
 # Repository pattern
 
 - So again, at the end of the day, all three different methods, 100% equivalent, more or less. And there's really not a great reason to use one approach over the other outside of your own personal preference as a developer, I personally rather like this static method approach because it makes this class just very easy to read.
+
+
+[<img src="./pictures/repository_pattern_01.png" width="50%"/>](./pictures/repository_pattern_01.png)
+
+[<img src="./pictures/repository_pattern_02.png" width="50%"/>](./pictures/repository_pattern_02.png)
+
+[<img src="./pictures/repository_pattern_03.png" width="50%"/>](./pictures/repository_pattern_03.png)
+
+
+# Security issue
+
+- there's one error right here that says relation users does not exist. What does that error mean?
+
+- Okay, so at present we are making requests to our application. Our application is taking that little one right there on the very end of our URL. We extract that number one as a plain string. It doesn't actually get extracted as number, even though it looks like a number to you and I. It gets extracted as a plain string with a number one inside of it.
+
+- we wrote out one semicolon drop table users semicolon. So we can imagine that we took that one and everything after it. It was extracted as a parameter of the URL. We then put it on to the very end of our statement
+
+- So by just modifying that very slightly, we were able to make a drastic change to our database.
+
+- This means if we kind of deployed this code into a production environment, that any arbitrary user could run arbitrary statements inside of our database by just modifying the URL.
+
+- We refer to this scenario as a SQL injection exploit.
+
+- A SQL injection exploit is when you take some user provided input either inside of a form post like a user submits a form or in the form of taking some part of a URL or just about any other value that is provided directly from a user. If you take that value that is provided from a user and just plainly execute it inside of a SQL query, the user can modify that value that they provide and do any kind of arbitrary operation inside of your database that they want so they can read information off of tables that they shouldn't. They can try to make changes to your database. They can even try to delete tables or records as well.
+
+- So we never, ever under any scenario, ever directly take user provided input and use some kind of direct string concatenation stuff to join that user provided value into a query.
+
+- Now, of course, in some scenarios we do want to take some kind of user provided value and supply it to a query. So there are a variety of different safe ways to take user provided values and somehow get it into a query.
+
+[<img src="./pictures/sql_injection_00.png" width="50%"/>](./pictures/sql_injection_00.png)
+
+[<img src="./pictures/sql_injection_01.png" width="50%"/>](./pictures/sql_injection_01.png)
+
+[<img src="./pictures/sql_injection_02.png" width="50%"/>](./pictures/sql_injection_02.png)
+
+[<img src="./pictures/sql_injection_03.png" width="50%"/>](./pictures/sql_injection_03.png)
+
+[<img src="./pictures/sql_injection_04.png" width="50%"/>](./pictures/sql_injection_04.png)
+
+[<img src="./pictures/sql_injection_05.png" width="50%"/>](./pictures/sql_injection_05.png)
