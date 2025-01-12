@@ -159,3 +159,9 @@
 - If you leave off the test. right there. So if you don't include it at all, then by default Postgres is going to try to create a table inside of the public schema.
 
 - If we want to revert back to adding in some users into our public schema or the default one, then all we have to do is take off that `test.` and that would add some users into our public schema instead.
+
+[<img src="./pictures/schema_table_01.png" width="50%"/>](./pictures/schema_table_01.png)
+
+[<img src="./pictures/schema_table_02.png" width="50%"/>](./pictures/schema_table_02.png)
+
+[<img src="./pictures/schema_table_03.png" width="50%"/>](./pictures/schema_table_03.png)
