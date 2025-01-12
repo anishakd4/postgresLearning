@@ -116,3 +116,31 @@
 - So there might be some scenario where test file one might try to create a user and then maybe try to get the most recent user that was created out of the users table. And that might be part of a very normal test to create a user, get the most recently created user, make sure that user has some certain attributes. If test file one creates a user and then in the very next microsecond test, file number three creates a user as well. We could potentially break that test inside of test file number one.
 
 - So in other words, because these tests are being executed in parallel, they might interfere with each other and cause some test to fail.
+
+# Jest
+
+`"test": "jest --no-cache"`
+
+- The reason we are adding `--no-cache` in this option right here is to just to make sure that Jest is going to run all three of our different test files in parallel.
+
+# Schemas
+
+- I think it's pretty clear that when we try to run our three different test files in parallel or essentially at the same time, they are all trying to access the same user table inside of our social network test database.
+
+- And because these different test files are accessing the same exact table, we start to get some conflicts really quickly and we start to get some mysterious test failures.
+
+- We need to make sure we can run all of our tests in parallel still without any kind of conflict between these different test files.
+
+[<img src="./pictures/schema_issue.png" width="50%"/>](./pictures/schema_issue.png)
+
+[<img src="./pictures/schema_solution_01.png" width="50%"/>](./pictures/schema_solution_01.png)
+
+- So on your hard drive or on your local file system, you have a folder or a number of different folders to organize, different files. You can think of schemas as being very similar in nature. We can create multiple schemas inside of one single database and then use these different schemas to organize our different tables, indexes and all the other kind of objects we might create inside of our database.
+
+- Whenever you create a database by default, it gets one schema created called the public schema, and you can actually see that very easily inside of Pgadmin right now.
+
+- And the nice thing about creating these schemas is that every single schema can have its own separate copy of a given table.
+
+- we essentially get that same kind of isolation that we have with multiple databases. But rather than creating multiple databases, we are creating separate folders inside of one single database.
+
+[<img src="./pictures/schema.png" width="50%"/>](./pictures/schema.png)
