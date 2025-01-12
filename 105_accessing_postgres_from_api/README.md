@@ -102,3 +102,17 @@
 [<img src="./pictures/sql_injection_save_06.png" width="50%"/>](./pictures/sql_injection_save_06.png)
 
 [<img src="./pictures/sql_injection_save_07.png" width="50%"/>](./pictures/sql_injection_save_07.png)
+
+# Jest test runner
+
+- So we are going to eventually write a couple of different test files. In total, we're going to write out three files and each of them is going to have some code inside that is going to try to execute some tests and make sure that our application is working as expected.
+
+- to run these test files. We're going to be using a test runner called Jest. Jest is a program that's going to execute these three files all at the exact same time. This is a little bit atypical. A lot of other test runners out there in the JavaScript world try to run test files sequentially.
+
+- But in order to save a little bit of time while running tests. Just runs tests in parallel.
+
+- All three of these test files are going to be Trying to work with the same exact database. They're all going to be connecting to our social networking database and making changes to data inside there. We can very easily get into scenarios where these three different test files have little conflicts going on between them just because the nature of how we write out tests.
+
+- So there might be some scenario where test file one might try to create a user and then maybe try to get the most recent user that was created out of the users table. And that might be part of a very normal test to create a user, get the most recently created user, make sure that user has some certain attributes. If test file one creates a user and then in the very next microsecond test, file number three creates a user as well. We could potentially break that test inside of test file number one.
+
+- So in other words, because these tests are being executed in parallel, they might interfere with each other and cause some test to fail.
