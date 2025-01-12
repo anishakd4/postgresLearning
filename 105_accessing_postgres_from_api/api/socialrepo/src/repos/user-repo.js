@@ -27,8 +27,13 @@ class UserRepo {
         return toCamelCase(rows)[0];
     }
 
-    static async update(){
 
+    //And then finally, very similar to when we do an insert, when we do an update, we don't actually get any information back about the rows that were actually updated.
+
+    //So if we want to get some information back about the user that was updated at the very end, we have to put in a returning * again.
+    static async update(id, username, bio){
+        const {rows} = await pool.query('UPDATE users SET username = $1 , bio = $2 WHERE id = $3 RETURNING *;', [username, bio, id]);
+        return toCamelCase(rows)[0];
     }
 
     static async delete(){
