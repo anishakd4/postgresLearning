@@ -131,6 +131,8 @@
 
 - We need to make sure we can run all of our tests in parallel still without any kind of conflict between these different test files.
 
+- Now, the upside to this is that each different test file would have its own independent copy of a database, so each one would have its own users table to work with, and each test file can make as many changes to that user's table as it wishes. The downside to this approach, however, is that if we have many different test files, we would have to create many different test databases inside of our local Postgres instance, and that would get really tedious really quickly. That would mean that every single time we create a new test file, we would also have to go off to pgadmin.
+
 [<img src="./pictures/schema_issue.png" width="50%"/>](./pictures/schema_issue.png)
 
 [<img src="./pictures/schema_solution_01.png" width="50%"/>](./pictures/schema_solution_01.png)
@@ -142,5 +144,9 @@
 - And the nice thing about creating these schemas is that every single schema can have its own separate copy of a given table.
 
 - we essentially get that same kind of isolation that we have with multiple databases. But rather than creating multiple databases, we are creating separate folders inside of one single database.
+
+[<img src="./pictures/schema_solution_011.png" width="50%"/>](./pictures/schema_solution_011.png)
+
+[<img src="./pictures/schema_solution_02.png" width="50%"/>](./pictures/schema_solution_02.png)
 
 [<img src="./pictures/schema.png" width="50%"/>](./pictures/schema.png)
