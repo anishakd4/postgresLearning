@@ -123,6 +123,9 @@
 
 - The reason we are adding `--no-cache` in this option right here is to just to make sure that Jest is going to run all three of our different test files in parallel.
 
+[<img src="./pictures/jest_test_runner.png" width="50%"/>](./pictures/jest_test_runner.png)
+
+
 # Schemas
 
 - I think it's pretty clear that when we try to run our three different test files in parallel or essentially at the same time, they are all trying to access the same user table inside of our social network test database.
