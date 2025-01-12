@@ -19,8 +19,12 @@ class UserRepo {
         return toCamelCase(rows)[0];
     }
 
-    static async insert(){
+    //Whenever we do an insert statement, we don't actually get any information about the user that was created back.
+    //If we do want to get information about that user, then after the value statement down here or at the very far right hand side, we have to put in a returning star like so. That means that after we insert this user, then go ahead and take all the different columns for that user and return them.
+    static async insert(username, bio){
+        const {rows} = await pool.query(`INSERT INTO users (username, bio) VALUES ($1, $2) RETURNING *;`, [username, bio]);
 
+        return toCamelCase(rows)[0];
     }
 
     static async update(){
