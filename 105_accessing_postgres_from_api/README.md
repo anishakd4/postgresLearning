@@ -74,3 +74,31 @@
 - So PG is essentially going to say create a prepared statement with some random name. It then says that this prepared statement is eventually going to take a string as a single argument. So that's a string that we're going to put in right there for the ID.
 
 - So the PG module is going to create that prepared statement that tells Postgres that, hey, you're going to have to run this thing at some point in time very soon.
+
+- Immediately after that, the PG module then says, okay, time to execute that prepared statement. So go and execute prepared statement with this name and we want to substitute that value of $1 right there with a number 127 or the string 127 whatever.
+
+- So your database is then going to substitute in and let's zoom in here. It's going to take that prepared statement. It's going to take that 127. Substitute it in for the dollar, sign one, and then execute this right here.
+
+- Well, Postgres is 100% aware of what you are trying to do with a prepared statement at 100% understands that when you call execute and you provide some values right here. These are values that should be placed into a query. They are not queries in their own right.
+
+- So if you ever try to put in something like, say, drop table users right here, that will not be executed as a query. Instead, we can imagine that it would be placed inside of here as a string like. Drop table users and that would not actually get executed in any way.
+
+- We are essentially relying upon Postgres and this idea of a prepared statement. That's what this is called. We are relying upon a prepared statement and how that prepared statement gets executed to deal with sanitizing the value for us.
+
+- We're relying on the fact that Postgres is 100% aware that when we actually execute the statement, we're going to provide values and not some further additional query to run or anything like that.
+
+- So the downside to this approach is that we can only use a prepared statement when we are trying to substitute in a value to a query.
+
+[<img src="./pictures/sql_injection_save_01.png" width="50%"/>](./pictures/sql_injection_save_01.png)
+
+[<img src="./pictures/sql_injection_save_02.png" width="50%"/>](./pictures/sql_injection_save_02.png)
+
+[<img src="./pictures/sql_injection_save_03.png" width="50%"/>](./pictures/sql_injection_save_03.png)
+
+[<img src="./pictures/sql_injection_save_04.png" width="50%"/>](./pictures/sql_injection_save_04.png)
+
+[<img src="./pictures/sql_injection_save_05.png" width="50%"/>](./pictures/sql_injection_save_05.png)
+
+[<img src="./pictures/sql_injection_save_06.png" width="50%"/>](./pictures/sql_injection_save_06.png)
+
+[<img src="./pictures/sql_injection_save_07.png" width="50%"/>](./pictures/sql_injection_save_07.png)
