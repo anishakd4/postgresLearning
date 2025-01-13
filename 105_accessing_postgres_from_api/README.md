@@ -191,3 +191,12 @@
 # Routing schema access
 
 [<img src="./pictures/routing_schema_access.png" width="50%"/>](./pictures/routing_schema_access.png)
+
+# Isolation strategy
+
+
+[<img src="./pictures/isolation_strategy_01.png" width="50%"/>](./pictures/isolation_strategy_01.png)
+
+[<img src="./pictures/isolation_strategy_02.png" width="50%"/>](./pictures/isolation_strategy_02.png)
+
+[<img src="./pictures/isolation_strategy_03.png" width="50%"/>](./pictures/isolation_strategy_03.png)
