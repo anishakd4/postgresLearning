@@ -165,3 +165,29 @@
 [<img src="./pictures/schema_table_02.png" width="50%"/>](./pictures/schema_table_02.png)
 
 [<img src="./pictures/schema_table_03.png" width="50%"/>](./pictures/schema_table_03.png)
+
+## Controlling schema access through search paths
+
+- We can change which schema Postgres is going to try to access by default.
+
+- When you run a statement like `SELECT * FROM users;`, Postgres is going to first start to say, Hey, wait a minute, we've got more than one schema inside this database. And each of these different schemas might have a users table. So Postgres has to make a decision about which schema to use when it tries to execute this command. If we do not specifically specify a schema in there.
+
+- So rather than just always 100% of the time defaulting to use using the schema of public as kind of made it sound like in the last video, it turns out that we can actually customize how this question gets answered by Postgres. So to do so, Postgres uses a little setting internally called the search path. 
+
+- The search path controls which schema Postgres is going to access by default if we do not specifically designate it inside of our query.
+
+- The $user right here means that if we have a schema inside of our database with the exact same name as the user that we are logged in with, then we should try to access that schema first.
+
+
+[<img src="./pictures/users_table_select_01.png" width="50%"/>](./pictures/users_table_select_01.png)
+
+[<img src="./pictures/users_table_select_02.png" width="50%"/>](./pictures/users_table_select_02.png)
+
+[<img src="./pictures/users_table_select_03.png" width="50%"/>](./pictures/users_table_select_03.png)
+
+[<img src="./pictures/users_table_select_04.png" width="50%"/>](./pictures/users_table_select_04.png)
+
+
+# Routing schema access
+
+[<img src="./pictures/routing_schema_access.png" width="50%"/>](./pictures/routing_schema_access.png)
