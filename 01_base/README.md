@@ -1,9 +1,3 @@
-# SQL
-
-- SQL is a communication language. It is how we interface or interact with our database. SQL is supported by many other databases as well, such as Oracle, Microsoft, SQL, MySQL and so on.
-
-[<img src="./pictures/sql_to_databases.png" width="50%"/>](./pictures/sql_to_databases.png)
-
 ## Create table query analyzer
 
 - keywords are always going to be capitalized and identifiers will always be lowercase.
