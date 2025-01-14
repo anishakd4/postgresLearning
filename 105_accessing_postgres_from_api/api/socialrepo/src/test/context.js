@@ -89,6 +89,10 @@ class Context {
     await pool.connect(DEFAULT_OPTS);
     //Disconnect
   }
+
+  async reset() {
+    return pool.query(`DELETE FROM users;`);
+  }
 }
 
 module.exports = Context;
