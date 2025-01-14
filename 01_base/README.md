@@ -1,3 +1,9 @@
+# SQL
+
+- SQL is a communication language. It is how we interface or interact with our database. SQL is supported by many other databases as well, such as Oracle, Microsoft, SQL, MySQL and so on.
+
+[<img src="./pictures/sql_to_databases.png" width="50%"/>](./pictures/sql_to_databases.png)
+
 ## Create table query analyzer
 
 - keywords are always going to be capitalized and identifiers will always be lowercase.
@@ -30,7 +36,7 @@
 
 [<img src="./pictures/select_where_sequence.png" width="50%"/>](./pictures/select_where_sequence.png)
 
-## Where clause 
+## Where clause
 
 [<img src="./pictures/comparision_math_operators.png" width="50%"/>](./pictures/comparision_math_operators.png)
 
@@ -87,7 +93,6 @@
 
 [<img src="./pictures/notes_on_join.png" width="50%"/>](./pictures/notes_on_join.png)
 
-
 [<img src="./pictures/order_of_from_join_matters.png" width="50%"/>](./pictures/order_of_from_join_matters.png)
 
 - Here simple join statement won't print photo with null user id.
@@ -120,7 +125,6 @@
 
 [<img src="./pictures/full_join_2.png" width="50%"/>](./pictures/full_join_2.png)
 
-
 ## order matters
 
 - yes, there is a difference in the order in which we list these tables in the from and join statement whenever we use a left or right outer, join the left and right outer joins. We definitely want to keep in mind the order of these tables so we list them out but with an inner join or a outer join in general, it doesn't make a difference.
@@ -143,7 +147,7 @@
 
 ## difference between a where and a having
 
-- Having is very similar to where. Its goal is to filter out some amount of information. The difference between where and having, however, is that where is going to operate on filtering out some number of rows, whereas having is going to filter out some number of groups. 
+- Having is very similar to where. Its goal is to filter out some amount of information. The difference between where and having, however, is that where is going to operate on filtering out some number of rows, whereas having is going to filter out some number of groups.
 - You are never going to see having without a group by. So you will always have a group by net right before a having.
 - You don't have to have a having if you have a group by, but if you want to do any filtering on the groups you will make use of having.
 
@@ -181,7 +185,6 @@
 
 ## One row and one column which referred to as a value. That's one single value
 
-
 # Subquery in join
 
 [<img src="./pictures/subquery_in_join.png" width="50%"/>](./pictures/subquery_in_join.png)
@@ -208,7 +211,6 @@
 
 [<img src="./pictures/correlated_queries.png" width="50%"/>](./pictures/correlated_queries.png)
 
-
 # Categories of data types in postgresql
 
 - So here are some of the different categories of data types we have access to. Now, I want to stress the word categories and say the numbers category. There are many different subtypes that we can get access to.
@@ -223,12 +225,11 @@
 
 # Character data types
 
--  Char(5) : we provide a string to Postgres that is longer than five characters, then Postgres is going to trim characters until it just gets down to five. And likewise, if we provide a string less than five characters, Postgres is going to insert spaces to the right hand side until it gets up to five.
+- Char(5) : we provide a string to Postgres that is longer than five characters, then Postgres is going to trim characters until it just gets down to five. And likewise, if we provide a string less than five characters, Postgres is going to insert spaces to the right hand side until it gets up to five.
 - VARCHAR(5): we provide a string to Postgres that is longer than five characters, then Postgres is going to trim characters until it just gets down to five. If we put in a string less than five characters, no spaces will be added, as was the case with Char.
 - Now, just so you know, there is no performance difference between these different character types, which is kind of unlike many other types of databases. So you should pick the type that best suits your application. You don't have to worry about trying to pick the exact correct value of VarChar in order to optimize any performance or anything like that.
 
 [<img src="./pictures/character_data_type.png" width="50%"/>](./pictures/character_data_type.png)
-
 
 # Boolean data types
 
@@ -269,7 +270,6 @@
 
 [<img src="./pictures/null_constraint.png" width="50%"/>](./pictures/null_constraint.png)
 
-
 # default column values
 
 - if we are setting up a default for, say, a VARCHAR column or a text column or a date or a Boolean, we could put the appropriate type inside of here. So for example, if we were setting up the default for VARCHAR. We had put in a default value of a string and set instead. So something like a string. If it was for a boolean column, we could put in a default of true or false, and for maybe a time we could put in a default time.
@@ -303,7 +303,6 @@
 
 [<img src="./pictures/reaction_based_system.png" width="50%"/>](./pictures/reaction_based_system.png)
 
-
 # Polymorphic associations
 
 - Whenever we try to insert, say, a new like with this kind of original design over here, Postgres is going to take a look at the value that we put into the user ID column. In this case, if we try to insert a row with a user ID of three, then Postgres is going to go over to the users table and make sure that there actually is a user ID of three.If there is no user ID of three, then Postgres is going to say throw an error.
@@ -314,7 +313,6 @@
 [<img src="./pictures/polymorphic_associations.png" width="50%"/>](./pictures/polymorphic_associations.png)
 
 # Polymorphic association alternative implementation
-
 
 [<img src="./pictures/polymorphic_association_alternative_implementation.png" width="50%"/>](./pictures/polymorphic_association_alternative_implementation.png)
 
