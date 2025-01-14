@@ -105,7 +105,7 @@ VALUES ('http://one.jpg', 4);
 
 INSERT INTO
     photos (url, user_id)
-VA  LUES
+VALUES
     ('http://one.jpg', 1),
     ('http://343.jpg', 1),
     ('http://565.jpg', 1),
