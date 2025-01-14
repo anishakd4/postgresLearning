@@ -200,3 +200,14 @@
 [<img src="./pictures/isolation_strategy_02.png" width="50%"/>](./pictures/isolation_strategy_02.png)
 
 [<img src="./pictures/isolation_strategy_03.png" width="50%"/>](./pictures/isolation_strategy_03.png)
+
+
+# Escaping identifiers
+
+- So the first thing we want to take a look at are the two queries that we wrote right here, to first create a role and then create a schema associated with it. So you'll notice that we are doing some direct string interpolation here. And I said earlier on inside the course that this is definitely something we do not want to do because it leads to SQL injection exploits.
+
+- Now, in this case, there is zero case or zero chance of us having any kind of SQL injection stuff going on here because we're not working with any user supplied data whatsoever.
+
+- In addition, I would never expect to see these lines of code executed against a development or production database. These are solely related to test databases.
+
+[<img src="./pictures/escaping_identifiers.png" width="50%"/>](./pictures/escaping_identifiers.png)
