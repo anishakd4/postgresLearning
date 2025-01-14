@@ -22,11 +22,15 @@ beforeAll( async () => {
     });
 
     //Create a new role
-    await pool.query(`CREATE ROLE ${roleName} WITH LOGIN PASSWORD '${roleName}'`);
+    // await pool.query(`CREATE ROLE ${roleName} WITH LOGIN PASSWORD '${roleName}'`);
+    // The %i means that we want to substitute in something that's going to be an identifier. %l means we're going to substitute in something that's going to be a literal value.
+    // So this is how we use the format module to still do some kind of escaping when it involves a literal or an identifier.
+    await pool.query(format('CREATE ROLE %I WITH LOGIN PASSWORD %L;', roleName, roleName));
 
     //CREATE schema with the same name
     //AUTHORIZATION just makes it very clear that this role that we just created can access this schema that we're making.
-    await pool.query(`CREATE SCHEMA ${roleName} AUTHORIZATION ${roleName} ;`);
+    // await pool.query(`CREATE SCHEMA ${roleName} AUTHORIZATION ${roleName} ;`);
+    await pool.query(format('CREATE SCHEMA %I AUTHORIZATION %I;', roleName, roleName));
 
     //Disconnect entirely from pg
     await pool.close();

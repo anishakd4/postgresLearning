@@ -211,3 +211,11 @@
 - In addition, I would never expect to see these lines of code executed against a development or production database. These are solely related to test databases.
 
 [<img src="./pictures/escaping_identifiers.png" width="50%"/>](./pictures/escaping_identifiers.png)
+
+- One way we could refactor this or one way you would think we could refactor it is to use that same kind of parameterized query approach where we put in, say, role name and role name and then replace our usages of those variables with dollar sign one and dollar sign two.
+
+- So it turns out we can only use this parameterized approach when we are trying to put in literal values into a query. So whenever we're trying to substitute in, say, some kind of where clause or something like that, but we cannot use this approach for injecting parameters that are supposed to be identifiers. An example of an identifier is something that's going to be, say, the name of a schema, a table, a column name, etcetera. So we cannot use this parameterized style if we are trying to designate the name of a schema, the name of a role, and so on.
+
+[<img src="./pictures/escaping_identifiers_2.png" width="50%"/>](./pictures/escaping_identifiers_2.png)
+
+- If we still want to do some kind of SQL injection prevention, we can instead use a package called pkg format, which is basically going to do very similar thing
