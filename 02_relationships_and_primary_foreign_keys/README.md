@@ -1,3 +1,7 @@
+## Database for photo sharing application
+
+[<img src="./pictures/database_for_photo_sharing.png" width="50%"/>](./pictures/database_for_photo_sharing.png)
+
 ## One to one and many to one relationship
 
 [<img src="./pictures/one_to_many_and_many_to_one.png" width="50%"/>](./pictures/one_to_many_and_many_to_one.png)
