@@ -1,6 +1,5 @@
-
-
 -- SERIAL tells postgres to generate values for this column automatically
+-- This adds on some special performance benefits to looking up records inside the users table when we are trying to look up records using the ID.
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
     username VARCHAR(50)
@@ -13,6 +12,8 @@ INSERT INTO
     users (username)
 VALUES
     ('anish'),('manish'),('suresh'),('mahesh');
+
+SELECT * FROM users;
 
 --foreign key
 CREATE TABLE photos (
