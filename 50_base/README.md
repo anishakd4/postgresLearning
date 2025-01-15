@@ -1,32 +1,3 @@
-## Primary keys and foreign keys
-
-- primary key is unique. value in primary key is unique and never going to be changed.
-- goal of foreign key is to somehow relate 1 record in a table to another record in another or same table.
-
-[<img src="./pictures/primary_foreign_keys.png" width="50%"/>](./pictures/primary_foreign_keys.png)
-
-[<img src="./pictures/primary_foreign_example.png" width="50%"/>](./pictures/primary_foreign_example.png)
-
-## Primary keys vs foreign keys
-
-[<img src="./pictures/primary_vs_foreign.png" width="50%"/>](./pictures/primary_vs_foreign.png)
-
-## Foreign keys
-
-[<img src="./pictures/foreign_keys1.png" width="50%"/>](./pictures/foreign_keys1.png)
-
-[<img src="./pictures/foreign_keys2.png" width="50%"/>](./pictures/foreign_keys2.png)
-
-## Foreign key cases
-
-[<img src="./pictures/foreign_key_cases.png" width="50%"/>](./pictures/foreign_key_cases.png)
-
-## What if we delete a row in table
-
-- If we delete a row in table with a SERIAL type column then there won't be any other record with the same id. No serial id ever gets reused even if the row ever gets deleted.
-
-[<img src="./pictures/constraints_in_delete.png" width="50%"/>](./pictures/constraints_in_delete.png)
-
 ## join
 
 [<img src="./pictures/imaginary_table_after_join.png" width="50%"/>](./pictures/imaginary_table_after_join.png)
