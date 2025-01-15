@@ -15,7 +15,8 @@ VALUES
 
 SELECT * FROM users;
 
---foreign key
+-- foreign key
+-- foreign key enforces some level of data consistency.
 CREATE TABLE photos (
 	id SERIAL PRIMARY KEY,
     url VARCHAR(200),
@@ -34,3 +35,5 @@ VALUES
     ('http://3453.jpg', 2),
     ('http://dfd.jpg', 3),
     ('http://sqweq.jpg', 4);
+
+SELECT * FROM photos;
