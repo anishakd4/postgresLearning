@@ -32,7 +32,21 @@
 
 ## Select query where clause sequence
 
+- Here's the actual order in what in which you want to consider these steps being executed by Postgres.
+
+- The first thing that really happens internally is Postgres takes a look at a data source. It's going to analyze your query and it's going to see that you are trying to pull in all the different rows from the city's table.
+
+- After it gets that entire source of data, it then second applies that filtering criteria. So it says for each row, I only want to consider the rows that have an area greater than 4000.
+
+- That's going to filter out or remove some rows out of our result set. And then for all the remaining entries or the remaining rows, then we are going to select some number of columns.
+
 [<img src="./pictures/select_where_sequence.png" width="50%"/>](./pictures/select_where_sequence.png)
+
+[<img src="./pictures/select_where_query_step_01.png" width="50%"/>](./pictures/select_where_query_step_01.png)
+
+[<img src="./pictures/select_where_query_step_02.png" width="50%"/>](./pictures/select_where_query_step_02.png)
+
+[<img src="./pictures/select_where_query_step_03.png" width="50%"/>](./pictures/select_where_query_step_03.png)
 
 ## Where clause
 
