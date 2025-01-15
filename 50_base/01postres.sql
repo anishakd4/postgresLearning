@@ -1,22 +1,5 @@
 
 
--- we can add mathematical operation or string operation in the Where clause
--- here the mathematical operation (population / area) will done first before > operation.
-SELECT
-    name,
-    population / area
-FROM
-    cities
-WHERE
-    population / area > 6000;
-
--- updating rows
--- if there are 2 cities with name Tokyo then both row will get updated.
-UPDATE cities SET population = 39505000 WHERE name = 'Tokyo';
-
--- here also if have multiple rows matching with the where clause then multiple rows will be deleted
-DELETE FROM cities WHERE name = 'Tokyo';
-
 -- SERIAL tells postgres to generate values for this column automatically
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,

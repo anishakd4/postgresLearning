@@ -61,3 +61,21 @@ SELECT name, area FROM cities WHERE area NOT IN (8223, 3042);
 -- compound where clauses
 SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) AND name != 'Delhi';
 SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) OR name = 'Delhi' OR NAME = 'Tokyo';
+
+-- We can do the same kind of calculation inside of where statements as well. We are not restricted to just doing checks against existing columns inside of our table.
+-- we can add mathematical operation or string operation in the Where clause
+-- here the mathematical operation (population / area) will done first before > operation.
+SELECT
+    name,
+    population / area
+FROM
+    cities
+WHERE
+    population / area > 6000;
+
+-- updating rows
+-- if there are 2 cities with name Tokyo then both row will get updated.
+UPDATE cities SET population = 39505000 WHERE name = 'Tokyo';
+
+-- here also if have multiple rows matching with the where clause then multiple rows will be deleted
+DELETE FROM cities WHERE name = 'Tokyo';
