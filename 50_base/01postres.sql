@@ -1,32 +1,5 @@
 
 
--- String operations and functions
-SELECT name || ', ' || country As location FROM cities;
-SELECT CONCAT(name, country) As location FROM cities;
-SELECT CONCAT(name, ', ', country) As location FROM cities;
-
--- We can stack together as many functions as we want.
-SELECT CONCAT(UPPER(name), ', ', LOWER(country)) As location FROM cities;
-SELECT UPPER(CONCAT(name, ', ', country)) As location FROM cities;
-
--- Where clause
-SELECT name, area FROM cities WHERE area > 4000
-SELECT name, population FROM cities WHERE area > 4000
-SELECT name, population FROM cities WHERE area = 8223;
-
--- the comparison we are doing is going to be run for every row.
-SELECT name, population FROM cities WHERE area != 8223;
-
-SELECT name, area FROM cities WHERE area BETWEEN 2000 AND 4000;
-SELECT name, area FROM cities WHERE name IN ('Delhi', 'Shanghai');
-SELECT name, area FROM cities WHERE name IN ('delhi', 'Shanghai');
-SELECT name, area FROM cities WHERE name NOT IN ('Delhi', 'Shanghai');
-SELECT name, area FROM cities WHERE area NOT IN (8223, 3042);
-
--- compound where clauses
-SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) AND name != 'Delhi';
-SELECT name, area FROM cities WHERE area NOT IN (8223, 3042) OR name = 'Delhi' OR NAME = 'Tokyo';
-
 -- we can add mathematical operation or string operation in the Where clause
 -- here the mathematical operation (population / area) will done first before > operation.
 SELECT

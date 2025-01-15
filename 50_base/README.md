@@ -1,17 +1,3 @@
-## String functions
-
-- There are also a set of operators we can use to manipulate strings. And in addition to these operators, there's something else called functions we can use as well.
-
-[<img src="./pictures/string_operators.png" width="50%"/>](./pictures/string_operators.png)
-
-## Select query where clause sequence
-
-[<img src="./pictures/select_where_sequence.png" width="50%"/>](./pictures/select_where_sequence.png)
-
-## Where clause
-
-[<img src="./pictures/comparision_math_operators.png" width="50%"/>](./pictures/comparision_math_operators.png)
-
 ## One to one and many to one relationship
 
 [<img src="./pictures/one_to_many_and_many_to_one.png" width="50%"/>](./pictures/one_to_many_and_many_to_one.png)
