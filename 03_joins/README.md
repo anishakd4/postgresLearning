@@ -2,6 +2,10 @@
 
 [<img src="./pictures/database_design_here.png" width="50%"/>](./pictures/database_design_here.png)
 
+# Joins vs aggregations
+
+[<img src="./pictures/joins_vs_aggregations.png" width="50%"/>](./pictures/joins_vs_aggregations.png)
+
 ## join
 
 [<img src="./pictures/imaginary_table_after_join.png" width="50%"/>](./pictures/imaginary_table_after_join.png)
