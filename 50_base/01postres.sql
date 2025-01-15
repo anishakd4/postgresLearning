@@ -1,10 +1,4 @@
--- creating tables
-CREATE TABLE cities (
-    name VARCHAR(50), 
-    country VARCHAR(50),
-    population INTEGER,
-    area INTEGER
-);
+
 
 -- If we wanted to, we could kind of jumble the order of columns. The only requirement is that when we list out all the values we want to insert, they match up in the same order as the order in which we listed out all of our columns.
 INSERT INTO cities (name, country, population, area)
