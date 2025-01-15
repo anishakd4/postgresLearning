@@ -45,4 +45,8 @@
 
 - If we delete a row in table with a SERIAL type column then there won't be any other record with the same id. No serial id ever gets reused even if the row ever gets deleted.
 
+- By default, the option that gets used if we don't specify anything at all is on delete restrict.
+
+- On delete Cascade is frequently a really good option if we want to try to delete a user and all the data associated with them.
+
 [<img src="./pictures/constraints_in_delete.png" width="50%"/>](./pictures/constraints_in_delete.png)
