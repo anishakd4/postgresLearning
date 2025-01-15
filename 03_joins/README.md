@@ -1,3 +1,7 @@
+## Database design here
+
+[<img src="./pictures/database_design_here.png" width="50%"/>](./pictures/database_design_here.png)
+
 ## join
 
 [<img src="./pictures/imaginary_table_after_join.png" width="50%"/>](./pictures/imaginary_table_after_join.png)
