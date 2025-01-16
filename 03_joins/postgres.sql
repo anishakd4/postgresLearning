@@ -368,7 +368,7 @@ VALUES
 
 -- join statements
 SELECT contents, url FROM comments
-JOIN phoots ON photos.id = comments.photo_id;
+JOIN photos ON photos.id = comments.photo_id;
 
 -- column reference "id" is ambiguous. We need to give more context in case of multiple tables with same column.
 SELECT id FROM comments
