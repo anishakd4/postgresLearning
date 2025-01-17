@@ -35,3 +35,11 @@
 [<img src="./pictures/combining_group_by_aggregate.png" width="50%"/>](./pictures/combining_group_by_aggregate.png)
 
 - An aggregate function, if we use it while doing group by, is only going to be applied to each of these individual little subgroups.
+
+[<img src="./pictures/combining_02.png" width="50%"/>](./pictures/combining_02.png)
+
+- number of comments that each of our different users have created.
+
+## Keywords
+
+[<img src="./pictures/keywords.png" width="50%"/>](./pictures/keywords.png)
