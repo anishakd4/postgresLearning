@@ -421,6 +421,7 @@ SELECT url, username FROM photos
 FULL JOIN users ON users.id = photos.user_id;
 
 -- where will always be on the other side of the join.
+-- Now, this is another scenario where you really need to remember that comparisons like this are being done for every row inside of this imaginary table right here.
 SELECT url, contents FROM comments
 JOIN photos ON photos.id = comments.photo_id
 WHERE comments.user_id = photos.user_id
