@@ -55,3 +55,17 @@
 [<img src="./pictures/subquery_example_001.png" width="50%"/>](./pictures/subquery_example_001.png)
 
 [<img src="./pictures/subquery_example_002.png" width="50%"/>](./pictures/subquery_example_002.png)
+
+[<img src="./pictures/subquery_example_003.png" width="50%"/>](./pictures/subquery_example_003.png)
+
+# Some/Any
+
+- Some is actually an alias for any. So you can make use of the keyword any or some.
+
+- The sum operator is going to make sure that 50 is greater than at least one of these two values. In this case, 50 is greater than 20. So this would evaluate to true.
+
+[<img src="./pictures/some_001.png" width="50%"/>](./pictures/some_001.png)
+
+[<img src="./pictures/some_002.png" width="50%"/>](./pictures/some_002.png)
+
+[<img src="./pictures/some_003.png" width="50%"/>](./pictures/some_003.png)
