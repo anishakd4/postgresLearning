@@ -18,10 +18,6 @@
 
 - if we want to in any way work with these underlying columns, we can only select them by using an aggregate function,
 
-## combining group by and aggregates
-
-[<img src="./pictures/combining_group_by_aggregate.png" width="50%"/>](./pictures/combining_group_by_aggregate.png)
-
 ## aggregate functions
 
 [<img src="./pictures/aggregate_functions.png" width="50%"/>](./pictures/aggregate_functions.png)
@@ -33,3 +29,9 @@
 - We're going to most frequently use these aggregate functions by themselves or as a part of a larger group by statement.
 
 - We cannot select a column and use an aggregate at the same time, or we end up with an error like so.
+
+## combining group by and aggregates
+
+[<img src="./pictures/combining_group_by_aggregate.png" width="50%"/>](./pictures/combining_group_by_aggregate.png)
+
+- An aggregate function, if we use it while doing group by, is only going to be applied to each of these individual little subgroups.
