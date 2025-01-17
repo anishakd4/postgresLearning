@@ -112,3 +112,17 @@ SELECT p1.name, (
   SELECT COUNT(*) FROM orders as o1 WHERE o1.product_id = p1.id
 ) AS num_orders
 FROM products as p1;
+
+
+-- Select without a from
+-- we can only do a select with just a subquery if we are getting back one single value
+-- this is actually really useful if we are ever trying to calculate just one single value that is the result of several other values.
+SELECT ( 
+  SELECT MAX(price) FROM products
+);
+
+SELECT 
+(SELECT MAX(price) FROM products)/(SELECT AVG(price) FROM products);
+
+SELECT 
+(SELECT MAX(price) FROM products) , (SELECT AVG(price) FROM products);

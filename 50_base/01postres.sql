@@ -1,18 +1,5 @@
 
 
--- Select without a from
--- we can only do a select with just a subquery if we are getting back one single value
--- this is actually really useful if we are ever trying to calculate just one single value that is the result of several other values.
-SELECT ( 
-  SELECT MAX(price) FROM products
-);
-
-SELECT 
-(SELECT MAX(price) FROM products)/(SELECT AVG(price) FROM products);
-
-SELECT 
-(SELECT MAX(price) FROM products) , (SELECT AVG(price) FROM products);
-
 -- DISTINCT
 -- Distinct is always going to be placed inside of a select clause, and we're going to place it right after that select keyword.
 -- Distinct is going to give you a list of all the different unique values inside of a column.
