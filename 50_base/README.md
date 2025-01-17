@@ -1,17 +1,3 @@
-## Group and aggregates
-
-[<img src="./pictures/group_and_aggregates.png" width="50%"/>](./pictures/group_and_aggregates.png)
-
-## Group by
-
-[<img src="./pictures/group_by_1.png" width="50%"/>](./pictures/group_by_1.png)
-
-[<img src="./pictures/group_by_2.png" width="50%"/>](./pictures/group_by_2.png)
-
-## combining group by and aggregates
-
-[<img src="./pictures/combining_group_by_aggregate.png" width="50%"/>](./pictures/combining_group_by_aggregate.png)
-
 ## difference between a where and a having
 
 - Having is very similar to where. Its goal is to filter out some amount of information. The difference between where and having, however, is that where is going to operate on filtering out some number of rows, whereas having is going to filter out some number of groups.
