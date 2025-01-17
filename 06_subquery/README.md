@@ -49,3 +49,9 @@
 # Subquery with where operators
 
 [<img src="./pictures/where_operator_subquery.png" width="50%"/>](./pictures/where_operator_subquery.png)
+
+# Subquery examples
+
+[<img src="./pictures/subquery_example_001.png" width="50%"/>](./pictures/subquery_example_001.png)
+
+[<img src="./pictures/subquery_example_002.png" width="50%"/>](./pictures/subquery_example_002.png)
