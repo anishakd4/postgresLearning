@@ -68,3 +68,47 @@ WHERE product_id IN
 (
   SELECT id FROM products WHERE price / weight > 50
 );
+
+
+
+SELECT name FROM products
+WHERE price > 
+(
+  SELECT AVG(price) FROM products
+);
+
+SELECT name, department FROM products
+WHERE department NOT IN
+(
+  SELECT department FROM products WHERE price < 100
+);
+
+-- > ALL will work only in case of a single column
+SELECT name, department FROM products
+WHERE price > ALL
+(
+  SELECT price FROM products WHERE department = 'Industrial'
+);
+
+-- show the name of products that are more expensive than at least one product in the industrial department.
+SELECT name, department, price FROM products
+WHERE price > SOME
+(
+  SELECT price FROM products WHERE department = 'Industrial'
+);
+
+-- correlated queries
+-- The term correlated subquery essentially means that we are referring to some row from the outside query in the inner query or in the subquery.
+SELECT name, department, price FROM products AS p1
+WHERE p1.price = (
+  SELECT MAX(price) 
+  FROM products as p2 
+  WHERE p1.department = p2.department
+);
+
+-- Correlated query in select
+-- Without using join or group by print the number of orders for each product
+SELECT p1.name, ( 
+  SELECT COUNT(*) FROM orders as o1 WHERE o1.product_id = p1.id
+) AS num_orders
+FROM products as p1;

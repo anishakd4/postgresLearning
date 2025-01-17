@@ -1,11 +1,3 @@
-# Correlated queries
-
-- So in other words, when we are executing a where for just one row right, we can imagine that the following thing occurs. The subquery runs, we get all of the different rows for products and then we execute the where for every row that we just fetched.
-- You can kind of imagine that this is like a double nested for loop if you are familiar with a for loop in general, for every row that we're going to iterate over on the outer query, we're going to iterate over all of our different products on the inner query. So it's kind of like a nested for loop.
-- We can make use of a correlated subquery not only inside of where, we can use them just about anywhere.
-
-[<img src="./pictures/correlated_queries.png" width="50%"/>](./pictures/correlated_queries.png)
-
 # Categories of data types in postgresql
 
 - So here are some of the different categories of data types we have access to. Now, I want to stress the word categories and say the numbers category. There are many different subtypes that we can get access to.
