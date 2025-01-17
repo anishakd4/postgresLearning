@@ -1,5 +1,3 @@
-
-
 -- Large dataset for trying
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
