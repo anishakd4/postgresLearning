@@ -21,3 +21,15 @@
 ## combining group by and aggregates
 
 [<img src="./pictures/combining_group_by_aggregate.png" width="50%"/>](./pictures/combining_group_by_aggregate.png)
+
+## aggregate functions
+
+[<img src="./pictures/aggregate_functions.png" width="50%"/>](./pictures/aggregate_functions.png)
+
+[<img src="./pictures/aggregate_error.png" width="50%"/>](./pictures/aggregate_error.png)
+
+- When we make use of an aggregate function, we cannot do a normal select. Next to it.
+
+- We're going to most frequently use these aggregate functions by themselves or as a part of a larger group by statement.
+
+- We cannot select a column and use an aggregate at the same time, or we end up with an error like so.
