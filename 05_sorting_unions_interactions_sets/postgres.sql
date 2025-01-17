@@ -772,9 +772,9 @@ SELECT * FROM products ORDER BY price DESC LIMIT 20 OFFSET 20;
 --a query that shows the names of only the second and third most expensive phones
 SELECT name from phones ORDER BY price DESC LIMIT 2 OFFSET 1;
 
-
-
 -- union. this removes duplicates
+-- If the union keyword sees an identical row in both lists, then it's only going to list that row in the output one single time.
+-- It is not required strictly to always use parentheses around these two different sets that we're trying to join. In this case, we only use the parentheses because otherwise the database might be a little bit confused on whether we are trying to apply an order by to just this query right here or to the results of the entire union.
 (SELECT * FROM products ORDER BY price DESC LIMIT 4)
 UNION
 (SELECT * FROM products ORDER BY price / weight DESC LIMIT 4);
