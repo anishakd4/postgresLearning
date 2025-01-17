@@ -77,3 +77,11 @@
 - We can make use of a correlated subquery not only inside of where, we can use them just about anywhere.
 
 [<img src="./pictures/correlated_queries.png" width="50%"/>](./pictures/correlated_queries.png)
+
+# Select without a from
+
+[<img src="./pictures/select_without_from_01.png" width="50%"/>](./pictures/select_without_from_01.png)
+
+[<img src="./pictures/select_without_from_02.png" width="50%"/>](./pictures/select_without_from_02.png)
+
+[<img src="./pictures/select_without_from_03.png" width="50%"/>](./pictures/select_without_from_03.png)
